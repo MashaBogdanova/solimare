@@ -1,11 +1,11 @@
 import React from "react";
 import Image from 'next/image';
 import {Carousel} from "antd";
-import carouselImage1 from "@/assets/20220227_210757.jpg";
-import carouselImage2 from "@/assets/20220225_130638.jpg";
-import carouselImage3 from "@/assets/20220227_210839.jpg";
-import carouselImage4 from "@/assets/20220225_121155.jpg";
-import styles from "@/app/page.module.css";
+import carouselImage1 from "@/assets/carousel/20220227_210757.jpg";
+import carouselImage2 from "@/assets/carousel/20220225_130638.jpg";
+import carouselImage3 from "@/assets/carousel/20220227_210839.jpg";
+import carouselImage4 from "@/assets/carousel/20220225_121155.jpg";
+import styles from "@/app/_page.module.scss";
 
 
 function MainCarousel() {
