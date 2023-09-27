@@ -9,12 +9,12 @@ import styles from "@/app/page.module.css";
 
 
 function MainCarousel() {
-    return <Carousel autoplay dots={false} effect="fade" className={styles.carousel}>
-        <Image src={carouselImage1} className={styles.carouselImage}/>
-        <Image src={carouselImage2} className={styles.carouselImage}/>
-        <Image src={carouselImage3} className={styles.carouselImage}/>
-        <Image src={carouselImage4} className={styles.carouselImage}/>
-    </Carousel>;
+    const images = [carouselImage1, carouselImage2, carouselImage3, carouselImage4];
+    return (
+        <Carousel autoplay dots={false} effect="fade" className={styles.carousel}>
+            {images.map(image => <Image src={image} className={styles.carouselImage} key={image} alt="Grota solna"/>)}
+        </Carousel>
+    )
 }
 
 export default MainCarousel;
