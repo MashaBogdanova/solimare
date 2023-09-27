@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './page.module.css';
+import styles from './_page.module.scss';
 import MainCarousel from "@/app/components/MainCarousel";
 import Header from "@/app/components/header/Header";
 

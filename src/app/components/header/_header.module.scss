@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .logo {
     position: absolute;
     top: 30px;
@@ -36,7 +38,7 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $color;
 }
 
 .nav > p:hover {

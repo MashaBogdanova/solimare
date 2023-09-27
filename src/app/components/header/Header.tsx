@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import {FacebookOutlined, InstagramOutlined} from "@ant-design/icons";
-import styles from './header.module.css';
+import styles from './_header.module.scss';
 import booksyIcon from '../../../assets/booksy-icon.svg';
 import logo from "@/assets/logo-white.png";
 
