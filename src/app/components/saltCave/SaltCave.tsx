@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from "next/image";
 import photo from '../../../assets/grota-solna.jpg';
-import styles from './_grotaSolna.module.scss';
+import styles from './_saltCave.module.scss';
 
-function GrotaSolna() {
+function SaltCave() {
     return (
-        <section className={styles.grotaSolna}>
+        <section className={styles.saltCave}>
             <Image src={photo} className={styles.photo}/>
             <div className={styles.text}>
                 <h1 className={styles.title}>Grota Solna</h1>
@@ -26,4 +26,4 @@ function GrotaSolna() {
     );
 }
 
-export default GrotaSolna;
+export default SaltCave;

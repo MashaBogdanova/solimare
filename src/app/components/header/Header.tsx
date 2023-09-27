@@ -7,7 +7,7 @@ import logo from "@/assets/logo-white.png";
 
 
 function Header() {
-    const navItems = ['Grota Solna', 'Sauna infrared', 'Inhalacje wodorem molekularnym', 'Joga', 'Cennik', 'Często zadawane pytanie', 'Kontakt'];
+    const navItems = ['Grota Solna', 'Inhalation infrared', 'Inhalacje wodorem molekularnym', 'Joga', 'Cennik', 'Często zadawane pytanie', 'Kontakt'];
     return (
         <header>
             <Image src={logo} width={220} className={styles.logo} alt="logo"/>
