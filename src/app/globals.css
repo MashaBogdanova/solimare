@@ -5,13 +5,13 @@
   "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
   "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   font-size: 14px;
-  color: #f4f1e8;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: #f4f1e8;
 }
 
 html,

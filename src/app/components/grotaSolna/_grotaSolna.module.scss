@@ -1,0 +1,24 @@
+@import "../../sass/variables";
+
+.grotaSolna {
+  display: flex;
+  gap: 4em;
+  padding: 2em;
+  font-size: 1.2em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 1em;
+}
+
+.photo {
+  width: 25vw;
+  height: 100%;
+  object-fit: cover;
+}
