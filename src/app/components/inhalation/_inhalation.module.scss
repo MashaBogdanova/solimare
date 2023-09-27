@@ -5,6 +5,7 @@
   gap: 4em;
   font-size: 1.2em;
   padding: 2em;
+  background-color: $color-secondary;
 }
 
 .text {
@@ -16,8 +17,13 @@
 
 .title {
   margin-bottom: 1em;
-
+  color: $color-primary;
 }
+
+.paragraph {
+  color: $color-primary;
+}
+
 
 .photo {
   width: 35vw;

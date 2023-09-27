@@ -4,11 +4,11 @@
   display: flex;
   gap: 4em;
   font-size: 1.2em;
-  background-color: $color-secondary;
 }
 
 .text {
   padding: 2em;
+  gap: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,12 +16,7 @@
 
 .title {
   margin-bottom: 1em;
-  color: $color-primary;
 
-}
-
-.paragraph {
-  color: $color-primary;
 }
 
 .photo {

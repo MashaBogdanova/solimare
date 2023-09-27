@@ -9,7 +9,7 @@ function Inhalation() {
             <Image src={photo} className={styles.photo}/>
             <div className={styles.text}>
                 <h1 className={styles.title}>Inhalacje wodorem molekularnym</h1>
-                <p>
+                <p className={styles.paragraph}>
                     Inhalacje wodorem molekularnym mają wiele korzyści dla zdrowia. Wodór molekularny działa jako silny
                     przeciwutleniacz, redukując stres oksydacyjny w organizmie. Inhalacje wodorem mogą pomóc w
                     łagodzeniu bólu, redukowaniu stanów zapalnych, poprawie funkcjonowania układu krążenia oraz

@@ -5,6 +5,7 @@ import Header from "@/app/components/header/Header";
 import SaltCave from "@/app/components/saltCave/SaltCave";
 import Sauna from "@/app/components/sauna/Sauna";
 import Inhalation from "@/app/components/inhalation/Inhalation";
+import Yoga from "@/app/components/yoga/Yoga";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
             <SaltCave />
             <Sauna />
             <Inhalation />
+            <Yoga/>
         </main>
     )
 }
