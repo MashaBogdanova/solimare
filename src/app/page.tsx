@@ -1,24 +1,23 @@
 import React from 'react';
 import styles from './_page.module.scss';
-import MainCarousel from "@/app/components/MainCarousel";
-import Header from "@/app/components/header/Header";
-import SaltCave from "@/app/components/saltCave/SaltCave";
-import Sauna from "@/app/components/sauna/Sauna";
-import Inhalation from "@/app/components/inhalation/Inhalation";
-import Yoga from "@/app/components/yoga/Yoga";
-import Footer from "@/app/components/footer/Footer";
-
+import Header from './components/header/Header';
+import MainCarousel from './components/mainCaousel/MainCarousel';
+import SaltCave from './components/saltCave/SaltCave';
+import Inhalation from './components/inhalation/Inhalation';
+import Sauna from './components/sauna/Sauna';
+import Yoga from './components/yoga/Yoga';
+import Footer from './components/footer/Footer';
 
 export default function Home() {
-    return (
-        <main className={styles.main}>
-            <Header/>
-            <MainCarousel/>
-            <SaltCave />
-            <Sauna />
-            <Inhalation />
-            <Yoga/>
-            <Footer/>
-        </main>
-    )
+  return (
+    <main className={styles.main}>
+      <Header />
+      <MainCarousel />
+      <SaltCave />
+      <Sauna />
+      <Inhalation />
+      <Yoga />
+      <Footer />
+    </main>
+  );
 }

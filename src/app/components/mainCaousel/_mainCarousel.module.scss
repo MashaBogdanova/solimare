@@ -1,0 +1,16 @@
+@import "../../sass/variables";
+
+.carousel {
+  min-width: 350px;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-dark;
+  overflow: hidden;
+}
+
+.carouselImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  opacity: 60%;
+}
