@@ -10,14 +10,16 @@ import Footer from './components/footer/Footer';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       <Header />
-      <MainCarousel />
-      <SaltCave />
-      <Sauna />
-      <Inhalation />
-      <Yoga />
+      <main className={styles.main}>
+        <MainCarousel />
+        <SaltCave />
+        <Sauna />
+        <Inhalation />
+        <Yoga />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
