@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin font($size, $height, $style: normal, $spacing: 0.06em, $weight: 400) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin media-l {
+  @media screen and (max-width: $screen-width-l) {
+    @content;
+  }
+}

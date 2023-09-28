@@ -5,17 +5,25 @@ import booksyIcon from '../../../../assets/booksy-icon.svg';
 import styles from './_socialNedia.module.scss';
 
 interface IProps {
-  isFooter: boolean;
+  isHeader?: boolean;
 }
 
-function SocialMedia({ isFooter }: IProps) {
+function SocialMedia({ isHeader }: IProps) {
   return (
-    <div className={isFooter ? styles.footerIconWrapper : styles.iconsWrapper}>
+    <div
+      className={`${styles.iconsWrapper} ${
+        isHeader && styles.headerIconsWrapper
+      }`}
+    >
       <Image src={booksyIcon} className={styles.booksyIcon} alt="booksy" />
       <InstagramOutlined />
       <FacebookOutlined />
     </div>
   );
 }
+
+SocialMedia.defaultProps = {
+  isHeader: false,
+};
 
 export default SocialMedia;
