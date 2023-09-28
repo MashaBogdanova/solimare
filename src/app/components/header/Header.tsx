@@ -1,23 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
-import {FacebookOutlined, InstagramOutlined} from "@ant-design/icons";
 import styles from './_header.module.scss';
-import booksyIcon from '../../../assets/booksy-icon.svg';
 import logo from "@/assets/logo-white.png";
+import SocialMedia from "@/app/components/header/socialMedia/SocialMedia";
 
 
 function Header() {
-    const navItems = ['Grota Solna', 'Inhalation infrared', 'Inhalacje wodorem molekularnym', 'Joga', 'Cennik', 'Często zadawane pytanie', 'Kontakt'];
+    const navItems = ['Grota Solna', 'Sauna infrared', 'Inhalacje wodorem molekularnym', 'Joga', 'Cennik', 'Kontakt', 'Regulamin', 'Często zadawane pytanie'];
     return (
         <header>
             <Image src={logo} width={220} className={styles.logo} alt="logo"/>
-
-            <div className={styles.navIconsWrapper}>
-                <Image src={booksyIcon} className={styles.booksyIcon} alt="booksy"/>
-                <InstagramOutlined/>
-                <FacebookOutlined/>
-            </div>
-
+            <SocialMedia/>
             <nav className={styles.nav}>
                 {navItems.map(item => <p key={item}>{item}</p>)}
             </nav>

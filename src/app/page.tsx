@@ -6,6 +6,7 @@ import SaltCave from "@/app/components/saltCave/SaltCave";
 import Sauna from "@/app/components/sauna/Sauna";
 import Inhalation from "@/app/components/inhalation/Inhalation";
 import Yoga from "@/app/components/yoga/Yoga";
+import Footer from "@/app/components/footer/Footer";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
             <Sauna />
             <Inhalation />
             <Yoga/>
+            <Footer/>
         </main>
     )
 }
