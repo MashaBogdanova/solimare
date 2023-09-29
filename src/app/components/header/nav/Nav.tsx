@@ -7,12 +7,6 @@ interface IProps {
 }
 
 function Nav({ isSideMenu }: IProps) {
-  const popoverStyle = {
-    backgroundColor: 'rgb(0, 0, 0, 0.9)',
-    margin: 0,
-    width: '100%',
-    borderRadius: 0,
-  };
   const items: MenuProps['items'] = [
     {
       label: 'Grota solna',
@@ -21,27 +15,22 @@ function Nav({ isSideMenu }: IProps) {
         {
           label: 'O Grocie',
           key: 'cave-info',
-          style: !isSideMenu && popoverStyle,
         },
         {
           label: 'Seansy dla dorosłych',
           key: 'adults-sessions',
-          style: !isSideMenu && popoverStyle,
         },
         {
           label: 'Seansy dla dzieci',
           key: 'children-sessions',
-          style: !isSideMenu && popoverStyle,
         },
         {
           label: 'Grota na wyłączność',
           key: 'cave-rent',
-          style: !isSideMenu && popoverStyle,
         },
         {
           label: 'Regulamin',
           key: 'cave-rules',
-          style: !isSideMenu && popoverStyle,
         },
       ],
     },
@@ -52,12 +41,10 @@ function Nav({ isSideMenu }: IProps) {
         {
           label: 'O Saunie',
           key: 'sauna-info',
-          style: !isSideMenu && popoverStyle,
         },
         {
           label: 'Regulamin',
           key: 'sauna-rules',
-          style: !isSideMenu && popoverStyle,
         },
       ],
     },
