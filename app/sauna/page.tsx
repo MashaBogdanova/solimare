@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '../../../assets/sauna.jpg';
+import photo from '../../assets/sauna.jpg';
 import styles from './_sauna.module.scss';
 
 function Sauna() {

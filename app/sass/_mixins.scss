@@ -1,4 +1,4 @@
-@import "./variables";
+@import "variables";
 
 @mixin font($size, $height, $style: normal, $spacing: 0.06em, $weight: 400) {
   font-size: $size;

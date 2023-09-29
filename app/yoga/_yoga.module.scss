@@ -1,15 +1,13 @@
-@import "../../sass/variables";
+@import "../sass/variables";
 
-.inhalation {
+.yoga {
   display: flex;
   gap: 4em;
   font-size: 1.2em;
-  padding: 2em;
-  background-color: $color-secondary;
 }
 
 .text {
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +15,8 @@
 
 .title {
   margin-bottom: 1em;
-  color: $color-primary;
-}
 
-.paragraph {
-  color: $color-primary;
 }
-
 
 .photo {
   width: 35vw;

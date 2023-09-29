@@ -55,11 +55,14 @@ function Nav({ isSideMenu }: IProps) {
     { label: 'Często zadawane pytanie', key: 'faq' },
   ];
 
+  const onClick: MenuProps['onClick'] = () => {};
+
   return (
     <Menu
       mode={isSideMenu ? 'inline' : 'horizontal'}
       items={[...items]}
       className={isSideMenu ? styles.sideMenuNav : styles.nav}
+      onClick={onClick}
     />
   );
 }

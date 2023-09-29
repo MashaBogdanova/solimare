@@ -4,10 +4,10 @@ import antdStyles from './appStyles';
 import styles from './_page.module.scss';
 import Header from './components/header/Header';
 import MainCarousel from './components/mainCaousel/MainCarousel';
-import SaltCave from './components/saltCave/SaltCave';
-import Inhalation from './components/inhalation/Inhalation';
-import Sauna from './components/sauna/Sauna';
-import Yoga from './components/yoga/Yoga';
+import SaltCave from './salt-cave/page';
+import Inhalation from './inhalation/page';
+import Sauna from './sauna/page';
+import Yoga from './yoga/page';
 import Footer from './components/footer/Footer';
 
 export default function Home() {

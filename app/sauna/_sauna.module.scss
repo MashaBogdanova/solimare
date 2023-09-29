@@ -1,6 +1,6 @@
-@import "../../sass/variables";
+@import "../sass/variables";
 
-.yoga {
+.sauna {
   display: flex;
   gap: 4em;
   font-size: 1.2em;
@@ -8,6 +8,7 @@
 
 .text {
   padding: 2em;
+  gap: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;

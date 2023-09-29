@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '../../../assets/yoga.jpg';
+import photo from '../../assets/yoga.jpg';
 import styles from './_yoga.module.scss';
 
 function Yoga() {

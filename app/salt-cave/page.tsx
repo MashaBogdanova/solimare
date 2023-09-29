@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '../../../assets/grota-solna.jpg';
+import photo from '../../assets/grota-solna.jpg';
 import styles from './_saltCave.module.scss';
 
 function SaltCave() {

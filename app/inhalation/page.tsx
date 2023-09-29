@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '../../../assets/inhalation.jpg';
+import photo from '../../assets/inhalation.jpg';
 import styles from './_inhalation.module.scss';
 
 function Inhalation() {
