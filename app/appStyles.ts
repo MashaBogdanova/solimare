@@ -8,6 +8,7 @@ const antdStyles = {
     colorTextBase: '#834a4c',
     colorBgBase: '#f4f1e8',
     borderRadius: 1,
+    fontFamily: 'var(--text-font)',
   },
   components: {
     Menu: {

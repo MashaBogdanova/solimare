@@ -1,9 +1,19 @@
 import React from 'react';
 import './globals.scss';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Radley, Arimo } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+export const titleFont = Radley({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--title-font',
+});
+
+export const textFont = Arimo({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--text-font',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${textFont.variable} ${titleFont.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
