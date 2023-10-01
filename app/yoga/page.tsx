@@ -1,7 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import photo from '../../assets/yoga.jpg';
 import styles from './_yoga.module.scss';
+
+export const metadata: Metadata = {
+  title: 'Grota Solna',
+  description: 'Yoga w Grocie Solney Warszawa',
+};
 
 function Yoga() {
   return (

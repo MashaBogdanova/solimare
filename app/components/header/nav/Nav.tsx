@@ -1,5 +1,7 @@
 import React from 'react';
-import { Menu, MenuProps } from 'antd';
+import Link from 'next/link';
+import { Popover } from 'antd';
+import navItems from '../../../../configs/navigation.config';
 import styles from './_nav.module.scss';
 
 interface IProps {
@@ -7,63 +9,35 @@ interface IProps {
 }
 
 function Nav({ isSideMenu }: IProps) {
-  const items: MenuProps['items'] = [
-    {
-      label: 'Grota solna',
-      key: 'cave',
-      children: [
-        {
-          label: 'O Grocie',
-          key: 'cave-info',
-        },
-        {
-          label: 'Seansy dla dorosłych',
-          key: 'adults-sessions',
-        },
-        {
-          label: 'Seansy dla dzieci',
-          key: 'children-sessions',
-        },
-        {
-          label: 'Grota na wyłączność',
-          key: 'cave-rent',
-        },
-        {
-          label: 'Regulamin',
-          key: 'cave-rules',
-        },
-      ],
-    },
-    {
-      label: 'Sauna infrared',
-      key: 'sauna',
-      children: [
-        {
-          label: 'O Saunie',
-          key: 'sauna-info',
-        },
-        {
-          label: 'Regulamin',
-          key: 'sauna-rules',
-        },
-      ],
-    },
-    { label: 'Inhalacje wodorem molekularnym', key: 'inhalation' },
-    { label: 'Joga', key: 'yoga' },
-    { label: 'Cennik', key: 'price' },
-    { label: 'Kontakt', key: 'contacts' },
-    { label: 'Często zadawane pytanie', key: 'faq' },
-  ];
-
-  const onClick: MenuProps['onClick'] = () => {};
+  function createSubItems(children) {
+    return children.map((subItem) => (
+      <p>
+        <Link href={subItem.key}>{subItem.label}</Link>
+      </p>
+    ));
+  }
 
   return (
-    <Menu
-      mode={isSideMenu ? 'inline' : 'horizontal'}
-      items={[...items]}
-      className={isSideMenu ? styles.sideMenuNav : styles.nav}
-      onClick={onClick}
-    />
+    <nav className={isSideMenu ? styles.sideMenuNav : styles.nav}>
+      {navItems.map((item) => {
+        if (item.children) {
+          return (
+            <Popover
+              placement="bottom"
+              content={
+                <div style={{ width: 150 }}>
+                  {createSubItems(item.children)}
+                </div>
+              }
+              trigger="hover"
+            >
+              <p>{item.label}</p>
+            </Popover>
+          );
+        }
+        return <Link href={item.key}>{item.label}</Link>;
+      })}
+    </nav>
   );
 }
 

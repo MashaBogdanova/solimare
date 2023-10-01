@@ -13,3 +13,8 @@
     @content;
   }
 }
+@mixin media-m {
+  @media screen and (max-width: $screen-width-m) {
+    @content;
+  }
+}

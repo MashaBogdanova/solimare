@@ -23,6 +23,14 @@ const antdStyles = {
       colorErrorBg: 'rgba(0, 0, 0, 0.5)',
       controlItemBgActive: 'rgba(0, 0, 0, 0.5)',
     },
+    Popover: {
+      colorBgElevated: 'rgba(0, 0, 0, 0.5)',
+      colorText: 'rgb(244, 241, 232)',
+      colorTextHeading: 'rgb(244, 241, 232)',
+      fontSize: 13,
+      borderRadiusLG: 8,
+      lineHeight: 2.5,
+    },
   },
 };
 
