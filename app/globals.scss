@@ -9,13 +9,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: $color-secondary;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  color: $color-secondary;
 }
 
 a {

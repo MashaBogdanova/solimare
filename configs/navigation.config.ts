@@ -46,7 +46,7 @@ const navItems: IItem[] = [
     ],
   },
   { label: 'Inhalacje wodorem molekularnym', key: 'inhalation' },
-  { label: 'Yoga', key: 'yoga' },
+  { label: 'Joga', key: 'yoga' },
   { label: 'Cennik', key: 'price' },
   { label: 'Kontakt', key: 'contacts' },
   { label: 'Często zadawane pytanie', key: 'faq' },

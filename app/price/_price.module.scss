@@ -1,0 +1,22 @@
+@import "../sass/variables";
+
+.price {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 200px;
+  background-color: $color-primary;
+  width: 100vw;
+  height: 100vh;
+}
+
+.priceCard {
+  display: flex;
+  flex-direction: column;
+  width: 22vw;
+  height: 70vh;
+  color: $color-dark-m;
+  & p {
+    color: $color-dark-transparent;
+    margin-bottom: .5em;
+  }
+}

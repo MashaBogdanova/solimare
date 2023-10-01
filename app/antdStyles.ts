@@ -31,6 +31,9 @@ const antdStyles = {
       borderRadiusLG: 8,
       lineHeight: 2.5,
     },
+    Card: {
+      colorTextHeading: '#834a4c',
+    },
   },
 };
 
