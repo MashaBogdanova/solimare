@@ -34,6 +34,14 @@ const antdStyles = {
     Card: {
       colorTextHeading: '#834a4c',
     },
+    Collapse: {
+      colorTextHeading: '#f4f1e8',
+      colorText: '#f4f1e8',
+      fontSize: 16,
+      padding: 0,
+      paddingSM: 0,
+      fontSizeIcon: 9,
+    },
   },
 };
 

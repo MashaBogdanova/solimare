@@ -1,17 +1,23 @@
 'use client';
 
-import React, { useState } from 'react';
-import { MenuOutlined } from '@ant-design/icons';
+import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import styles from './_header.module.scss';
-import logo from '../../../assets/logo-white.png';
+import { MenuOutlined } from '@ant-design/icons';
 import SocialMedia from './socialMedia/SocialMedia';
 import SideMenu from './sideMenu/SideMenu';
 import Nav from './nav/Nav';
+import logo from '../../../assets/logo-white.png';
+import styles from './_header.module.scss';
 
 function Header() {
   const [isSideMenuVisible, setSideMenuVisible] = useState(false);
   const [isAnimated, setAnimated] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setSideMenuVisible(false);
+  }, [pathname]);
 
   return (
     <header>
