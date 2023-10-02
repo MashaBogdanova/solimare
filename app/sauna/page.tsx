@@ -33,7 +33,7 @@ function Sauna() {
           infrared.
         </p>
       </div>
-      <Image src={photo} className={styles.photo} />
+      <Image src={photo} className={styles.photo} alt="sauna"/>
     </section>
   );
 }

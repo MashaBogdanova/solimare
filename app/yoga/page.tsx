@@ -23,7 +23,7 @@ function Yoga() {
           sposobem na poprawę zdrowia fizycznego i psychicznego.
         </p>
       </div>
-      <Image src={photo} className={styles.photo} />
+      <Image src={photo} className={styles.photo} alt="girl doing yoga" />
     </section>
   );
 }

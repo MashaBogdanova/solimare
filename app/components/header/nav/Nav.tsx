@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Collapse, Popover } from 'antd';
 import navItems from '../../../../configs/navigation.config';
@@ -11,7 +11,12 @@ interface IProps {
 const SCREEN_WIDTH_SMALL = 920;
 
 function Nav({ isSideMenu }: IProps) {
-  const isSmallScreen = window.innerWidth <= SCREEN_WIDTH_SMALL;
+  const [isSmallScreen, setSmallScreen] = useState(false);
+  useEffect(() => {
+    if (window?.innerWidth <= SCREEN_WIDTH_SMALL) {
+      setSmallScreen(true);
+    }
+  }, []);
 
   function createSubItems(children) {
     return children.map((subItem) => (
@@ -49,13 +54,14 @@ function Nav({ isSideMenu }: IProps) {
                 </div>
               }
               trigger="hover"
+              key={item.key}
             >
               <p>{item.label}</p>
             </Popover>
           );
         }
         return (
-          <Link href={item.key} className={styles.navItem}>
+          <Link key={item.key} href={item.key} className={styles.navItem}>
             {item.label}
           </Link>
         );

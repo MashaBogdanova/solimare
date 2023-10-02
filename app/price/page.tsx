@@ -12,6 +12,7 @@ function Price() {
             title={price.label}
             bordered={false}
             className={styles.priceCard}
+            key={price.label}
           >
             <>
               <h4>Session time</h4>

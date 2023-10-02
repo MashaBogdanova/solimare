@@ -7,10 +7,10 @@ import styles from './_socialNedia.module.scss';
 import contacts from '../../../../configs/contacts.config';
 
 interface IProps {
-  isHeader?: boolean;
+  isHeader: boolean;
 }
 
-function SocialMedia({ isHeader }: IProps) {
+function SocialMedia({ isHeader = false }: IProps) {
   return (
     <div
       className={`${styles.iconsWrapper} ${
@@ -29,9 +29,5 @@ function SocialMedia({ isHeader }: IProps) {
     </div>
   );
 }
-
-SocialMedia.defaultProps = {
-  isHeader: false,
-};
 
 export default SocialMedia;

@@ -6,7 +6,7 @@ import styles from './_saltCave.module.scss';
 function SaltCave() {
   return (
     <section className={styles.saltCave}>
-      <Image src={photo} className={styles.photo} />
+      <Image src={photo} className={styles.photo} alt="salt cave"/>
       <div className={styles.text}>
         <h1 className={styles.title}>Grota Solna</h1>
         <p className={styles.paragraph}>

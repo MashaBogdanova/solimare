@@ -12,7 +12,7 @@ import SocialMedia from '../header/socialMedia/SocialMedia';
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Image src={logo} width={180} />
+      <Image src={logo} width={180} alt="logo" />
       <div className={styles.addresses}>
         <div className={styles.address}>
           <EnvironmentOutlined />

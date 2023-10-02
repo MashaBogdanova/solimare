@@ -6,7 +6,7 @@ import styles from './_inhalation.module.scss';
 function Inhalation() {
   return (
     <section className={styles.inhalation}>
-      <Image src={photo} className={styles.photo} />
+      <Image src={photo} className={styles.photo} alt="inhalation"/>
       <div className={styles.text}>
         <h1 className={styles.title}>Inhalacje wodorem molekularnym</h1>
         <p className={styles.paragraph}>
