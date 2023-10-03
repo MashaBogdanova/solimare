@@ -42,6 +42,11 @@ const antdStyles = {
       paddingSM: 0,
       fontSizeIcon: 9,
     },
+    Table: {
+      colorBgContainer: '#834a4c',
+      colorText: '#f4f1e8',
+      colorTextHeading: '#f4f1e8',
+    },
   },
 };
 

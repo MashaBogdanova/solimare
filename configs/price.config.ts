@@ -1,10 +1,14 @@
-interface IPrice {
+interface ITicketOptions {
+  key: string;
+  title: string;
+  bilet: string;
+  karnet: string;
+}
+
+export interface IPrice {
   label: string;
-  sessionTime: string;
-  biletNormalny: string;
-  karnetNormalny: string;
-  biletUlgowy?: string;
-  karnetUlgowy?: string;
+  sessionTime?: string;
+  tickets: ITicketOptions[];
   sessionTimePlus?: string;
   biletPlus?: string;
   karnetPlus?: string;
@@ -16,41 +20,83 @@ interface IPrice {
 
 const prices: IPrice[] = [
   {
-    label: 'Grota Solna',
-    sessionTime: '45 min',
-    biletNormalny: '30 zł',
-    karnetNormalny: '270 zł',
-    biletUlgowy: '22 zł',
-    karnetUlgowy: '198 zł',
+    label: 'Grota Solna (Sesja trwa 45 min)',
+    tickets: [
+      {
+        key: '1',
+        title: 'Bilet normalny',
+        bilet: '30 zł',
+        karnet: '270 zł',
+      },
+      {
+        key: '2',
+        title: 'Bilet ulgowy',
+        bilet: '22 zł',
+        karnet: '198 zł',
+      },
+    ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
   },
   {
-    label: 'Sauna Infrared',
-    sessionTime: '30 min',
-    biletNormalny: '35 zł',
-    karnetNormalny: '315 zł',
-    kartaMultiSport: 'Dodatkowa opłata za 1 sesję - 6 zł',
-    kartaMedicover: 'Dodatkowa opłata za 1 sesję - 5 zł',
+    label: 'Sauna Infrared (Sesja trwa 30 min)',
+    tickets: [
+      {
+        key: '3',
+        title: 'Bilet ulgowy/ normalny',
+        bilet: '35 zł',
+        karnet: '315 zł',
+      },
+      {
+        key: '4',
+        title: 'Z kartą MultiSport',
+        bilet: 'dopłata 6 zł',
+        karnet: '',
+      },
+      {
+        key: '5',
+        title: `Z kartą Medicower (pakiet podstawowy)`,
+        bilet: 'dopłata 5 zł',
+        karnet: '',
+      },
+    ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
   },
   {
     label: 'Inhalacje wodorem molekularnym',
-    sessionTime: '30 min',
-    biletNormalny: '60 zł',
-    karnetNormalny: '500 zł',
-    sessionTimePlus: '50min',
-    biletPlus: '80 zł',
-    karnetPlus: '700 zł',
-    kartaPZU: 'Dodatkowa opłata za 1 sesję - 30 zł',
+    tickets: [
+      {
+        key: '4',
+        title: 'Sesja 30 min',
+        bilet: '60 zł',
+        karnet: '500 zł',
+      },
+      {
+        key: '5',
+        title: 'Sesja 50 min',
+        bilet: '80 zł',
+        karnet: '700 zł',
+      },
+      {
+        key: '5',
+        title: 'Z kartą PZU Sport (30 min)',
+        bilet: 'dopłata 30zł',
+        karnet: '',
+      },
+    ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
   },
   {
     label: 'Joga',
     sessionTime: '60 min',
-    biletNormalny: '60 zł',
-    karnetNormalny: '200 zł',
-    addition: '*Karnet 4 wejścia, jest ważny 1 miesiąc',
+    tickets: [
+      {
+        key: '1',
+        title: 'Jednorazowe wejście na zajęcia',
+        bilet: '60 zł',
+        karnet: 'Karnet 200 zł',
+      },
+    ],
+    addition: '*Karnet  obejmuje 4 wejścia po 50 zł, jest ważny 1 miesiąc',
   },
 ];
-
 export default prices;

@@ -1,4 +1,4 @@
-@import "../../../sass/mixins";
+@import "../../../app/sass/mixins";
 
 .iconsWrapper {
   padding: 1.8em 0 0 2em;
@@ -17,7 +17,7 @@
 
 .headerIconsWrapper {
   position: absolute;
-  top: 55px;
+  top: 30px;
   right: 30px;
   z-index: 1;
 

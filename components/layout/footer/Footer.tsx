@@ -1,18 +1,17 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   EnvironmentOutlined,
   MailOutlined,
   PhoneOutlined,
 } from '@ant-design/icons';
+import SocialMedia from '../socialMedia/SocialMedia';
+import Logo from '../logo/Logo';
 import styles from './_footer.module.scss';
-import logo from '../../../assets/logo-white.png';
-import SocialMedia from '../header/socialMedia/SocialMedia';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Image src={logo} width={180} alt="logo" />
+      <Logo isHeader={false} />
       <div className={styles.addresses}>
         <div className={styles.address}>
           <EnvironmentOutlined />

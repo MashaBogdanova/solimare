@@ -2,8 +2,8 @@ import React from 'react';
 import './globals.scss';
 import type { Metadata } from 'next';
 import { Radley, Arimo } from 'next/font/google';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from '../components/layout/header/Header';
+import Footer from '../components/layout/footer/Footer';
 import antdStyles from './antdStyles';
 import {ConfigProvider} from "antd";
 

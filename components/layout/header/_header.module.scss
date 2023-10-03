@@ -1,12 +1,5 @@
-@import "../../sass/variables";
-@import "../../sass/mixins";
-
-.logo {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  z-index: 1;
-}
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
 
 .menuIcon {
   display: none;

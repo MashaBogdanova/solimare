@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './_page.module.scss';
-import MainCarousel from './components/mainCaousel/MainCarousel';
+import MainCarousel from '../components/mainCarousel/MainCarousel';
 
 export default function Home() {
   return (

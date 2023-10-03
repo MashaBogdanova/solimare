@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import { MenuOutlined } from '@ant-design/icons';
-import SocialMedia from './socialMedia/SocialMedia';
-import SideMenu from './sideMenu/SideMenu';
-import Nav from './nav/Nav';
-import logo from '../../../assets/logo-white.png';
+import SocialMedia from '../socialMedia/SocialMedia';
+import SideMenu from '../sideMenu/SideMenu';
+import Nav from '../nav/Nav';
+import Logo from '../logo/Logo';
 import styles from './_header.module.scss';
 
 function Header() {
@@ -21,7 +20,7 @@ function Header() {
 
   return (
     <header>
-      <Image src={logo} width={220} className={styles.logo} alt="logo" />
+      <Logo isHeader />
       <SocialMedia isHeader />
       <Nav />
       <MenuOutlined

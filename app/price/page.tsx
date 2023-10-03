@@ -1,81 +1,58 @@
 import React from 'react';
-import { Card } from 'antd';
-import prices from '../../configs/price.config';
+import Image from 'next/image';
+import { Table } from 'antd';
+import { ColumnsType } from 'antd/es/table';
+import prices, { IPrice } from '../../configs/price.config';
+import card1 from '../../assets/price/multisport.png';
+import card2 from '../../assets/price/medicover.png';
+import card3 from '../../assets/price/fit-profit.png';
+import card4 from '../../assets/price/pzu.png';
 import styles from './_price.module.scss';
 
 function Price() {
+  const cards = [card1, card2, card3, card4];
+
+  const columns: ColumnsType<IPrice> = [
+    {
+      title: '',
+      dataIndex: 'title',
+      key: 'title',
+    },
+    {
+      title: 'Wejścia pojedyncze',
+      dataIndex: 'bilet',
+      key: 'bilet',
+    },
+    {
+      title: 'Karnet*',
+      dataIndex: 'karnet',
+      key: 'karnet',
+    },
+  ];
+
   return (
     <section className={styles.price}>
       {prices.map((price) => {
         return (
-          <Card
-            title={price.label}
-            bordered={false}
-            className={styles.priceCard}
-            key={price.label}
-          >
-            <>
-              <h4>Session time</h4>
-              <p>{price.sessionTime}</p>
-            </>
-            <>
-              <h4>Bilet normalny</h4>
-              <p>{price.biletNormalny}</p>
-            </>
-            <>
-              <h4>Karnet</h4>
-              <p>{price.karnetNormalny}</p>
-            </>
-            {price.biletUlgowy && (
-              <>
-                <>
-                  <h4>Bilet ulgowy</h4>
-                  <p>{price.biletUlgowy}</p>
-                </>
-                <>
-                  <h4>Karnet ulgowy</h4>
-                  <p>{price.karnetUlgowy}</p>
-                </>
-              </>
-            )}
-            {price.biletPlus && (
-              <>
-                <>
-                  <h4>Session time</h4>
-                  <p>{price.sessionTimePlus}</p>
-                </>
-                <>
-                  <h4>Bilet</h4>
-                  <p>{price.biletPlus}</p>
-                </>
-                <>
-                  <h4>Karnet</h4>
-                  <p>{price.karnetPlus}</p>
-                </>
-              </>
-            )}
-            {price.kartaMultiSport && (
-              <>
-                <h4>Z kartą MultiSport</h4>
-                <p>{price.kartaMultiSport}</p>
-              </>
-            )}
-            {price.kartaMedicover && (
-              <>
-                <h4>Z kartą Medicower (pakiet podstawowy)</h4>
-                <p>{price.kartaMedicover}</p>
-              </>
-            )}
-            {price.kartaPZU && (
-              <>
-                <h4>Z kartą PZU Sport (30 min)</h4>
-                <p>{price.kartaPZU}</p>
-              </>
-            )}
-            <p>{price.addition}</p>
-          </Card>
+          <div className={styles.price__section}>
+            <h2 style={{ marginBottom: 10 }}>{price.label}</h2>
+            <Table
+              columns={columns}
+              dataSource={price.tickets}
+              pagination={false}
+            />
+            <p className={styles.price__addition}>{price.addition}</p>
+          </div>
         );
       })}
+      <div className={styles.price__partners}>
+        <h4>Akceptujemy karty</h4>
+        <div className={styles.price__partnersCards}>
+          {cards.map((card) => (
+            <Image src={card} height={40} alt="card" key={card} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
