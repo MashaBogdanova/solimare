@@ -1,7 +1,6 @@
 @import "../../../app/sass/mixins";
 
 .icons {
-  padding: 1.8em 0 0 2em;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -13,7 +12,7 @@
 
   &_header {
     position: absolute;
-    top: 30px;
+    top: 60px;
     right: 30px;
     z-index: 1;
 

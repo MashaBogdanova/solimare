@@ -20,14 +20,14 @@ function Logo({ isHeader }: IProps) {
         <Image
           src={logoLight}
           width={220}
-          className={isHeader ? styles.logo : ''}
+          className={isHeader ? styles.logo_header : ''}
           alt="logo"
         />
       ) : (
         <Image
           src={logoDark}
           width={220}
-          className={isHeader ? styles.logo : ''}
+          className={isHeader ? styles.logo_header : ''}
           alt="logo"
         />
       )}

@@ -47,6 +47,12 @@ const antdStyles = {
       colorText: '#f4f1e8',
       colorTextHeading: '#f4f1e8',
     },
+    Divider: {
+      colorSplit: '#f4f1e8',
+      margin: 0,
+      marginLG: 5,
+      marginMS: 0,
+    },
   },
 };
 

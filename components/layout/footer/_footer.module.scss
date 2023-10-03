@@ -1,35 +1,56 @@
 @import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
 
 .footer {
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding: 2em 4em;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   background-color: $color-primary;
-}
-
-.addresses {
-  display: flex;
-  gap: .6em;
-  flex-direction: column;
   color: $color-secondary;
-}
 
-.address {
-  display: flex;
-  gap: 1em;
-}
+  &__contacts {
+    display: flex;
+  }
 
-.socialNetworks {
-  display: flex;
-  gap: 1em;
-  flex-direction: column;
-  color: $color-secondary;
-}
+  &__addresses {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+  }
 
-.booksyIcon {
-  width: 50px;
-  height: 20px;
-  object-fit: cover;
+  &__address {
+    display: flex;
+    gap: 1em;
+  }
+
+  &__divider {
+    display: none;
+    @include media-m {
+      display: flex;
+    }
+  }
+
+  &__socialNetworks {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+
+    & > h4 {
+      @include media-m {
+        display: none;
+      }
+    }
+  }
+
+  @include media-l {
+    padding: 2em 1em;
+  }
+
+  @include media-m {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+  }
 }
