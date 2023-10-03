@@ -8,7 +8,7 @@ import card2 from '../../assets/price/medicover.png';
 import card3 from '../../assets/price/fit-profit.png';
 import card4 from '../../assets/price/pzu.png';
 import styles from './_price.module.scss';
-import LayoutWidth from '../../components/layout/layout-width/LayoutWidth';
+import PageLayout from '../../components/layout/layout-width/PageLayout';
 
 function Price() {
   const cards = [card1, card2, card3, card4];
@@ -32,7 +32,7 @@ function Price() {
   ];
 
   return (
-    <LayoutWidth>
+    <PageLayout>
       <section className={styles.price}>
         {prices.map((price) => {
           return (
@@ -56,7 +56,7 @@ function Price() {
           </div>
         </div>
       </section>
-    </LayoutWidth>
+    </PageLayout>
   );
 }
 

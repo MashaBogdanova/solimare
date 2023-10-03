@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
-import styles from './_layout-width.module.scss';
+import styles from './_page-layout.module.scss';
 
 interface IProps {
   children: ReactNode;
 }
 
-function LayoutWidth({ children }: IProps) {
+function PageLayout({ children }: IProps) {
   return <div className={styles.contentWrapper}>{children}</div>;
 }
 
-export default LayoutWidth;
+export default PageLayout;

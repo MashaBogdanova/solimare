@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import LayoutWidth from '../../components/layout/layout-width/LayoutWidth';
+import PageLayout from '../../components/layout/layout-width/PageLayout';
 import photo from '../../assets/yoga.jpg';
 import styles from './_yoga.module.scss';
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 function Yoga() {
   return (
-    <LayoutWidth>
+    <PageLayout>
       <section className={styles.yoga}>
         <div className={styles.yoga__text}>
           <h1 className={styles.yoga__title}>Joga w grocie solnej</h1>
@@ -31,7 +31,7 @@ function Yoga() {
           alt="girl doing yoga"
         />
       </section>
-    </LayoutWidth>
+    </PageLayout>
   );
 }
 

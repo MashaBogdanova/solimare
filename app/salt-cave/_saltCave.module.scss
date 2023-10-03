@@ -4,28 +4,26 @@
   display: flex;
   gap: 4em;
   padding: 2em;
-  font-size: 1.2em;
-  background-color: $color-secondary;
-}
 
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.title {
-  margin-bottom: 1em;
-  color: $color-primary;
-}
+  &__title {
+    margin-bottom: 1em;
+    color: $color-primary;
+  }
 
-.paragraph {
-  margin-bottom: 1em;
-  color: $color-primary;
-}
+  &__paragraph {
+    margin-bottom: 1em;
+    color: $color-primary;
+  }
 
-.photo {
-  width: 25vw;
-  height: 100%;
-  object-fit: cover;
+  &__picture {
+    width: 25vw;
+    height: 100%;
+    object-fit: cover;
+  }
 }
