@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './_side-menu.module.scss';
 import SocialMedia from '../social-media/SocialMedia';
 import Nav from '../nav/Nav';
+import styles from './_side-menu.module.scss';
 
 interface IProps {
   isVisible: boolean;
@@ -10,10 +10,12 @@ interface IProps {
 function SideMenu({ isVisible }: IProps) {
   return (
     <div
-      className={`${styles.sideMenu} ${isVisible && styles.sideMenuVisible}`}
+      className={`${styles.sideMenu} ${isVisible && styles.sideMenu_visible}`}
     >
       {isVisible && <Nav isSideMenu />}
-      <SocialMedia />
+      <div className={styles.sideMenu__socialMedia}>
+        <SocialMedia isHeader={false} />
+      </div>
     </div>
   );
 }
