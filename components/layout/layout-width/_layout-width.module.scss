@@ -1,0 +1,11 @@
+@import "../../../app/sass/mixins";
+
+.contentWrapper {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 180px 0 2em;
+
+  @include media-l {
+    max-width: 90vw;
+  }
+}

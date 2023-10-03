@@ -2,16 +2,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { MenuOutlined } from '@ant-design/icons';
-import SocialMedia from '../socialMedia/SocialMedia';
-import SideMenu from '../sideMenu/SideMenu';
+import SocialMedia from '../social-media/SocialMedia';
+import SideMenu from '../side-menu/SideMenu';
 import Nav from '../nav/Nav';
 import Logo from '../logo/Logo';
-import styles from './_header.module.scss';
+import BurgerIcon from '../burger-icon/BurgerIcon';
 
 function Header() {
   const [isSideMenuVisible, setSideMenuVisible] = useState(false);
-  const [isAnimated, setAnimated] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,15 +21,7 @@ function Header() {
       <Logo isHeader />
       <SocialMedia isHeader />
       <Nav />
-      <MenuOutlined
-        className={`${styles.menuIcon} ${
-          isAnimated && styles.menuIconAnimated
-        }`}
-        onClick={() => {
-          setSideMenuVisible((value) => !value);
-          setAnimated((value) => !value);
-        }}
-      />
+      <BurgerIcon setSideMenuVisible={setSideMenuVisible} />
       <SideMenu isVisible={isSideMenuVisible} />
     </header>
   );

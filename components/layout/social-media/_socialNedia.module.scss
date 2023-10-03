@@ -1,0 +1,42 @@
+@import "../../../app/sass/mixins";
+
+.icons {
+  padding: 1.8em 0 0 2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: $color-primary;
+
+  &_light {
+    color: $color-secondary;
+  }
+
+  &_header {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1;
+
+    @include media-l {
+      display: none;
+    }
+  }
+
+  &__booksy {
+    width: 60px;
+    height: 25px;
+    object-fit: cover;
+    fill: #03b2ae;
+    color: red;
+    & > * {
+      color: red;
+      fill: purple;
+    }
+  }
+
+  & > * {
+    font-size: 15px;
+    cursor: pointer;
+
+  }
+}

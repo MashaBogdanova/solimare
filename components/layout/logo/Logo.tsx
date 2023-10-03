@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../../../assets/logo-white.png';
+import { usePathname } from 'next/navigation';
+import logoLight from '../../../assets/logo/logo-light.png';
+import logoDark from '../../../assets/logo/logo-dark.png';
 import styles from './_logo.module.scss';
 
 interface IProps {
@@ -9,14 +13,24 @@ interface IProps {
 }
 
 function Logo({ isHeader }: IProps) {
+  const pathname = usePathname();
   return (
     <Link href="/">
-      <Image
-        src={logo}
-        width={220}
-        className={isHeader ? styles.logo : ''}
-        alt="logo"
-      />
+      {(isHeader && pathname === '/') || !isHeader ? (
+        <Image
+          src={logoLight}
+          width={220}
+          className={isHeader ? styles.logo : ''}
+          alt="logo"
+        />
+      ) : (
+        <Image
+          src={logoDark}
+          width={220}
+          className={isHeader ? styles.logo : ''}
+          alt="logo"
+        />
+      )}
     </Link>
   );
 }

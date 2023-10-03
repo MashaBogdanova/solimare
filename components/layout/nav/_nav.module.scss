@@ -13,6 +13,7 @@
   font-size: 0.85em;
   align-items: center;
   background-color: $color-dark-transparent;
+  color: $color-secondary;
 
   @include media-l {
     display: none;

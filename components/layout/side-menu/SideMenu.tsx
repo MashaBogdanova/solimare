@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './_sideMenu.module.scss';
-import SocialMedia from '../socialMedia/SocialMedia';
+import SocialMedia from '../social-media/SocialMedia';
 import Nav from '../nav/Nav';
 
 interface IProps {

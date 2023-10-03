@@ -4,7 +4,7 @@ import {
   MailOutlined,
   PhoneOutlined,
 } from '@ant-design/icons';
-import SocialMedia from '../socialMedia/SocialMedia';
+import SocialMedia from '../social-media/SocialMedia';
 import Logo from '../logo/Logo';
 import styles from './_footer.module.scss';
 

@@ -7,14 +7,7 @@ interface ITicketOptions {
 
 export interface IPrice {
   label: string;
-  sessionTime?: string;
   tickets: ITicketOptions[];
-  sessionTimePlus?: string;
-  biletPlus?: string;
-  karnetPlus?: string;
-  kartaMultiSport?: string;
-  kartaMedicover?: string;
-  kartaPZU?: string;
   addition: string;
 }
 
@@ -50,13 +43,13 @@ const prices: IPrice[] = [
         key: '4',
         title: 'Z kartą MultiSport',
         bilet: 'dopłata 6 zł',
-        karnet: '',
+        karnet: '-',
       },
       {
         key: '5',
         title: `Z kartą Medicower (pakiet podstawowy)`,
         bilet: 'dopłata 5 zł',
-        karnet: '',
+        karnet: '-',
       },
     ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
@@ -80,20 +73,19 @@ const prices: IPrice[] = [
         key: '5',
         title: 'Z kartą PZU Sport (30 min)',
         bilet: 'dopłata 30zł',
-        karnet: '',
+        karnet: '-',
       },
     ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
   },
   {
     label: 'Joga',
-    sessionTime: '60 min',
     tickets: [
       {
         key: '1',
         title: 'Jednorazowe wejście na zajęcia',
         bilet: '60 zł',
-        karnet: 'Karnet 200 zł',
+        karnet: '200 zł',
       },
     ],
     addition: '*Karnet  obejmuje 4 wejścia po 50 zł, jest ważny 1 miesiąc',
