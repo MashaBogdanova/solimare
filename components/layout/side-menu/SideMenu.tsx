@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './_sideMenu.module.scss';
+import styles from './_side-menu.module.scss';
 import SocialMedia from '../social-media/SocialMedia';
 import Nav from '../nav/Nav';
 

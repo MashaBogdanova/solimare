@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FacebookOutlined, InstagramOutlined } from '@ant-design/icons';
 import booksyIcon from '../../../assets/booksy-icon.svg';
-import styles from './_socialNedia.module.scss';
+import styles from './_social-media.module.scss';
 import contacts from '../../../configs/contacts.config';
 
 interface IProps {

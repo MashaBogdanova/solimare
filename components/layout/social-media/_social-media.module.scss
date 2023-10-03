@@ -26,17 +26,10 @@
     width: 60px;
     height: 25px;
     object-fit: cover;
-    fill: #03b2ae;
-    color: red;
-    & > * {
-      color: red;
-      fill: purple;
-    }
   }
 
   & > * {
     font-size: 15px;
     cursor: pointer;
-
   }
 }
