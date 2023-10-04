@@ -13,21 +13,19 @@ interface IProps {
   isHeader: boolean;
 }
 
-function SocialMedia({ isHeader = false }: IProps) {
+function SocialMedia({ isHeader }: IProps) {
   const pathname = usePathname();
   return (
     <div
       className={`${styles.icons} ${
-        !isHeader || (isHeader && pathname === '/') ? styles.icons_light : ''
+        !isHeader || pathname !== '/contacts' ||
+        (isHeader && pathname === '/')
+          ? styles.icons_light
+          : ''
       } ${isHeader && styles.icons_header}`}
     >
       <Link href={contacts.booksy}>
-        <Image
-          src={booksyIcon}
-          className={styles.icons__booksy}
-          alt="booksy"
-          style={{ fill: 'red' }}
-        />
+        <Image src={booksyIcon} className={styles.icons__booksy} alt="booksy" />
       </Link>
       <Link href={contacts.instagram}>
         <InstagramOutlined />

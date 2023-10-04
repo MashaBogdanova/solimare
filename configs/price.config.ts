@@ -35,7 +35,7 @@ const prices: IPrice[] = [
     tickets: [
       {
         key: '3',
-        title: 'Bilet ulgowy/ normalny',
+        title: 'Bilet ulgowy / normalny',
         bilet: '35 zł',
         karnet: '315 zł',
       },

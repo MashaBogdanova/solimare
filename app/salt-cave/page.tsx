@@ -8,7 +8,11 @@ function SaltCave() {
   return (
     <PageLayout>
       <section className={styles.saltCave}>
-        <Image src={photo} className={styles.saltCave__picture} alt="salt cave" />
+        <Image
+          src={photo}
+          className={styles.saltCave__picture}
+          alt="salt cave"
+        />
         <div className={styles.saltCave__text}>
           <h1 className={styles.saltCave__title}>Grota Solna</h1>
           <p className={styles.saltCave__paragraph}>

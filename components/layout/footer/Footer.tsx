@@ -4,10 +4,11 @@ import {
   MailOutlined,
   PhoneOutlined,
 } from '@ant-design/icons';
+import { Divider } from 'antd';
 import SocialMedia from '../social-media/SocialMedia';
 import Logo from '../logo/Logo';
+import addressInfo from '../../../configs/address.config';
 import styles from './_footer.module.scss';
-import { Divider } from 'antd';
 
 function Footer() {
   return (
@@ -16,15 +17,15 @@ function Footer() {
       <div className={styles.footer__addresses}>
         <div className={styles.footer__address}>
           <EnvironmentOutlined />
-          <span>ul. Mandarynki 12, 02-796 Warsaw</span>
+          <span>{addressInfo.address}</span>
         </div>
         <div className={styles.footer__address}>
           <MailOutlined />
-          <span>sollsolimare@gmail.com</span>
+          <a href={`mailto:${addressInfo.email}`}>{addressInfo.email}</a>
         </div>
         <div className={styles.footer__address}>
           <PhoneOutlined />
-          <span>506-815-888</span>
+          <a href={`tel://${addressInfo.telephone}`}>{addressInfo.telephone}</a>
         </div>
         <Divider className={styles.footer__divider} />
       </div>

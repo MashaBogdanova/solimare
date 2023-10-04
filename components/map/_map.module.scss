@@ -1,0 +1,18 @@
+@import "../../app/sass/variables";
+@import "../../app/sass/mixins";
+
+.map {
+  width: 40vw;
+  height: 40vw;
+  color: $color-dark-m;
+
+  & a {
+    color: $color-primary;
+  }
+
+  @include media-m {
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+  }
+}

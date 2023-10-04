@@ -1,0 +1,23 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3em;
+
+  & p {
+    color: $color-dark-m;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+  }
+
+  @include media-m {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
