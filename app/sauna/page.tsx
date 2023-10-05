@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import PageLayout from '../../components/layout/layout-width/PageLayout';
-import photo from '../../assets/sauna.jpg';
+import photo from '../../assets/pages/sauna.jpg';
 import styles from './_sauna.module.scss';
 import pagesInfo from '../../configs/pages.config';
 
