@@ -28,7 +28,6 @@
   },
   "baseUrl": ".",
   "include": [
-    "src",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

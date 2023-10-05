@@ -18,19 +18,18 @@ function SocialMedia({ isHeader }: IProps) {
   return (
     <div
       className={`${styles.icons} ${
-        !isHeader || pathname !== '/contacts' ||
-        (isHeader && pathname === '/')
+        !isHeader || pathname !== '/contacts' || (isHeader && pathname === '/')
           ? styles.icons_light
           : ''
       } ${isHeader && styles.icons_header}`}
     >
-      <Link href={contacts.booksy}>
+      <Link href={contacts.booksyLink}>
         <Image src={booksyIcon} className={styles.icons__booksy} alt="booksy" />
       </Link>
-      <Link href={contacts.instagram}>
+      <Link href={contacts.instagramLink}>
         <InstagramOutlined />
       </Link>
-      <Link href={contacts.facebook}>
+      <Link href={contacts.facebookLink}>
         <FacebookOutlined />
       </Link>
     </div>

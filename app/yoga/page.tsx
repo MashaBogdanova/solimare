@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import PageLayout from '../../components/layout/layout-width/PageLayout';
 import photo from '../../assets/yoga.jpg';
 import styles from './_yoga.module.scss';
+import pagesInfo from '../../configs/pages.config';
 
 export const metadata: Metadata = {
   title: 'Grota Solna',
@@ -15,15 +16,10 @@ function Yoga() {
     <PageLayout>
       <section className={styles.yoga}>
         <div className={styles.yoga__text}>
-          <h1 className={styles.yoga__title}>Joga w grocie solnej</h1>
-          <p>
-            Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze
-            zdrowotnymi właściwościami soli. Grota solna to miejsce, w którym
-            można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.
-            Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres
-            i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest
-            idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.
-          </p>
+          <h1 className={styles.yoga__title}>{pagesInfo.yoga.title}</h1>
+          {pagesInfo.yoga.description.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
         <Image
           src={photo}

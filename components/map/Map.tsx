@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { GoogleMap, InfoWindowF, useJsApiLoader } from '@react-google-maps/api';
-import addressInfo from '../../configs/address.config';
+import contacts from '../../configs/contacts.config';
 import styles from './_map.module.scss';
 
 function Map() {
@@ -15,17 +15,17 @@ function Map() {
     return (
       <GoogleMap
         mapContainerClassName={styles.map}
-        center={{ lat: addressInfo.latitude, lng: addressInfo.longitude }}
+        center={{ lat: contacts.latitude, lng: contacts.longitude }}
         zoom={15}
       >
         <InfoWindowF
-          position={{ lat: addressInfo.latitude, lng: addressInfo.longitude }}
+          position={{ lat: contacts.latitude, lng: contacts.longitude }}
         >
           <div>
-            <h3>{addressInfo.name}</h3>
-            <p style={{ fontWeight: 'bold' }}>{addressInfo.description}</p>
-            <p>{addressInfo.address}</p>
-            <a href={addressInfo.googleMapLink}>View on Google Maps</a>
+            <h3>{contacts.googleMapName}</h3>
+            <p style={{ fontWeight: 'bold' }}>{contacts.googleMapDescription}</p>
+            <p>{contacts.address}</p>
+            <a href={contacts.googleMapLink}>View on Google Maps</a>
           </div>
         </InfoWindowF>
       </GoogleMap>
