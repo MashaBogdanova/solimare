@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Table } from 'antd';
@@ -8,7 +10,7 @@ import card2 from '../../assets/price/medicover.png';
 import card3 from '../../assets/price/fit-profit.png';
 import card4 from '../../assets/price/pzu.png';
 import styles from './_price.module.scss';
-import PageLayout from '../../components/layout/layout-width/PageLayout';
+import PageLayout from '../../components/layout/page-layout/PageLayout';
 
 function Price() {
   const cards = [card1, card2, card3, card4];
@@ -33,10 +35,10 @@ function Price() {
 
   return (
     <PageLayout>
-      <section className={styles.price}>
+      <div className={styles.price}>
         {prices.map((price) => {
           return (
-            <div className={styles.price__section}>
+            <div className={styles.price__block} key={price.key}>
               <h2 style={{ marginBottom: 10 }}>{price.label}</h2>
               <Table
                 columns={columns}
@@ -47,15 +49,16 @@ function Price() {
             </div>
           );
         })}
+
         <div className={styles.price__partners}>
           <h4>Akceptujemy karty</h4>
           <div className={styles.price__partnersCards}>
             {cards.map((card) => (
-              <Image src={card} height={40} alt="card" key={card} />
+              <Image src={card} height={40} alt="card" key={card.src} />
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </PageLayout>
   );
 }

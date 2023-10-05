@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import SocialMedia from '../social-media/SocialMedia';
-import SideMenu from '../side-menu/SideMenu';
-import Nav from '../nav/Nav';
-import Logo from '../logo/Logo';
-import BurgerIcon from '../burger-icon/BurgerIcon';
+import SocialMedia from '../../social-media/SocialMedia';
+import SideMenu from '../../side-menu/SideMenu';
+import Nav from '../../nav/Nav';
+import Logo from '../../logo/Logo';
+import BurgerIcon from '../../burger-icon/BurgerIcon';
 
 function Header() {
   const [isSideMenuVisible, setSideMenuVisible] = useState(false);
@@ -19,7 +19,7 @@ function Header() {
   return (
     <header>
       <Logo isHeader />
-      <SocialMedia isHeader />
+      <SocialMedia isHeader isLight={false} />
       <Nav />
       <BurgerIcon setSideMenuVisible={setSideMenuVisible} />
       <SideMenu isVisible={isSideMenuVisible} />

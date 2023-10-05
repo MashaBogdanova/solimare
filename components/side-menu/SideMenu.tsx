@@ -14,7 +14,7 @@ function SideMenu({ isVisible }: IProps) {
     >
       {isVisible && <Nav isSideMenu />}
       <div className={styles.sideMenu__socialMedia}>
-        <SocialMedia isHeader={false} />
+        <SocialMedia isHeader={false} isLight />
       </div>
     </div>
   );

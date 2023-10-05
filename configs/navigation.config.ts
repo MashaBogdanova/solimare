@@ -11,7 +11,7 @@ const navItems: IItem[] = [
     children: [
       {
         label: 'O Grocie',
-        key: 'salt-cave',
+        key: 'salt-cave-about',
       },
       {
         label: 'Seansy dla dorosłych',
@@ -37,11 +37,11 @@ const navItems: IItem[] = [
     children: [
       {
         label: 'O Saunie',
-        key: 'sauna',
+        key: 'sauna-about',
       },
       {
         label: 'Regulamin',
-        key: 'sauna-rules',
+        key: 'sauna-about-rules',
       },
     ],
   },

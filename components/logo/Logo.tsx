@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import logoLight from '../../../assets/logo/logo-light.png';
-import logoDark from '../../../assets/logo/logo-dark.png';
+import logoLight from '../../assets/logo/logo-light.png';
+import logoDark from '../../assets/logo/logo-dark.png';
 import styles from './_logo.module.scss';
 
 interface IProps {

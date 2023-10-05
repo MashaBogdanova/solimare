@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Collapse, Popover } from 'antd';
-import navItems from '../../../configs/navigation.config';
+import navItems from '../../configs/navigation.config';
 import styles from './_nav.module.scss';
 
 interface IProps {

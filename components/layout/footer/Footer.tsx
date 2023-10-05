@@ -5,8 +5,8 @@ import {
   PhoneOutlined,
 } from '@ant-design/icons';
 import { Divider } from 'antd';
-import SocialMedia from '../social-media/SocialMedia';
-import Logo from '../logo/Logo';
+import SocialMedia from '../../social-media/SocialMedia';
+import Logo from '../../logo/Logo';
 import contacts from '../../../configs/contacts.config';
 import styles from './_footer.module.scss';
 
@@ -31,7 +31,7 @@ function Footer() {
       </div>
       <div className={styles.footer__socialNetworks}>
         <h4>Follow us</h4>
-        <SocialMedia isHeader={false} />
+        <SocialMedia isHeader={false} isLight />
       </div>
     </footer>
   );

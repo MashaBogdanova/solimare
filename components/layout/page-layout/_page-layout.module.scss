@@ -1,0 +1,27 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.contentWrapper {
+  display: flex;
+  gap: 3em;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 210px 0 3em;
+
+  & h1 {
+    margin-bottom: .2em;
+    font-size: 2em;
+  }
+
+  & p {
+    padding-top: 1em;
+  }
+
+  @include media-l {
+    flex-direction: column;
+    max-width: 90vw;
+    padding: 150px 0 3em;
+  }
+}

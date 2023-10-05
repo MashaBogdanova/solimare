@@ -23,7 +23,9 @@ function Map() {
         >
           <div>
             <h3>{contacts.googleMapName}</h3>
-            <p style={{ fontWeight: 'bold' }}>{contacts.googleMapDescription}</p>
+            <p style={{ fontWeight: 'bold', padding: 0 }}>
+              {contacts.googleMapDescription}
+            </p>
             <p>{contacts.address}</p>
             <a href={contacts.googleMapLink}>View on Google Maps</a>
           </div>

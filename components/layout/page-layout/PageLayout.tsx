@@ -6,7 +6,7 @@ interface IProps {
 }
 
 function PageLayout({ children }: IProps) {
-  return <div className={styles.contentWrapper}>{children}</div>;
+  return <section className={styles.contentWrapper}>{children}</section>;
 }
 
 export default PageLayout;
