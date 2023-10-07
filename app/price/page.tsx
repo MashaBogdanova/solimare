@@ -22,7 +22,7 @@ function Price() {
       key: 'title',
     },
     {
-      title: 'Wejścia pojedyncze',
+      title: 'Wejście jednorazowe',
       dataIndex: 'bilet',
       key: 'bilet',
     },

@@ -7,7 +7,7 @@ import styles from './_yoga.module.scss';
 import pagesInfo from '../../configs/pages.config';
 
 export const metadata: Metadata = {
-  title: 'Grota Solna',
+  title: 'Yoga',
   description: 'Yoga w Grocie Solney Warszawa',
 };
 

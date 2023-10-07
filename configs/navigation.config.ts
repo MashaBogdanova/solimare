@@ -27,7 +27,7 @@ const navItems: IItem[] = [
       },
       {
         label: 'Regulamin',
-        key: 'cave-rules',
+        key: 'salt-cave-rules',
       },
     ],
   },
@@ -37,11 +37,11 @@ const navItems: IItem[] = [
     children: [
       {
         label: 'O Saunie',
-        key: 'sauna-about',
+        key: 'sauna-salt-cave-about',
       },
       {
         label: 'Regulamin',
-        key: 'sauna-about-rules',
+        key: 'sauna-salt-cave-about-rules',
       },
     ],
   },

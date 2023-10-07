@@ -38,7 +38,7 @@ const pagesInfo: IPagesInfo = {
     description: [
       'Sauna infrared to innowacyjne rozwiązanie, które zyskuje na\n' +
         'popularności ze względu na swoje korzystne działanie na zdrowie. W\n' +
-        'przeciwieństwie do tradycyjnych saun, sauna-about infrared działa na\n' +
+        'przeciwieństwie do tradycyjnych saun, sauna-salt-cave-about infrared działa na\n' +
         'zasadzie generowania ciepła przez promieniowanie podczerwone, a nie\n' +
         'przez ogrzewanie powietrza. Dzięki temu temperatura w saunie jest\n' +
         'niższa, ale odczuwamy takie samo ciepło.',
@@ -49,7 +49,7 @@ const pagesInfo: IPagesInfo = {
         'dla osób zmagających się z bólami mięśni i stawów, a także dla osób,\n' +
         'które chcą poprawić kondycję swojej skóry.',
 
-      'Należy jednak pamiętać, że sauna-about infrared nie jest odpowiednia dla\n' +
+      'Należy jednak pamiętać, że sauna-salt-cave-about infrared nie jest odpowiednia dla\n' +
         'każdego. Osoby z problemami zdrowotnymi, takimi jak choroby serca,\n' +
         'nadciśnienie czy cukrzyca, powinny skonsultować się z lekarzem przed\n' +
         'skorzystaniem z sauny infrared. We wszystkich przypadkach, przed\n' +
