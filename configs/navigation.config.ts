@@ -23,7 +23,7 @@ const navItems: IItem[] = [
       },
       {
         label: 'Grota na wyłączność',
-        key: 'cave-rent',
+        key: 'salt-cave-rent',
       },
       {
         label: 'Regulamin',
@@ -37,11 +37,11 @@ const navItems: IItem[] = [
     children: [
       {
         label: 'O Saunie',
-        key: 'sauna-salt-cave-about',
+        key: 'sauna-about',
       },
       {
         label: 'Regulamin',
-        key: 'sauna-salt-cave-about-rules',
+        key: 'sauna-rules',
       },
     ],
   },

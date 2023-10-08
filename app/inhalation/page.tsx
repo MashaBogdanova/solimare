@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import photo from '../../assets/pages/inhalation.jpg';
+import photo from '../../public/pages/inhalation.jpg';
 import styles from './_inhalation.module.scss';
 import PageLayout from '../../components/layout/page-layout/PageLayout';
 import pagesInfo from '../../configs/pages.config';

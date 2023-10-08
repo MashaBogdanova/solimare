@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import prices, { IPrice } from '../../configs/price.config';
-import card1 from '../../assets/price/multisport.png';
-import card2 from '../../assets/price/medicover.png';
-import card3 from '../../assets/price/fit-profit.png';
-import card4 from '../../assets/price/pzu.png';
+import card1 from '../../public/price/multisport.png';
+import card2 from '../../public/price/medicover.png';
+import card3 from '../../public/price/fit-profit.png';
+import card4 from '../../public/price/pzu.png';
 import styles from './_price.module.scss';
 import PageLayout from '../../components/layout/page-layout/PageLayout';
 

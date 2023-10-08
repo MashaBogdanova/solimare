@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
 import PageLayout from '../../components/layout/page-layout/PageLayout';
-import photo from '../../assets/pages/yoga.jpg';
+import photo from '../../public/pages/yoga.jpg';
 import styles from './_yoga.module.scss';
 import pagesInfo from '../../configs/pages.config';
 
