@@ -1,10 +1,25 @@
-// Add page descriptions in paragraphs separated by commas
-// Добавляйте описание на страницах параграфами, разделенными запятой
-// Dodaj opisy na stronach w akapitach oddzielonych przecinkami
+import sauna from '../public/pages/sauna.jpg';
+import yoga from '../public/pages/yoga.jpg';
 
-interface IPage {
+interface IList {
+  subtitle?: string;
+  text: string;
+}
+
+interface IDescription {
+  subtitle?: string;
+  text: string[] | IList[];
+  addition?: string;
+  picture?: {
+    file: string;
+    alt: string;
+  };
+  background?: 'dark';
+}
+
+export interface IPage {
   title: string;
-  description: string[];
+  description: IDescription[];
 }
 
 interface IPagesInfo {
@@ -12,73 +27,346 @@ interface IPagesInfo {
 }
 
 const pagesInfo: IPagesInfo = {
-  saltCave: {
-    title: 'Grota Solna',
-    description: [
-      'Grota solna to pomieszczenie wypełnione solą, które ma na celu\n' +
-        'poprawienie zdrowia i samopoczucia ludzi. Oczyszcza ona drogi\n' +
-        'oddechowe, a także działa kojąco na skórę. Groty solne są\n' +
-        'szczególnie polecane osobom cierpiącym na choroby układu\n' +
-        'oddechowego, takie jak astma czy kaszel. Sól zawarta w grocie jest\n' +
-        'bogata w mikroelementy, które korzystnie wpływają na organizm. Grota\n' +
-        'solna może być stosowana w celach terapeutycznych, a także jako\n' +
-        'sposób na relaks i odprężenie.',
-
-      'Jeśli chcesz zadbać o swoje zdrowie w sposób naturalny i bezpieczny\n' +
-        'dla organizmu, grota solna to doskonały wybór. W takim pomieszczeniu\n' +
-        'możesz nie tylko poprawić swoje zdrowie, ale także wypocząć i\n' +
-        'zrelaksować się po ciężkim dniu. Mgiełka solankowa którą można\n' +
-        'zobaczyć poniżej na filmiku jest dodatkowo rozpylana, ona zwiększa\n' +
-        'koncentrację mikrocząstek i jest bardziej skoncentrowaną formą\n' +
-        'terapii solnej.',
-    ],
-  },
+  // saltCave: {
+  //   title: 'Grota Solna',
+  //   description: [
+  //     {
+  //       subtitle: '',
+  //       text:
+  //         'Grota solna to pomieszczenie wypełnione solą, które ma na celu\n' +
+  //         'poprawienie zdrowia i samopoczucia ludzi. Oczyszcza ona drogi\n' +
+  //         'oddechowe, a także działa kojąco na skórę. Groty solne są\n' +
+  //         'szczególnie polecane osobom cierpiącym na choroby układu\n' +
+  //         'oddechowego, takie jak astma czy kaszel. Sól zawarta w grocie jest\n' +
+  //         'bogata w mikroelementy, które korzystnie wpływają na organizm. Grota\n' +
+  //         'solna może być stosowana w celach terapeutycznych, a także jako\n' +
+  //         'sposób na relaks i odprężenie.',
+  //     },
+  //     {
+  //       subtitle: '',
+  //       text:
+  //         'Jeśli chcesz zadbać o swoje zdrowie w sposób naturalny i bezpieczny\n' +
+  //         'dla organizmu, grota solna to doskonały wybór. W takim pomieszczeniu\n' +
+  //         'możesz nie tylko poprawić swoje zdrowie, ale także wypocząć i\n' +
+  //         'zrelaksować się po ciężkim dniu. Mgiełka solankowa którą można\n' +
+  //         'zobaczyć poniżej na filmiku jest dodatkowo rozpylana, ona zwiększa\n' +
+  //         'koncentrację mikrocząstek i jest bardziej skoncentrowaną formą\n' +
+  //         'terapii solnej.',
+  //     },
+  //   ],
+  // },
   saunaInfrared: {
     title: 'Sauna infrared',
     description: [
-      'Sauna infrared to innowacyjne rozwiązanie, które zyskuje na\n' +
-        'popularności ze względu na swoje korzystne działanie na zdrowie. W\n' +
-        'przeciwieństwie do tradycyjnych saun, sauna-salt-cave-about infrared działa na\n' +
-        'zasadzie generowania ciepła przez promieniowanie podczerwone, a nie\n' +
-        'przez ogrzewanie powietrza. Dzięki temu temperatura w saunie jest\n' +
-        'niższa, ale odczuwamy takie samo ciepło.',
+      {
+        subtitle:
+          'Zapraszamy do skorzystania z naszej usługi sauny infrared, gdzie relaks i poprawa zdrowia idą w parze!',
+        text: [
+          'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie.' +
+            'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
+            'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
+            'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem.',
+          'Rezerwacje są obowiązkowe, abyśmy mogli zapewnić Ci najlepsze doświadczenie.',
+        ],
+        picture: {
+          file: sauna,
+          alt: 'Sauna',
+        },
+        background: 'dark',
+      },
+      {
+        subtitle:
+          'Sauna infrared, zwana także sauną na podczerwień, ' +
+          'działa na zasadzie wykorzystania promieniowania podczerwonego do podgrzewania ciała.',
+        text: [
+          {
+            subtitle: 'Promieniowanie podczerwone',
+            text:
+              'W saunie infrared stosuje się specjalne promienniki emitujące promieniowanie podczerwone.' +
+              'To promieniowanie jest niewidoczne dla ludzkiego oka, ale można je odczuć jako ciepło.',
+          },
+          {
+            subtitle: 'Przenikanie pod skórę',
+            text:
+              'Promieniowanie podczerwone penetruje skórę i dociera głębiej do tkanek i narządów. ' +
+              'Jest to główna różnica między tradycyjnymi saunami a saunami infrared, ponieważ te pierwsze' +
+              'podgrzewają powietrze wokół ciała.',
+          },
+          {
+            subtitle: 'Podgrzewanie ciała',
+            text:
+              'Promieniowanie podczerwone przekształca się w ciepło wewnątrz ciała, bez konieczności podgrzewania' +
+              'powietrza. To sprawia, że organizm zaczyna się pocąć, aby utrzymać odpowiednią temperaturę,' +
+              'co przyczynia się do eliminacji toksyn.',
+          },
+          {
+            subtitle: 'Komfort cieplny',
+            text:
+              'Sauny infrared są często odbierane jako mniej duszne i gorące w porównaniu do tradycyjnych saun. ' +
+              'Dzięki temu wielu osobom jest łatwiej znosić wyższą temperaturę w takim środowisku.',
+          },
+        ],
+        addition:
+          'Sauna infrared przynosi korzyści osobom cierpiącym na boleriozę, choć ważne jest, aby skonsultować się z lekarzem.',
+      },
+      {
+        subtitle: 'Korzyści',
+        text: [
+          {
+            subtitle: 'Relaks i redukcja stresu',
+            text:
+              'W naszej saunie infrared możesz się zrelaksować i zapomnieć o codziennym stresie.' +
+              'Ciepło promieni podczerwonych działa uspokajająco na organizm, pomagając złagodzić napięcie i stres.',
+          },
+          {
+            subtitle: 'Regeneracja mięśni i stawów',
+            text:
+              'Promieniowanie podczerwone działa korzystnie na bóle stawów, mięśni, ' +
+              'a także może przynieść ulgę w przypadku dolegliwości reumatycznych czy rwę kulszową.',
+          },
+          {
+            subtitle: 'Detoksykacja',
+            text:
+              'Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się, ' +
+              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia.',
+          },
+          {
+            text:
+              'Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się,' +
+              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia.',
+          },
+          {
+            text: 'Wzmocnienie układu immunologicznego: Regularne korzystanie z sauny infrared  pomaga w wzmocnieniu układu immunologicznego.',
+          },
+          {
+            subtitle: 'Poprawa krążenia krwi',
+            text:
+              'Dzięki stymulacji krążenia krwi w saunie infrared, możesz odczuć ulgę w' +
+              'bólach mięśniowych i stawowych oraz przyspieszyć proces regeneracji.',
+          },
+          {
+            subtitle: 'Wspomaganie utraty wagi',
+            text:
+              'Regularne korzystanie z sauny infrared  przyspiesza spalanie kalorii, pomagając w' +
+              'procesie utraty wagi i kształtowaniu sylwetki. W ciągu 30 min spalamy 600 - 900 kcal.',
+          },
+          {
+            subtitle: 'Poprawa wyglądu skóry',
+            text:
+              'Wysoka temperatura w saunie pomaga oczyścić pory skóry i przywrócić jej zdrowy i' +
+              'promienny wygląd. Zmniejsza problemy dermatologiczne oraz cellulit i rozstępy.',
+          },
+          {
+            subtitle: 'Lepszy sen',
+            text: 'Sauna może pomóc w poprawie jakości snu, co jest istotne dla procesu leczenia i zdrowia ogólnego.',
+          },
+        ],
+        background: 'dark',
+        addition:
+          'Zanurz się w doświadczeniu pełnym relaksu, aromaterapii, muzyki i koloroterapii,' +
+          'czerpiąc korzyści zarówno dla ciała, jak i umysłu.',
+      },
+      {
+        subtitle: 'Dodatkowe atrakcje',
+        text: [
+          {
+            subtitle: 'Wybór naturalnego olejku',
+            text:
+              'Przed rozpoczęciem sesji możesz wybrać olejek zapachowy, który będzie Cię otaczał ' +
+              'podczas korzystania z sauny, tworząc przyjemne doznania aromaterapeutyczne.',
+          },
+          {
+            subtitle: 'Inhalacje',
+            text:
+              'W saunie możesz cieszyć się inhalacjami, które korzystnie wpłyną na Twoje drogi oddechowe i ' +
+              'ogólne samopoczucie.',
+          },
+          {
+            subtitle: 'Relaksująca muzyka',
+            text: 'W trakcie sesji gra relaksująca muzyka, dzięki której atmosfera staje się jeszcze bardziej kojąca.',
+          },
+          {
+            subtitle: 'Koloroterapia',
+            text: 'Kolorowe światło wprowadza element koloroterapii, co może dodatkowo zwiększyć efekty relaksacyjne.',
+          },
+        ],
+      },
+      {
+        subtitle:
+          'Jednak istnieją pewne przeciwwskazania do korzystania z sauny infrared:',
+        text: [
+          {
+            subtitle: 'Ciąża',
+            text: 'Nie zaleca się korzystania z sauny w trakcie ciąży.',
+          },
+          {
+            subtitle: 'Choroby serca',
+            text: 'Jeśli masz problemy z sercem, skonsultuj się z lekarzem przed skorzystaniem z naszej sauny.',
+          },
+          {
+            subtitle: 'Wysoka gorączka',
+            text: 'Jeśli masz gorączkę, lepiej poczekaj, aż stan zdrowia się poprawi.',
+          },
+          {
+            subtitle: 'Skłonność do krwawień',
+            text: 'Osoby z tendencją do nadmiernego krwawienia powinny unikać sauny.',
+          },
 
-      'Korzystanie z sauny infrared przynosi wiele korzyści dla naszego\n' +
-        'organizmu. Sauny te poprawiają krążenie, redukują ból, zmniejszają\n' +
-        'stres i poprawiają wygląd skóry. Dzięki temu są szczególnie polecane\n' +
-        'dla osób zmagających się z bólami mięśni i stawów, a także dla osób,\n' +
-        'które chcą poprawić kondycję swojej skóry.',
-
-      'Należy jednak pamiętać, że sauna-salt-cave-about infrared nie jest odpowiednia dla\n' +
-        'każdego. Osoby z problemami zdrowotnymi, takimi jak choroby serca,\n' +
-        'nadciśnienie czy cukrzyca, powinny skonsultować się z lekarzem przed\n' +
-        'skorzystaniem z sauny infrared. We wszystkich przypadkach, przed\n' +
-        'rozpoczęciem korzystania z sauny, należy dokładnie zapoznać się z\n' +
-        'zasadami bezpieczeństwa i przestrzegać ich podczas korzystania z\n' +
-        'sauny infrared.',
+          {
+            subtitle: 'Nowotwory',
+            text: 'Osoby z chorobami nowotworowymi powinny unikać sauny',
+          },
+        ],
+        background: 'dark',
+      },
+      {
+        subtitle: 'Przygotowanie',
+        text: [
+          'Przed przyjściem do naszej sauny, upewnij się, że masz ze sobą dwa ręczniki na osobę oraz klapki.' +
+            'To nie tylko zwiększy Twój komfort, ale także pomaga w utrzymaniu higieny.',
+        ],
+        addition:
+          'Nie zapomnij o rezerwacji, abyś móc doświadczyć tego wyjątkowego doświadczenia w pełnej prywatności!',
+      },
     ],
   },
   inhalation: {
     title: 'Inhalacje wodorem molekularnym',
     description: [
-      'Inhalacje wodorem molekularnym mają wiele korzyści dla zdrowia.\n' +
-        'Wodór molekularny działa jako silny przeciwutleniacz, redukując\n' +
-        'stres oksydacyjny w organizmie. Inhalacje wodorem mogą pomóc w\n' +
-        'łagodzeniu bólu, redukowaniu stanów zapalnych, poprawie\n' +
-        'funkcjonowania układu krążenia oraz zwiększeniu poziomu energii.\n' +
-        'Wodór molekularny jest także bezpieczny w użyciu i nie powoduje\n' +
-        'skutków ubocznych.',
+      {
+        subtitle:
+          'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym. ' +
+          'Co to jest wodór?',
+        text: [
+          'Wodór jest wszechobecny w przyrodzie i występuje głównie w formie cząsteczek dwuatomowych (H2). ' +
+            'Jest również głównym składnikiem wody (H2O), gdzie łączy się z tlenem. Woda jest niezbędna dla życia ' +
+            'na Ziemi, co czyni wodór jednym z kluczowych elementów naszej planety.',
+          'Wodór molekularny (H2) jest badany ze względu na swoje potencjalne korzyści zdrowotne, ' +
+            'takie jak działanie przeciwutleniające i przeciwzapalne.',
+          'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
+            'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
+            'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
+            'problemami z pamięcią oraz alergiami.',
+        ],
+      },
+      {
+        subtitle: 'Czym są inhalacje wodorem molekularnym?',
+        text: [
+          'To rewolucyjna metoda, która wykorzystuje właściwości wodoru molekularnego do walki z wieloma ' +
+            'schorzeniami i do wspierania ogólnego samopoczucia. Wodór molekularny jest najmniejszym molekułowym elementem ' +
+            'w przyrodzie, co oznacza, że łatwo przenika do komórek organizmu, neutralizując wolne rodniki, które mogą ' +
+            'prowadzić do uszkodzenia tkanek i przyspieszenia procesów starzenia się.',
+        ],
+        background: 'dark',
+      },
+      {
+        subtitle:
+          'Nasza usługa inhalacji wodorem molekularnym oferuje wiele korzyści',
+        text: [
+          {
+            subtitle: 'Redukcja stanów zapalnych',
+            text:
+              'Wodór molekularny jest znany ze swojego potencjału do redukcji stanów zapalnych w organizmie. ' +
+              'Chroniczne stany zapalne są często źródłem wielu chorób, w tym chorób serca, cukrzycy i wielu innych. ' +
+              'Inhalacje wodorem pomagają w łagodzeniu tych stanów, co wpływa na ogólną poprawę zdrowia.',
+          },
+          {
+            subtitle: 'Silny antyoksydant',
+            text:
+              'Wodór molekularny jest silnym antyoksydantem, który pomaga w ochronie komórek przed uszkodzeniami ' +
+              'oksydacyjnymi, przyczyniającymi się do procesów starzenia i wielu chorób.',
+          },
+          {
+            subtitle: 'Lepsze trawienie',
+            text:
+              'Badania sugerują, że wodór molekularny wspomaga procesy trawienia, poprawiając wchłanianie ' +
+              'składników odżywczych z pożywienia. To może przyczynić się do lepszego wykorzystania wartości ' +
+              'odżywczej spożywanych posiłków.',
+          },
+          {
+            subtitle: 'Ochrona przed uszkodzeniem DNA',
+            text:
+              'Wodór molekularny działa jako skuteczny przeciwutleniacz, chroniąc DNA przed uszkodzeniem ' +
+              'spowodowanym przez wolne rodniki. To może przyczynić się do zmniejszenia ryzyka chorób ' +
+              'nowotworowych.',
+          },
+          {
+            subtitle: 'Poprawa funkcji mózgu',
+            text:
+              'Wodór molekularny pomaga w ochronie mózgu przed stresem oksydacyjnym, ale także wpływa na poprawę ' +
+              'funkcji poznawczych. To oznacza lepszą pamięć, koncentrację i ogólną wydolność umysłową.',
+          },
+          {
+            subtitle: 'Wspomaganie procesu gojenia',
+            text:
+              'Wodór molekularny przyspiesza proces gojenia ran i urazów poprzez stymulowanie regeneracji tkanek. ' +
+              'To jest szczególnie istotne w przypadku osób po operacjach lub z uszkodzeniami skóry.',
+          },
+          {
+            subtitle: 'Poprawa snu',
+            text:
+              'Inhalacje wodorem molekularnym poprawiają jakość snu i zmniejszają problemy ze snem. Dzięki temu ' +
+              'klientom łatwiej jest się zrelaksować i regenerować organizm w trakcie snu.',
+          },
+          {
+            subtitle: 'Antyoksydacyjne działanie',
+            text:
+              'Wodór molekularny działa jako potężny antyoksydant, pomagając w oczyszczaniu organizmu z toksyn i ' +
+              'wolnych rodników. To może przyczynić się do ogólnego oczyszczenia ciała i wzmocnienia układu ' +
+              'odpornościowego.',
+          },
+          {
+            subtitle: 'Lepsza elastyczność i zdolność do ruchu',
+            text:
+              'Dla osób cierpiących na schorzenia stawów czy bóle mięśni, inhalacje wodorem molekularnym mogą ' +
+              'przyczynić się do zwiększenia elastyczności i komfortu podczas ruchu.',
+          },
+          {
+            subtitle: 'Wspomaganie procesu odchudzania',
+            text:
+              'Wodór molekularny pomaga w procesie odchudzania poprzez przyspieszenie przemiany materii i redukcję ' +
+              'stanów zapalnych, które mogą być związane z otyłością.',
+          },
+          {
+            subtitle: 'Poprawa wydolności tlenowej',
+            text:
+              'Badania wskazują, że wodór molekularny  poprawia wydolność tlenową organizmu, co może pomóc ' +
+              'sportowcom i osobom aktywnym fizycznie.',
+          },
+        ],
+      },
+      {
+        subtitle: 'Jak wygląda proces inhalacji wodorem molekularnym',
+        text: [
+          'Inhalacja wodorem molekularnym odbywa się przez kaniulę wąsową, która jest bardziej precyzyjna niż inne ' +
+            'metody i może być stosowana w celu dostarczania wodoru w terapii medycznej.',
+          'Zaczynasz wdychać powoli i głęboko przez kaniulę wąsową, co pozwala wodorowi dostawać się do płuc. W ten ' +
+            'sposób wodór jest wchłaniany przez układ oddechowy, który wpłyna na nasz organizm.',
+        ],
+        background: 'dark',
+      },
     ],
   },
   yoga: {
     title: 'Joga w grocie solnej',
     description: [
-      'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze\n' +
-        'zdrowotnymi właściwościami soli. Grota solna to miejsce, w którym\n' +
-        'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.\n' +
-        'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres\n' +
-        'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest\n' +
-        'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
+      {
+        subtitle:
+          'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze' +
+          'zdrowotnymi właściwościami soli.',
+        text: [
+          'Grota solna to miejsce, w którym' +
+            'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.' +
+            'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres' +
+            'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest' +
+            'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
+        ],
+        background: 'dark',
+        picture: {
+          file: yoga,
+          alt: 'Girl doing yoga',
+        },
+      },
     ],
   },
 };

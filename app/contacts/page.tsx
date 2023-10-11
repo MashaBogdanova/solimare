@@ -8,18 +8,20 @@ import styles from './_contacts.module.scss';
 function Contacts() {
   return (
     <PageLayout>
-      <div className={styles.contacts__text}>
-        <h1>Kontakt</h1>
-        <p>{contacts.address}</p>
-        <a href={`tel://${contacts.telephone}`}>{contacts.telephone}</a>
-        <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
-        <h4>Poniedziałek - piątek </h4>
-        {contacts.weekHours}
-        <h4>Sobota i niedziela </h4>
-        {contacts.weekendHours}
-        <SocialMedia isHeader={false} isLight={false} />
+      <div className={styles.contacts}>
+        <div className={styles.contacts__text}>
+          <h1>Kontakt</h1>
+          <p>{contacts.address}</p>
+          <a href={`tel://${contacts.telephone}`}>{contacts.telephone}</a>
+          <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
+          <h4>Poniedziałek - piątek </h4>
+          {contacts.weekHours}
+          <h4>Sobota i niedziela </h4>
+          {contacts.weekendHours}
+          <SocialMedia isHeader={false} isLight={false} />
+        </div>
+        <Map />
       </div>
-      <Map />
     </PageLayout>
   );
 }

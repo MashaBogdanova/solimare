@@ -1,19 +1,19 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Radley, Arimo } from 'next/font/google';
+import { DM_Serif_Display, Lato } from 'next/font/google';
 import { ConfigProvider } from 'antd';
 import Header from '../components/layout/header/Header';
 import Footer from '../components/layout/footer/Footer';
 import antdStyles from './antdStyles';
 import './globals.scss';
 
-export const titleFont = Radley({
+export const titleFont = DM_Serif_Display({
   weight: '400',
   subsets: ['latin'],
   variable: '--title-font',
 });
 
-export const textFont = Arimo({
+export const textFont = Lato({
   weight: '400',
   subsets: ['latin'],
   variable: '--text-font',
@@ -34,7 +34,7 @@ export default function RootLayout({
       <ConfigProvider theme={antdStyles}>
         <body className={`${textFont.variable} ${titleFont.variable}`}>
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
         </body>
       </ConfigProvider>

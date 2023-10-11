@@ -6,6 +6,8 @@
   flex-direction: column;
   gap: 2em;
   align-items: center;
+  background-color: white;
+  padding: 4em 8em;
 
   &__block{
     display: flex;
@@ -23,6 +25,7 @@
 
   &__addition {
     font-size: .8em;
+    margin-top: .5em;
   }
 
   &__partners {

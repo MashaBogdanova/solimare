@@ -1,10 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import { Metadata } from 'next';
-import PageLayout from '../../components/layout/page-layout/PageLayout';
-import photo from '../../public/pages/yoga.jpg';
-import styles from './_yoga.module.scss';
 import pagesInfo from '../../configs/pages.config';
+import InfoPage from '../../utils/InfoPage';
 
 export const metadata: Metadata = {
   title: 'Yoga',
@@ -12,21 +9,7 @@ export const metadata: Metadata = {
 };
 
 function Yoga() {
-  return (
-    <PageLayout>
-      <div>
-        <h1>{pagesInfo.yoga.title}</h1>
-        {pagesInfo.yoga.description.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-      <Image
-        src={photo}
-        className={styles.yoga__picture}
-        alt="girl doing yoga"
-      />
-    </PageLayout>
-  );
+  return <InfoPage pageInfo={pagesInfo.yoga} />;
 }
 
 export default Yoga;

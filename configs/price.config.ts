@@ -84,7 +84,7 @@ const prices: IPrice[] = [
   },
   {
     key: '4',
-    label: 'Joga',
+    label: 'Joga (Czas zajęć 60 min)',
     tickets: [
       {
         key: '4.1',

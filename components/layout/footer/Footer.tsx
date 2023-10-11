@@ -17,7 +17,7 @@ function Footer() {
       <div className={styles.footer__addresses}>
         <div className={styles.footer__address}>
           <EnvironmentOutlined />
-          <span>{contacts.address}</span>
+          <a href={contacts.googleMapLink}>{contacts.address}</a>
         </div>
         <div className={styles.footer__address}>
           <MailOutlined />
