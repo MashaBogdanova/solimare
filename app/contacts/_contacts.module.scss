@@ -15,10 +15,13 @@
     display: flex;
     flex-direction: column;
     gap: .5em;
+    @include media-m {
+      padding: 2em;
+    }
   }
 
   @include media-m {
     flex-direction: column;
-    padding-top: 0;
+    padding: 0;
   }
 }

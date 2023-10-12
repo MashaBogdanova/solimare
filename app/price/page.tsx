@@ -39,7 +39,7 @@ function Price() {
         {prices.map((price) => {
           return (
             <div className={styles.price__block} key={price.key}>
-              <h2 style={{ marginBottom: 10 }}>{price.label}</h2>
+              <h2 className={styles.price__subtitle}>{price.label}</h2>
               <Table
                 columns={columns}
                 dataSource={price.tickets}

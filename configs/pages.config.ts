@@ -1,5 +1,6 @@
 import sauna from '../public/pages/sauna.jpg';
 import yoga from '../public/pages/yoga.jpg';
+import cave from '../public/pages/cave.jpg';
 
 interface IList {
   subtitle?: string;
@@ -27,34 +28,41 @@ interface IPagesInfo {
 }
 
 const pagesInfo: IPagesInfo = {
-  // saltCave: {
-  //   title: 'Grota Solna',
-  //   description: [
-  //     {
-  //       subtitle: '',
-  //       text:
-  //         'Grota solna to pomieszczenie wypełnione solą, które ma na celu\n' +
-  //         'poprawienie zdrowia i samopoczucia ludzi. Oczyszcza ona drogi\n' +
-  //         'oddechowe, a także działa kojąco na skórę. Groty solne są\n' +
-  //         'szczególnie polecane osobom cierpiącym na choroby układu\n' +
-  //         'oddechowego, takie jak astma czy kaszel. Sól zawarta w grocie jest\n' +
-  //         'bogata w mikroelementy, które korzystnie wpływają na organizm. Grota\n' +
-  //         'solna może być stosowana w celach terapeutycznych, a także jako\n' +
-  //         'sposób na relaks i odprężenie.',
-  //     },
-  //     {
-  //       subtitle: '',
-  //       text:
-  //         'Jeśli chcesz zadbać o swoje zdrowie w sposób naturalny i bezpieczny\n' +
-  //         'dla organizmu, grota solna to doskonały wybór. W takim pomieszczeniu\n' +
-  //         'możesz nie tylko poprawić swoje zdrowie, ale także wypocząć i\n' +
-  //         'zrelaksować się po ciężkim dniu. Mgiełka solankowa którą można\n' +
-  //         'zobaczyć poniżej na filmiku jest dodatkowo rozpylana, ona zwiększa\n' +
-  //         'koncentrację mikrocząstek i jest bardziej skoncentrowaną formą\n' +
-  //         'terapii solnej.',
-  //     },
-  //   ],
-  // },
+  saltCave: {
+    title: 'Grota Solna',
+    description: [
+      {
+        subtitle:
+          'Grota solna to pomieszczenie wypełnione solą, które ma na celu\n' +
+          'poprawienie zdrowia i samopoczucia ludzi.',
+        text: [
+          'Oczyszcza ona drogi oddechowe, a także działa kojąco na skórę. Groty solne są\n' +
+            'szczególnie polecane osobom cierpiącym na choroby układu\n' +
+            'oddechowego, takie jak astma czy kaszel. Sól zawarta w grocie jest\n' +
+            'bogata w mikroelementy, które korzystnie wpływają na organizm. Grota\n' +
+            'solna może być stosowana w celach terapeutycznych, a także jako\n' +
+            'sposób na relaks i odprężenie.',
+        ],
+        picture: {
+          file: cave,
+          alt: 'Salt cave',
+        },
+        background: 'dark',
+      },
+      {
+        subtitle:
+          'Jeśli chcesz zadbać o swoje zdrowie w sposób naturalny i bezpieczny\n' +
+          'dla organizmu, grota solna to doskonały wybór.',
+        text: [
+          'W takim pomieszczeniu możesz nie tylko poprawić swoje zdrowie, ale także wypocząć i\n' +
+            'zrelaksować się po ciężkim dniu. Mgiełka solankowa którą można\n' +
+            'zobaczyć poniżej na filmiku jest dodatkowo rozpylana, ona zwiększa\n' +
+            'koncentrację mikrocząstek i jest bardziej skoncentrowaną formą\n' +
+            'terapii solnej.',
+        ],
+      },
+    ],
+  },
   saunaInfrared: {
     title: 'Sauna infrared',
     description: [

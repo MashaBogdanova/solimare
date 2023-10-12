@@ -9,7 +9,7 @@
   background-color: white;
   padding: 4em 8em;
 
-  &__block{
+  &__block {
     display: flex;
     flex-direction: column;
     width: 40vw;
@@ -21,11 +21,23 @@
     @include media-m {
       width: 100%;
     }
+  }
+
+  &__subtitle {
+    margin-bottom: 1em;
+    @include media-m {
+      font-size: 1.3em;
+      padding: 1em 1em 0;
     }
+  }
 
   &__addition {
     font-size: .8em;
     margin-top: .5em;
+    @include media-m {
+      padding: 1em 1em;
+
+    }
   }
 
   &__partners {
@@ -45,5 +57,7 @@
 
   @include media-m {
     width: 90vw;
+    padding: 0;
+    gap: 0;
   }
 }
