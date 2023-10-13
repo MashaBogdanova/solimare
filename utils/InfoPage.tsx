@@ -19,6 +19,14 @@ function InfoPage({ pageInfo }: IProps) {
             textBlock.background === 'dark' && styles.page__textBlock_dark
           }`}
         >
+          {textBlock.picture && textBlock.picture.leftSide === true && (
+            <Image
+              src={textBlock.picture.file}
+              className={styles.page__picture}
+              alt={textBlock.picture.alt}
+            />
+          )}
+
           <div className={styles.page__text}>
             <p className={styles.page__subtitle}>
               {textBlock.subtitle && textBlock.subtitle}
@@ -35,7 +43,7 @@ function InfoPage({ pageInfo }: IProps) {
             })}
             {textBlock.addition && <p>{textBlock.addition}</p>}
           </div>
-          {textBlock.picture && (
+          {textBlock.picture && !textBlock.picture.leftSide && (
             <Image
               src={textBlock.picture.file}
               className={styles.page__picture}

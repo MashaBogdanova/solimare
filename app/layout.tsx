@@ -20,8 +20,8 @@ export const textFont = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'Grota Solna',
-  description: 'Grota Solna Warszawa',
+  title: 'Solimare',
+  description: 'Grota Solna & Sauna Infrared Warszawa',
 };
 
 export default function RootLayout({

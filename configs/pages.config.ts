@@ -1,6 +1,7 @@
 import sauna from '../public/pages/sauna.jpg';
 import yoga from '../public/pages/yoga.jpg';
 import cave from '../public/pages/cave.jpg';
+import cave2 from '../public/pages/cave2.jpg';
 
 interface IList {
   subtitle?: string;
@@ -14,6 +15,7 @@ interface IDescription {
   picture?: {
     file: string;
     alt: string;
+    leftSide?: boolean;
   };
   background?: 'dark';
 }
@@ -33,15 +35,11 @@ const pagesInfo: IPagesInfo = {
     description: [
       {
         subtitle:
-          'Grota solna to pomieszczenie wypełnione solą, które ma na celu\n' +
-          'poprawienie zdrowia i samopoczucia ludzi.',
+          'Grota solna to wyjątkowe miejsce, zbudowane z cegieł solnych, które stwarzają atmosferę spokoju i odprężenia.',
         text: [
-          'Oczyszcza ona drogi oddechowe, a także działa kojąco na skórę. Groty solne są\n' +
-            'szczególnie polecane osobom cierpiącym na choroby układu\n' +
-            'oddechowego, takie jak astma czy kaszel. Sól zawarta w grocie jest\n' +
-            'bogata w mikroelementy, które korzystnie wpływają na organizm. Grota\n' +
-            'solna może być stosowana w celach terapeutycznych, a także jako\n' +
-            'sposób na relaks i odprężenie.',
+          'Głównym punktem tej groty jest imponująca tężnia solankowa, która wzmaga działanie soli poprzez uwalnianie ' +
+            'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
+            'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
         ],
         picture: {
           file: cave,
@@ -51,15 +49,62 @@ const pagesInfo: IPagesInfo = {
       },
       {
         subtitle:
-          'Jeśli chcesz zadbać o swoje zdrowie w sposób naturalny i bezpieczny\n' +
-          'dla organizmu, grota solna to doskonały wybór.',
+          'Grota solna znana jest ze swoich licznych korzyści zdrowotnych.',
         text: [
-          'W takim pomieszczeniu możesz nie tylko poprawić swoje zdrowie, ale także wypocząć i\n' +
-            'zrelaksować się po ciężkim dniu. Mgiełka solankowa którą można\n' +
-            'zobaczyć poniżej na filmiku jest dodatkowo rozpylana, ona zwiększa\n' +
-            'koncentrację mikrocząstek i jest bardziej skoncentrowaną formą\n' +
-            'terapii solnej.',
+          'Inhalacja solanki pomaga w łagodzeniu problemów z drogami oddechowymi, takich jak astma, alergie czy ' +
+            "przewlekłe zapalenia zatok.'Działa także łagodząco na stres i poprawia ogólną kondycję psychiczną. " +
+            'Ponadto, solankowy mikroklimat pomaga w oczyszczeniu dróg oddechowych, poprawiając ich funkcję.',
+          'Odwiedzając Grotę solną, można cieszyć się nie tylko relaksem, ale także korzystać z jej właściwości ' +
+            'zdrowotnych, co sprawia, że jest to miejsce szczególnie wartościowe dla osób poszukujących ukojenia dla ' +
+            'ciała i ducha.',
         ],
+        picture: {
+          file: cave2,
+          alt: 'Salt cave',
+          leftSide: true,
+        },
+      },
+      {
+        subtitle:
+          'Pobyt w grocie solnej ma również znaczący wpływ na budowanie odporności organizmu. Jod, brom i inne' +
+          'mikroelementy zawarte w powietrzu groty korzystnie wpływają na zdrowie.',
+        text: [
+          {
+            subtitle: 'Jod',
+            text:
+              'Jod jest istotnym pierwiastkiem dla naszego organizmu, szczególnie dla prawidłowego funkcjonowania ' +
+              'tarczycy. Inhalacja jodu w grocie solnej pomaga w regulacji pracy tarczycy i wspomaga procesy metaboliczne.',
+          },
+          {
+            subtitle: 'Brom',
+            text:
+              'Brom jest znany ze swoich właściwości relaksujących. W grocie solnej, inhalacja bromu pomaga w ' +
+              'zmniejszeniu napięcia mięśniowego, stresu i poprawieniu ogólnego stanu emocjonalnego.',
+          },
+          {
+            subtitle: 'Magnez',
+            text:
+              'Magnez jest ważnym minerałem dla naszych mięśni i układu nerwowego. Obecność magnezu w powietrzu ' +
+              'groty solnej pomaga w łagodzeniu bólu mięśniowego i poprawie ogólnego samopoczucia.',
+          },
+          {
+            subtitle: 'Wapń',
+            text:
+              'Wapń to niezbędny minerał do utrzymania mocnych kości i zębów. Wprowadzanie wapnia do organizmu ' +
+              'podczas inhalacji w grocie solnej korzystnie wpływa na zdrowie układu kostnego.',
+          },
+          {
+            subtitle: 'Selen',
+            text:
+              'Selen jest pierwiastkiem o działaniu antyoksydacyjnym, co oznacza, że pomaga chronić organizm przed ' +
+              'uszkodzeniem komórek przez wolne rodniki. Selen w powietrzu groty solnej wspomaga odporność i ogólną kondycję.',
+          },
+        ],
+        background: 'dark',
+        addition:
+          '45-minutowy pobyt w Grocie solnej jest często porównywany do trzydniowego pobytu nad morzem w czasie ' +
+          'sztormu ze względu na obecność tych mikroelementów w powietrzu. To doświadczenie może pomóc w oczyszczeniu ' +
+          'organizmu i poprawieniu zdrowia, a jednocześnie dostarczać relaksu i odprężenia.',
       },
     ],
   },

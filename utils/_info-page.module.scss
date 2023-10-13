@@ -3,7 +3,7 @@
 .page {
   &__textBlock {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     justify-content: space-between;
     align-items: stretch;
     background-color: white;
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: .5em;
-    padding: 2em;
+    padding: 2.5em;
 
     @include media-l {
       padding: 0;
