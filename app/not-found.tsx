@@ -3,23 +3,21 @@
 import React from 'react';
 import Link from 'next/link';
 import { SettingOutlined } from '@ant-design/icons';
-import styles from './_not-found.module.scss';
 import contacts from '../configs/contacts.config';
+import styles from './_loading-error.module.scss';
 
 function Error() {
   return (
-    <div className={styles.notFound}>
-      <h2 className={styles.notFound__text}>
-        Ta strona jest w trakcie tworzenia
-      </h2>
-      <p className={styles.notFound__text}>Wkrótce dodamy informacje</p>
-      <SettingOutlined className={styles.notFound__icon} />
-      <div className={styles.notFound__links}>
-        <Link href="/" className={styles.notFound__link}>
-          <p className={styles.notFound__text}>Wróć do strony głównej</p>
+    <div className={styles.page}>
+      <p>Ta strona jest w trakcie tworzenia</p>
+      <p>Wkrótce dodamy informacje</p>
+      <SettingOutlined className={styles.page__icon} />
+      <div className={styles.page__links}>
+        <Link href="/" className={styles.page__link}>
+          <p>Wróć do strony głównej</p>
         </Link>
-        <Link href={contacts.booksyLink} className={styles.notFound__link}>
-          <p className={styles.notFound__text}>Zarezerwuj online</p>
+        <Link href={contacts.booksyLink} className={styles.page__link}>
+          <p>Zarezerwuj online</p>
         </Link>
       </div>
     </div>

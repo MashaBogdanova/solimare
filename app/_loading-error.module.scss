@@ -1,25 +1,33 @@
 @import "./sass/variables";
+@import "./sass/mixins";
 
-.notFound {
+.page {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: .5em;
   height: 100vh;
+  padding-top: 150px;
+  font-size: 1.2em;
+  color: $color-secondary;
   background-color: $color-dark-transparent-xl;
-  &__text {
-    color: $color-secondary;
-  }
+
   &__icon {
     margin: .5em 0;
     font-size: 3em;
-    animation: spin 3s linear infinite;
+    color: $color-secondary;
+    animation: spin 10s linear infinite;
+    &_loading {
+      animation: spin 1s linear infinite;
+    }
   }
+
   &__links {
     display: flex;
     gap: 1em;
   }
+
   &__link {
     color: $color-secondary;
     font-size: .8em;
