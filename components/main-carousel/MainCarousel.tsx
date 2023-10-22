@@ -23,7 +23,7 @@ function MainCarousel() {
       {images.map((image) => (
         <Image
           src={image}
-          className={styles.carouselImage}
+          className={styles.carousel__image}
           key={image}
           alt="Grota solna"
         />

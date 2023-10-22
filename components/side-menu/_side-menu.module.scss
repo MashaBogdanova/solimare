@@ -4,11 +4,11 @@
 .sideMenu {
   position: absolute;
   top: 0;
-  bottom: 0;
   right: -40vw;
   display: none;
   z-index: 1;
   width: 40vw;
+  height: 100vh;
   color: $color-secondary;
   background-color: $color-dark-transparent-l;
   padding: 5.5em 1em 1em 2.5em;
@@ -21,6 +21,10 @@
 
   &__socialMedia {
     padding: 2em 0 0 2em;
+  }
+
+  @include media-l {
+    height: 720px;
   }
 
   @include media-m {
