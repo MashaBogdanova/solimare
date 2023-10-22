@@ -1,0 +1,37 @@
+@import "./sass/variables";
+
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5em;
+  height: 100vh;
+  background-color: $color-dark-transparent-xl;
+  &__text {
+    color: $color-secondary;
+  }
+  &__icon {
+    margin: .5em 0;
+    font-size: 3em;
+    animation: spin 3s linear infinite;
+  }
+  &__links {
+    display: flex;
+    gap: 1em;
+  }
+  &__link {
+    color: $color-secondary;
+    font-size: .8em;
+    text-decoration: underline;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

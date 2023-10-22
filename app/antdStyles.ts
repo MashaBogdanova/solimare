@@ -11,6 +11,9 @@ const antdStyles = {
     fontFamily: 'var(--text-font)',
   },
   components: {
+    FloatButton: {
+      colorBgElevated: 'rgba(255,255,255,0.44)',
+    },
     Menu: {
       colorBgContainer: 'rgba(0, 0, 0, 0.5)',
       colorBgElevated: 'rgba(0, 0, 0, 0.5)',

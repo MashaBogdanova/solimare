@@ -1,5 +1,23 @@
 .booksy {
+  width: 60px;
+  height: 25px;
+  object-fit: cover;
+
+  &_animated {
     width: 60px;
     height: 25px;
-    object-fit: cover;
+    animation: shake 5s 7s both infinite;
+  }
+}
+
+@keyframes shake {
+  0%, 20% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 14%, 18%, 2%, 6% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  12%, 16%, 4%, 8% {
+    transform: translate3d(2px, 0, 0);
+  }
 }

@@ -32,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ConfigProvider theme={antdStyles}>
-        <body className={`${textFont.variable} ${titleFont.variable}`}>
+        <body
+          className={`${textFont.variable} ${titleFont.variable}`}
+        >
           <Header />
           <main>{children}</main>
           <Footer />

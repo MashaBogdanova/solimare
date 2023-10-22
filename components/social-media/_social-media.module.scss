@@ -3,7 +3,7 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: .5em;
   color: $color-primary;
 
   &_light {
@@ -12,8 +12,8 @@
 
   &_header {
     position: absolute;
-    top: 60px;
-    right: 30px;
+    top: 50px;
+    right: 4.5em;
     z-index: 1;
 
     @include media-l {

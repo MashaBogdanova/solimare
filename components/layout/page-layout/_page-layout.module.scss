@@ -16,8 +16,11 @@
   }
 
   @include media-l {
-    max-width: 90vw;
     margin: 120px auto 2em;
     padding: 0;
+  }
+
+  @include media-m {
+    max-width: 100vw;
   }
 }

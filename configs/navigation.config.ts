@@ -7,27 +7,27 @@ interface IItem {
 const navItems: IItem[] = [
   {
     label: 'Grota solna',
-    key: 'salt-cave',
+    key: '/salt-cave',
     children: [
       {
         label: 'O Grocie',
-        key: 'salt-cave-about',
+        key: '/salt-cave-about',
       },
       {
         label: 'Seansy dla dorosłych',
-        key: 'adults-sessions',
+        key: '/adults-sessions',
       },
       {
         label: 'Seansy dla dzieci',
-        key: 'children-sessions',
+        key: '/children-sessions',
       },
       {
         label: 'Grota na wyłączność',
-        key: 'salt-cave-rent',
+        key: '/salt-cave-rent',
       },
       {
         label: 'Regulamin',
-        key: 'salt-cave-rules',
+        key: '/salt-cave-rules',
       },
     ],
   },

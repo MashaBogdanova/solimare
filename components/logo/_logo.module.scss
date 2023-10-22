@@ -4,7 +4,12 @@
   &_header {
     position: absolute;
     top: 30px;
-    left: 30px;
+    left: 3.5em;
     z-index: 1;
+    @include media-l {
+      position: absolute;
+      top: 30px;
+      left: 1.5em;
+    }
   }
 }

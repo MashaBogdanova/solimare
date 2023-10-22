@@ -30,7 +30,7 @@ function Footer() {
         <Divider className={styles.footer__divider} />
       </div>
       <div className={styles.footer__socialNetworks}>
-        <h4>Follow us</h4>
+        <h4 className={styles.footer__followUs}>Follow us</h4>
         <SocialMedia isHeader={false} isLight />
       </div>
     </footer>
