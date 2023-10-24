@@ -1,4 +1,4 @@
-@import "./app/sass/mixins";
+@import "../../../app/sass/mixins";
 
 .page {
   &__textBlock {
@@ -6,6 +6,7 @@
     gap: 1em;
     justify-content: space-between;
     align-items: stretch;
+    height: 350px;
     background-color: white;
 
     &_dark {
@@ -13,13 +14,18 @@
       color: $color-secondary;
     }
 
-    @include media-l {
-      flex-direction: column;
-      padding: 3em;
-      align-items: center;
+    &_text {
+      height: unset;
+      padding: 0 3em;
+      @include media-m {
+        padding: 0;
+      }
     }
-    @include media-m {
-      padding: 0;
+
+    @include media-l {
+      height: unset;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -28,10 +34,6 @@
     flex-direction: column;
     gap: .5em;
     padding: 2.5em;
-
-    @include media-l {
-      padding: 0;
-    }
 
     @include media-m {
       padding: 2em;
@@ -52,17 +54,18 @@
   }
 
   &__picture {
-    width: 30vw;
-    height: 30vw;
+    position: relative;
+    display: block;
+    width: auto;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 100%;
 
     @include media-l {
-      width: 60vw;
-      height: 60vw;
-    }
-
-    @include media-m {
-      width: 90vw;
-      height: 90vw;
+      max-width: unset;
+      width: 100%;
+      height: auto;
     }
   }
 }

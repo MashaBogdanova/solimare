@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import pagesInfo from '../../configs/pages.config';
-import InfoPage from '../../utils/InfoPage';
+import InfoPage from '../../components/layout/info-page/InfoPage';
 
 export const metadata: Metadata = {
   title: 'Yoga',

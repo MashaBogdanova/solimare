@@ -1,5 +1,11 @@
 @import "variables";
 
+@mixin media-xl {
+  @media screen and (max-width: $screen-width-xl) {
+    @content;
+  }
+}
+
 @mixin media-l {
   @media screen and (max-width: $screen-width-l) {
     @content;

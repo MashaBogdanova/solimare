@@ -6,18 +6,22 @@
   flex-direction: column;
 
   max-width: 75vw;
-  margin: 210px auto 4em;
-  padding: 0 3em 3em;
+  margin: 200px auto 4em;
 
   & h1 {
     margin-bottom: 1em;
     font-size: 2em;
     text-align: center;
+    color: $color-dark-transparent-l;
+  }
+
+  @include media-xl {
+    max-width: 90vw;
   }
 
   @include media-l {
+    max-width: 65vw;
     margin: 120px auto 2em;
-    padding: 0;
   }
 
   @include media-m {
