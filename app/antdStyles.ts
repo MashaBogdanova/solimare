@@ -13,6 +13,7 @@ const antdStyles = {
   components: {
     FloatButton: {
       colorBgElevated: 'rgba(255,255,255,0.44)',
+      colorText: 'rgba(0,0,0,0.59)',
     },
     Menu: {
       colorBgContainer: 'rgba(0, 0, 0, 0.5)',
