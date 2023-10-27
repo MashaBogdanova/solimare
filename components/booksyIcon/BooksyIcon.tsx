@@ -14,18 +14,10 @@ interface IProps {
 
 function BooksyIcon({ isHeader, isLight }: IProps) {
   const pathname = usePathname();
-  if (isLight || (isHeader && pathname === '/')) {
-    return (
-      <Image
-        src={lightIcon}
-        className={`${styles.booksy} ${isHeader && styles.booksy_animated}`}
-        alt="booksy"
-      />
-    );
-  }
+
   return (
     <Image
-      src={darkIcon}
+      src={isLight || (isHeader && pathname === '/') ? lightIcon : darkIcon}
       className={`${styles.booksy} ${isHeader && styles.booksy_animated}`}
       alt="booksy"
     />

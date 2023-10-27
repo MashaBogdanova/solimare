@@ -8,16 +8,18 @@
   background-color: $color-dark-l;
   overflow: hidden;
 
+  @include media-l {
+    height: 720px;
+  }
+
   &__image {
-    object-fit: cover;
     width: 100%;
     height: 100vh;
+    object-fit: cover;
     opacity: 60%;
+
     @include media-l {
       height: 720px;
     }
-  }
-  @include media-l {
-    height: 720px;
   }
 }

@@ -9,14 +9,14 @@ interface IProps {
 
 function SideMenu({ isVisible }: IProps) {
   return (
-    <div
+    <aside
       className={`${styles.sideMenu} ${isVisible && styles.sideMenu_visible}`}
     >
       {isVisible && <Nav isSideMenu />}
       <div className={styles.sideMenu__socialMedia}>
         <SocialMedia isHeader={false} isLight />
       </div>
-    </div>
+    </aside>
   );
 }
 

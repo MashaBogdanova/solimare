@@ -17,13 +17,3 @@
     @content;
   }
 }
-
-@mixin page-picture {
-  width: 30vw;
-  height: 100%;
-
-  @include media-l {
-    width: 80vw;
-    height: 100%;
-  }
-}

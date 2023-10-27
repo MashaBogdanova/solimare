@@ -4,16 +4,8 @@
 .contentWrapper {
   display: flex;
   flex-direction: column;
-
   max-width: 75vw;
   margin: 200px auto 4em;
-
-  & h1 {
-    margin-bottom: 1em;
-    font-size: 2em;
-    text-align: center;
-    color: $color-dark-transparent-l;
-  }
 
   @include media-xl {
     max-width: 90vw;
@@ -26,5 +18,12 @@
 
   @include media-m {
     max-width: 100vw;
+  }
+
+  & h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+    color: $color-dark-transparent-l;
   }
 }

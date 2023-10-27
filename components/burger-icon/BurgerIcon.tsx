@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { MenuOutlined } from '@ant-design/icons';
@@ -10,9 +12,11 @@ interface IProps {
 function BurgerIcon({ setSideMenuVisible }: IProps) {
   const [isAnimated, setAnimated] = useState(false);
   const pathname = usePathname();
+
   useEffect(() => {
     setAnimated(false);
   }, [pathname]);
+
   return (
     <MenuOutlined
       className={`${styles.menuIcon} ${

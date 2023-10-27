@@ -1,14 +1,19 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { GoogleMap, InfoWindowF, useJsApiLoader } from '@react-google-maps/api';
 import contacts from '../../configs/contacts.config';
 import styles from './_map.module.scss';
 
+const MAP_ZOOM = 15;
+const GOOGLE_MAP_ID = 'google-map-script';
+const GOOGLE_MAPS_API_KEY = 'AIzaSyAeZ1dXdRqqDkz8Tah7a-sOpVliw58qPSw';
+
 function Map() {
   const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAeZ1dXdRqqDkz8Tah7a-sOpVliw58qPSw',
+    id: GOOGLE_MAP_ID,
+    googleMapsApiKey: GOOGLE_MAPS_API_KEY,
   });
 
   if (isLoaded) {
@@ -16,19 +21,19 @@ function Map() {
       <GoogleMap
         mapContainerClassName={styles.map}
         center={{ lat: contacts.latitude, lng: contacts.longitude }}
-        zoom={15}
+        zoom={MAP_ZOOM}
       >
         <InfoWindowF
           position={{ lat: contacts.latitude, lng: contacts.longitude }}
         >
-          <div>
+          <>
             <h3>{contacts.googleMapName}</h3>
-            <p style={{ fontWeight: 'bold', padding: 0 }}>
-              {contacts.googleMapDescription}
-            </p>
+            <p>{contacts.googleMapDescription}</p>
             <p>{contacts.address}</p>
-            <a href={contacts.googleMapLink}>View on Google Maps</a>
-          </div>
+            <Link href={contacts.googleMapLink} className={styles.map__link}>
+              View on Google Maps
+            </Link>
+          </>
         </InfoWindowF>
       </GoogleMap>
     );

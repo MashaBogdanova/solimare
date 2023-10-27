@@ -4,24 +4,21 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  background-color: white;
   padding: 3em;
-
-  & h1 {
-    text-align: left;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    @include media-m {
-      padding: 2em;
-    }
-  }
+  background-color: white;
 
   @include media-m {
     flex-direction: column;
     padding: 0;
+  }
+
+  &__textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+    @include media-m {
+      padding: 2em;
+    }
   }
 }

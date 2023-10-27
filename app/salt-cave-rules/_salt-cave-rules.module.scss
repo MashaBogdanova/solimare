@@ -6,10 +6,12 @@
   padding: 2em 4em;
   background-color: white;
   border-radius: 1em;
-  &__rule {
-    margin: .5em;
-  }
+
   @include media-l {
     padding: 0 1em;
+  }
+
+  &__rule {
+    margin: .5em;
   }
 }

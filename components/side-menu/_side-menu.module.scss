@@ -6,23 +6,24 @@
   z-index: 1;
   width: 40vw;
   height: 100vh;
+  padding: 5.5em 1em 1em 2.5em;
+
   color: $color-secondary;
   background-color: $color-dark-transparent-l;
-  padding: 5.5em 1em 1em 2.5em;
 
   transform: translateX(140vw);
   transition: transform 0.5s ease;
+
+  @include media-l {
+    height: 720px;
+  }
 
   &_visible {
     transform: translateX(60vw);
   }
 
   &__socialMedia {
-    padding: 2em 0 0 2em;
-  }
-
-  @include media-l {
-    height: 720px;
+    padding: 2em 0 0 1em;
   }
 
   @include media-m {

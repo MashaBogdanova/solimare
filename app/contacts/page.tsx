@@ -9,7 +9,7 @@ function Contacts() {
   return (
     <PageLayout>
       <div className={styles.contacts}>
-        <div className={styles.contacts__text}>
+        <div className={styles.contacts__textBlock}>
           <h1>Kontakt</h1>
           <p>{contacts.address}</p>
           <a href={`tel://${contacts.telephone}`}>{contacts.telephone}</a>

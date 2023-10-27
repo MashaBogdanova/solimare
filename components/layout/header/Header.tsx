@@ -7,7 +7,6 @@ import SideMenu from '../../side-menu/SideMenu';
 import Nav from '../../nav/Nav';
 import Logo from '../../logo/Logo';
 import BurgerIcon from '../../burger-icon/BurgerIcon';
-import styles from './_header.module.scss';
 
 function Header() {
   const [isSideMenuVisible, setSideMenuVisible] = useState(false);
@@ -18,10 +17,10 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className={styles.header}>
+    <header>
       <Logo isHeader />
       <SocialMedia isHeader isLight={false} />
-      <Nav />
+      <Nav isSideMenu={false} />
       <BurgerIcon setSideMenuVisible={setSideMenuVisible} />
       <SideMenu isVisible={isSideMenuVisible} />
     </header>

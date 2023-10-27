@@ -6,13 +6,13 @@
   height: 35vw;
   color: $color-dark-m;
 
-  & a {
-    color: $color-primary;
-  }
-
   @include media-m {
     width: 90vw;
     height: 90vw;
     margin: 2em auto 0;
+  }
+
+  &__link {
+    color: $color-primary;
   }
 }

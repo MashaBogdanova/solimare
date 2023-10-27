@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { Table } from 'antd';
@@ -14,7 +12,6 @@ import PageLayout from '../../components/layout/page-layout/PageLayout';
 
 function Price() {
   const cards = [card1, card2, card3, card4];
-
   const columns: ColumnsType<IPrice> = [
     {
       title: '',
@@ -38,7 +35,7 @@ function Price() {
       <div className={styles.price}>
         {prices.map((price) => {
           return (
-            <div className={styles.price__block} key={price.key}>
+            <article className={styles.price__block} key={price.key}>
               <h2 className={styles.price__subtitle}>{price.label}</h2>
               <Table
                 columns={columns}
@@ -46,18 +43,18 @@ function Price() {
                 pagination={false}
               />
               <p className={styles.price__addition}>{price.addition}</p>
-            </div>
+            </article>
           );
         })}
 
-        <div className={styles.price__partners}>
+        <article className={styles.price__partners}>
           <h4>Akceptujemy karty</h4>
           <div className={styles.price__partnersCards}>
             {cards.map((card) => (
               <Image src={card} height={40} alt="card" key={card.src} />
             ))}
           </div>
-        </div>
+        </article>
       </div>
     </PageLayout>
   );

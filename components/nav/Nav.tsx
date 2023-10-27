@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Collapse, Popover } from 'antd';
 import navItems from '../../configs/navigation.config';
+import SubItems from './SubItems';
 import styles from './_nav.module.scss';
 
 interface IProps {
@@ -12,22 +13,15 @@ const SCREEN_WIDTH_SMALL = 920;
 
 function Nav({ isSideMenu }: IProps) {
   const [isSmallScreen, setSmallScreen] = useState(false);
+
   useEffect(() => {
     if (window?.innerWidth <= SCREEN_WIDTH_SMALL) {
       setSmallScreen(true);
     }
   }, []);
 
-  function createSubItems(children) {
-    return children.map((subItem) => (
-      <p key={subItem.key}>
-        <Link href={subItem.key}>{subItem.label}</Link>
-      </p>
-    ));
-  }
-
   return (
-    <nav className={isSideMenu ? styles.sideMenuNav : styles.nav}>
+    <nav className={isSideMenu ? styles.sideMenu : styles.nav}>
       {navItems.map((item, key) => {
         if (item.children && isSmallScreen) {
           return (
@@ -38,30 +32,32 @@ function Nav({ isSideMenu }: IProps) {
                 {
                   key,
                   label: item.label,
-                  children: createSubItems(item.children),
+                  children: SubItems(item.children),
                 },
               ]}
             />
           );
         }
+
         if (item.children && !isSmallScreen) {
           return (
             <Popover
               placement="bottom"
               content={
-                <div style={{ width: 150 }}>
-                  {createSubItems(item.children)}
+                <div className={styles.nav__popover}>
+                  {SubItems(item.children)}
                 </div>
               }
               trigger="hover"
               key={item.key}
             >
-              <p>{item.label}</p>
+              {item.label}
             </Popover>
           );
         }
+
         return (
-          <Link key={item.key} href={item.key} className={styles.navItem}>
+          <Link key={item.key} href={item.key}>
             {item.label}
           </Link>
         );

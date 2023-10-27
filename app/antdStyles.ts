@@ -11,22 +11,6 @@ const antdStyles = {
     fontFamily: 'var(--text-font)',
   },
   components: {
-    FloatButton: {
-      colorBgElevated: 'rgba(255,255,255,0.44)',
-      colorText: 'rgba(0,0,0,0.59)',
-    },
-    Menu: {
-      colorBgContainer: 'rgba(0, 0, 0, 0.5)',
-      colorBgElevated: 'rgba(0, 0, 0, 0.5)',
-      colorBgTextHover: 'rgba(0, 0, 0, 0.5)',
-      colorPrimary: 'rgb(244, 241, 232)',
-      colorPrimaryBorder: 'rgba(168, 159, 158, 0)',
-      colorText: 'rgb(244, 241, 232)',
-      colorTextDescription: 'rgb(244, 241, 232)',
-      dangerItemActiveBg: 'rgba(0, 0, 0, 0.5)',
-      colorErrorBg: 'rgba(0, 0, 0, 0.5)',
-      controlItemBgActive: 'rgba(0, 0, 0, 0.5)',
-    },
     Popover: {
       colorBgElevated: 'rgba(0, 0, 0, 0.5)',
       colorText: 'rgb(244, 241, 232)',
@@ -35,9 +19,6 @@ const antdStyles = {
       borderRadiusLG: 8,
       lineHeight: 2.5,
     },
-    Card: {
-      colorTextHeading: '#834a4c',
-    },
     Collapse: {
       colorTextHeading: '#f4f1e8',
       colorText: '#f4f1e8',
@@ -45,6 +26,10 @@ const antdStyles = {
       padding: 0,
       paddingSM: 0,
       fontSizeIcon: 9,
+    },
+    FloatButton: {
+      colorBgElevated: 'rgba(255,255,255,0.44)',
+      colorText: 'rgba(0,0,0,0.59)',
     },
     Table: {
       colorBgContainer: '#834a4c',

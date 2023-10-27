@@ -4,11 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { SettingOutlined } from '@ant-design/icons';
 import contacts from '../configs/contacts.config';
-import styles from './_loading-error.module.scss';
+import styles from './_loading-not-found.module.scss';
 
 function Error() {
   return (
-    <div className={styles.page}>
+    <section className={styles.page}>
       <p>Ta strona jest w trakcie tworzenia</p>
       <p>Wkrótce dodamy informacje</p>
       <SettingOutlined className={styles.page__icon} />
@@ -20,7 +20,7 @@ function Error() {
           <p>Zarezerwuj online</p>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

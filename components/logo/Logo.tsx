@@ -16,21 +16,12 @@ function Logo({ isHeader }: IProps) {
   const pathname = usePathname();
   return (
     <Link href="/">
-      {(isHeader && pathname === '/') || !isHeader ? (
-        <Image
-          src={logoLight}
-          width={220}
-          className={isHeader ? styles.logo_header : ''}
-          alt="logo"
-        />
-      ) : (
-        <Image
-          src={logoDark}
-          width={220}
-          className={isHeader ? styles.logo_header : ''}
-          alt="logo"
-        />
-      )}
+      <Image
+        src={(isHeader && pathname === '/') || !isHeader ? logoLight : logoDark}
+        width={220}
+        className={isHeader ? styles.logo_header : ''}
+        alt="logo"
+      />
     </Link>
   );
 }

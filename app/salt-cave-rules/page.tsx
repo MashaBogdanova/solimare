@@ -1,6 +1,6 @@
 import React from 'react';
-import PageLayout from '../../components/layout/page-layout/PageLayout';
 import saltCaveRules from '../../configs/salt-cave-rules.config';
+import PageLayout from '../../components/layout/page-layout/PageLayout';
 import styles from './_salt-cave-rules.module.scss';
 
 function SaltCaveRules() {
@@ -14,7 +14,7 @@ function SaltCaveRules() {
             <li key={rule} className={styles.rules__rule}>
               {rule}
               {rule.includes('Chociaż haloterapia jest zalecana') && (
-                <div>
+                <>
                   <ul>
                     {saltCaveRules.illnesses.map((illness) => (
                       <li key={illness} className={styles.rules__rule}>
@@ -23,7 +23,7 @@ function SaltCaveRules() {
                     ))}
                   </ul>
                   <p>{saltCaveRules.illnessesAddition}</p>
-                </div>
+                </>
               )}
             </li>
           ))}

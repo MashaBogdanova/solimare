@@ -5,7 +5,7 @@ import Image from 'next/image';
 import PageLayout from '../page-layout/PageLayout';
 import { IPage } from '../../../configs/pages.config';
 import styles from './_info-page.module.scss';
-import useScreenWidth from '../../../utils/useScreenWidth';
+import useScreenWidth from '../../../hooks/useScreenWidth';
 
 interface IProps {
   pageInfo: IPage;
@@ -13,6 +13,7 @@ interface IProps {
 
 function InfoPage({ pageInfo }: IProps) {
   const screenWidth = useScreenWidth();
+
   return (
     <PageLayout>
       <h1>{pageInfo.title}</h1>
@@ -22,7 +23,8 @@ function InfoPage({ pageInfo }: IProps) {
           className={`
           ${styles.page__textBlock} 
           ${textBlock.background === 'dark' && styles.page__textBlock_dark}
-          ${!textBlock.picture && styles.page__textBlock_text}`}
+          ${!textBlock.picture && styles.page__textBlock_text}
+          `}
         >
           {textBlock.picture &&
             textBlock.picture.leftSide === true &&
@@ -42,9 +44,11 @@ function InfoPage({ pageInfo }: IProps) {
               return typeof paragraph === 'string' ? (
                 <p>{paragraph}</p>
               ) : (
-                <li className={styles.page__list}>
-                  <h4>{paragraph.subtitle && paragraph.subtitle}</h4>
-                  <p>{paragraph.text}</p>
+                <li>
+                  <h4 className={styles.page__listSubtitle}>
+                    {paragraph.subtitle && paragraph.subtitle}
+                  </h4>
+                  <p className={styles.page__listText}>{paragraph.text}</p>
                 </li>
               );
             })}

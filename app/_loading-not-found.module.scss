@@ -3,12 +3,14 @@
 
 .page {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: .5em;
+
   height: 100vh;
   padding-top: 150px;
+
   font-size: 1.2em;
   color: $color-secondary;
   background-color: $color-dark-transparent-xl;
@@ -18,6 +20,7 @@
     font-size: 3em;
     color: $color-secondary;
     animation: spin 10s linear infinite;
+
     &_loading {
       animation: spin 1s linear infinite;
     }
