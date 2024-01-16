@@ -1,11 +1,11 @@
 import React from 'react';
 import saltCaveRules from '../../configs/salt-cave-rules.config';
-import PageLayout from '../../components/layout/page-layout/PageLayout';
+import SectionLayout from '../../components/layout/section-layout/SectionLayout';
 import styles from './_salt-cave-rules.module.scss';
 
 function SaltCaveRules() {
   return (
-    <PageLayout>
+    <SectionLayout>
       <div className={styles.rules}>
         <h1>{saltCaveRules.title}</h1>
         <p>{saltCaveRules.introduction}</p>
@@ -31,7 +31,7 @@ function SaltCaveRules() {
         <p>{saltCaveRules.parentsBlockTitle}</p>
         <p>{saltCaveRules.parentsBlockText}</p>
       </div>
-    </PageLayout>
+    </SectionLayout>
   );
 }
 

@@ -2,7 +2,7 @@ interface ITicketOptions {
   key: string;
   title: string;
   bilet: string;
-  karnet: string;
+  karnet?: string;
 }
 
 export interface IPrice {
@@ -19,13 +19,13 @@ const prices: IPrice[] = [
     tickets: [
       {
         key: '1.1',
-        title: 'Bilet normalny',
+        title: 'Bilet normalny ',
         bilet: '30 zł',
         karnet: '270 zł',
       },
       {
         key: '1.2',
-        title: 'Bilet ulgowy',
+        title: 'Bilet ulgowy ',
         bilet: '22 zł',
         karnet: '198 zł',
       },
@@ -38,21 +38,19 @@ const prices: IPrice[] = [
     tickets: [
       {
         key: '2.1',
-        title: 'Bilet ulgowy / normalny',
+        title: 'Bilet ulgowy / normalny ',
         bilet: '35 zł',
         karnet: '315 zł',
       },
       {
         key: '2.2',
-        title: 'Z kartą MultiSport',
+        title: 'Z kartą MultiSport ',
         bilet: 'dopłata 6 zł',
-        karnet: '-',
       },
       {
         key: '2.3',
-        title: `Z kartą Medicower (pakiet podstawowy)`,
+        title: 'Z kartą Medicower (pakiet podstawowy) ',
         bilet: 'dopłata 5 zł',
-        karnet: '-',
       },
     ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',
@@ -63,21 +61,20 @@ const prices: IPrice[] = [
     tickets: [
       {
         key: '3.1',
-        title: 'Sesja 30 min',
+        title: 'Sesja 30 min ',
         bilet: '60 zł',
         karnet: '500 zł',
       },
       {
         key: '3.2',
-        title: 'Sesja 50 min',
+        title: 'Sesja 50 min ',
         bilet: '80 zł',
         karnet: '700 zł',
       },
       {
         key: '3.3',
-        title: 'Z kartą PZU Sport (30 min)',
+        title: 'Z kartą PZU Sport (30 min) ',
         bilet: 'dopłata 30zł',
-        karnet: '-',
       },
     ],
     addition: '*Karnet 10 wejść, jest ważny 2 miesiące',

@@ -1,55 +1,15 @@
 interface IItem {
   label: string;
   key: string;
-  children?: IItem[];
 }
 
 const navItems: IItem[] = [
-  {
-    label: 'Grota solna',
-    key: '/salt-cave',
-    children: [
-      {
-        label: 'O Grocie',
-        key: '/salt-cave-about',
-      },
-      {
-        label: 'Seansy dla dorosłych',
-        key: '/adults-sessions',
-      },
-      {
-        label: 'Seansy dla dzieci',
-        key: '/children-sessions',
-      },
-      {
-        label: 'Grota na wyłączność',
-        key: '/salt-cave-rent',
-      },
-      {
-        label: 'Regulamin',
-        key: '/salt-cave-rules',
-      },
-    ],
-  },
-  {
-    label: 'Sauna infrared',
-    key: 'sauna',
-    children: [
-      {
-        label: 'O Saunie',
-        key: 'sauna-about',
-      },
-      {
-        label: 'Regulamin',
-        key: 'sauna-rules',
-      },
-    ],
-  },
-  { label: 'Inhalacje wodorem molekularnym', key: 'inhalation' },
-  { label: 'Joga', key: 'yoga' },
-  { label: 'Cennik', key: 'price' },
-  { label: 'Kontakt', key: 'contacts' },
-  { label: 'Często zadawane pytanie', key: 'faq' },
+  { label: 'Grota solna', key: 'grota-solna' },
+  { label: 'Sauna infrared', key: 'sauna-infrared' },
+  { label: 'Inhalacje wodorem molekularnym', key: 'inhalacje-wodorem' },
+  { label: 'Joga', key: 'joga' },
+  { label: 'Kontakt', key: 'kontakt' },
+  { label: 'Cennik', key: 'cennik' },
 ];
 
 export default navItems;

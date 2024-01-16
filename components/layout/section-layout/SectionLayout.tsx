@@ -2,19 +2,19 @@
 
 import React, { ReactNode } from 'react';
 import { FloatButton } from 'antd';
-import styles from './_page-layout.module.scss';
+import styles from './_section-layout.module.scss';
 
 interface IProps {
   children: ReactNode;
 }
 
-function PageLayout({ children }: IProps) {
+function SectionLayout({ children }: IProps) {
   return (
-    <section className={styles.contentWrapper}>
+    <div className={styles.contentWrapper}>
       {children}
       <FloatButton.BackTop />
-    </section>
+    </div>
   );
 }
 
-export default PageLayout;
+export default SectionLayout;

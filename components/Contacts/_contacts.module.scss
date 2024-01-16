@@ -1,11 +1,15 @@
-@import "../sass/variables";
-@import "../sass/mixins";
+@import "app/sass/variables";
+@import "/app/sass/mixins";
 
 .contacts {
   display: flex;
   justify-content: space-between;
   padding: 3em;
-  background-color: white;
+
+  &__wrapper {
+    color: $color-secondary;
+    background-color: $color-primary;
+  }
 
   @include media-m {
     flex-direction: column;

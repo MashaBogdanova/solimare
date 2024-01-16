@@ -7,13 +7,13 @@ import Footer from '../components/layout/footer/Footer';
 import antdStyles from './antdStyles';
 import './globals.scss';
 
-export const titleFont = DM_Serif_Display({
+const titleFont = DM_Serif_Display({
   weight: '400',
   subsets: ['latin'],
   variable: '--title-font',
 });
 
-export const textFont = Lato({
+const textFont = Lato({
   weight: '400',
   subsets: ['latin'],
   variable: '--text-font',
@@ -34,7 +34,7 @@ export default function RootLayout({
       <ConfigProvider theme={antdStyles}>
         <body className={`${textFont.variable} ${titleFont.variable}`}>
           <Header />
-          <main>{children}</main>
+          {children}
           <Footer />
         </body>
       </ConfigProvider>

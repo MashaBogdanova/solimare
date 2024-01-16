@@ -1,0 +1,57 @@
+@import "/app/sass/variables";
+@import "/app/sass/mixins";
+
+.price {
+  display: flex;
+  justify-content: space-around;
+  gap: 2em 0;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+
+  &__title {
+    align-self: center;
+    padding: 2rem 0;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 45%;
+    border: 1px solid $color-primary;
+  }
+
+  &__line {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__addition {
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  &__partners {
+    display: flex;
+    flex: 1;
+    max-width: 40vw;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  &__partnersCards {
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+  }
+}

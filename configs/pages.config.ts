@@ -1,52 +1,47 @@
+import { StaticImageData } from 'next/image';
 import sauna from '../public/pages/sauna.jpg';
 import yoga from '../public/pages/yoga.jpg';
 import cave from '../public/pages/cave.jpg';
 import cave2 from '../public/pages/cave2.jpg';
 
-interface IList {
-  subtitle?: string;
-  text: string;
-}
-
-interface IDescription {
-  subtitle?: string;
-  text: string[] | IList[];
+interface TextBlock {
+  subtitle: string;
+  text: string | string[] | TextBlock[];
   addition?: string;
-  picture?: {
-    file: string;
-    alt: string;
-    leftSide?: boolean;
-  };
-  background?: 'dark';
 }
 
-export interface IPage {
+export interface Section {
+  hash: string;
   title: string;
-  description: IDescription[];
+  mainInfo: TextBlock;
+  additionInfo?: TextBlock[];
+  picture: {
+    file: StaticImageData;
+    alt: string;
+  };
 }
 
-interface IPagesInfo {
-  [key: string]: IPage;
+interface SectionsConfig {
+  [key: string]: Section;
 }
 
-const pagesInfo: IPagesInfo = {
+const pagesInfo: SectionsConfig = {
   saltCave: {
+    hash: 'grota-solna',
     title: 'Grota Solna',
-    description: [
-      {
-        subtitle:
-          'Grota solna to wyjątkowe miejsce, zbudowane z cegieł solnych, które stwarzają atmosferę spokoju i odprężenia.',
-        text: [
-          'Głównym punktem tej groty jest imponująca tężnia solankowa, która wzmaga działanie soli poprzez uwalnianie ' +
-            'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
-            'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
-        ],
-        picture: {
-          file: cave,
-          alt: 'Salt cave',
-        },
-        background: 'dark',
-      },
+    mainInfo: {
+      subtitle:
+        'Grota solna to wyjątkowe miejsce, zbudowane z cegieł solnych, które stwarzają atmosferę spokoju i odprężenia',
+      text: [
+        'Głównym punktem tej groty jest imponująca tężnia solankowa, która wzmaga działanie soli poprzez uwalnianie ' +
+          'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
+          'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
+        '45-minutowy pobyt w Grocie solnej jest często porównywany do trzydniowego pobytu nad morzem w czasie ' +
+          'sztormu ze względu na obecność tych mikroelementów w powietrzu. To doświadczenie może pomóc w oczyszczeniu ' +
+          'organizmu i poprawieniu zdrowia, a jednocześnie dostarczać relaksu i odprężenia.',
+      ],
+    },
+    additionInfo: [
       {
         subtitle:
           'Grota solna znana jest ze swoich licznych korzyści zdrowotnych.',
@@ -58,11 +53,6 @@ const pagesInfo: IPagesInfo = {
             'zdrowotnych, co sprawia, że jest to miejsce szczególnie wartościowe dla osób poszukujących ukojenia dla ' +
             'ciała i ducha.',
         ],
-        picture: {
-          file: cave2,
-          alt: 'Salt cave',
-          leftSide: true,
-        },
       },
       {
         subtitle:
@@ -100,33 +90,28 @@ const pagesInfo: IPagesInfo = {
               'uszkodzeniem komórek przez wolne rodniki. Selen w powietrzu groty solnej wspomaga odporność i ogólną kondycję.',
           },
         ],
-        background: 'dark',
-        addition:
-          '45-minutowy pobyt w Grocie solnej jest często porównywany do trzydniowego pobytu nad morzem w czasie ' +
-          'sztormu ze względu na obecność tych mikroelementów w powietrzu. To doświadczenie może pomóc w oczyszczeniu ' +
-          'organizmu i poprawieniu zdrowia, a jednocześnie dostarczać relaksu i odprężenia.',
       },
     ],
+    picture: {
+      file: cave,
+      alt: 'Salt cave',
+    },
   },
   saunaInfrared: {
+    hash: 'sauna-infrared',
     title: 'Sauna infrared',
-    description: [
-      {
-        subtitle:
-          'Zapraszamy do skorzystania z naszej usługi sauny infrared, gdzie relaks i poprawa zdrowia idą w parze!',
-        text: [
-          'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie.' +
-            'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
-            'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
-            'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem.',
-          'Rezerwacje są obowiązkowe, abyśmy mogli zapewnić Ci najlepsze doświadczenie.',
-        ],
-        picture: {
-          file: sauna,
-          alt: 'Sauna',
-        },
-        background: 'dark',
-      },
+    mainInfo: {
+      subtitle:
+        'Zapraszamy do skorzystania z naszej usługi sauny infrared, gdzie relaks i poprawa zdrowia idą w parze!',
+      text: [
+        'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie.' +
+          'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
+          'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
+          'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem.',
+        'Rezerwacje są obowiązkowe, abyśmy mogli zapewnić Ci najlepsze doświadczenie.',
+      ],
+    },
+    additionInfo: [
       {
         subtitle:
           'Sauna infrared, zwana także sauną na podczerwień, ' +
@@ -181,15 +166,12 @@ const pagesInfo: IPagesInfo = {
             subtitle: 'Detoksykacja',
             text:
               'Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się, ' +
+              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia. Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się,' +
               'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia.',
           },
           {
-            text:
-              'Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się,' +
-              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia.',
-          },
-          {
-            text: 'Wzmocnienie układu immunologicznego: Regularne korzystanie z sauny infrared  pomaga w wzmocnieniu układu immunologicznego.',
+            subtitle: 'Wzmocnienie układu immunologicznego',
+            text: 'Regularne korzystanie z sauny infrared  pomaga w wzmocnieniu układu immunologicznego.',
           },
           {
             subtitle: 'Poprawa krążenia krwi',
@@ -214,7 +196,6 @@ const pagesInfo: IPagesInfo = {
             text: 'Sauna może pomóc w poprawie jakości snu, co jest istotne dla procesu leczenia i zdrowia ogólnego.',
           },
         ],
-        background: 'dark',
         addition:
           'Zanurz się w doświadczeniu pełnym relaksu, aromaterapii, muzyki i koloroterapii,' +
           'czerpiąc korzyści zarówno dla ciała, jak i umysłu.',
@@ -270,7 +251,6 @@ const pagesInfo: IPagesInfo = {
             text: 'Osoby z chorobami nowotworowymi powinny unikać sauny',
           },
         ],
-        background: 'dark',
       },
       {
         subtitle: 'Przygotowanie',
@@ -282,26 +262,31 @@ const pagesInfo: IPagesInfo = {
           'Nie zapomnij o rezerwacji, abyś móc doświadczyć tego wyjątkowego doświadczenia w pełnej prywatności!',
       },
     ],
+    picture: {
+      file: sauna,
+      alt: 'Sauna',
+    },
   },
   inhalation: {
+    hash: 'inhalacje-wodorem',
     title: 'Inhalacje wodorem molekularnym',
-    description: [
-      {
-        subtitle:
-          'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym. ' +
-          'Co to jest wodór?',
-        text: [
-          'Wodór jest wszechobecny w przyrodzie i występuje głównie w formie cząsteczek dwuatomowych (H2). ' +
-            'Jest również głównym składnikiem wody (H2O), gdzie łączy się z tlenem. Woda jest niezbędna dla życia ' +
-            'na Ziemi, co czyni wodór jednym z kluczowych elementów naszej planety.',
-          'Wodór molekularny (H2) jest badany ze względu na swoje potencjalne korzyści zdrowotne, ' +
-            'takie jak działanie przeciwutleniające i przeciwzapalne.',
-          'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
-            'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
-            'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
-            'problemami z pamięcią oraz alergiami.',
-        ],
-      },
+    mainInfo: {
+      subtitle:
+        'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym. ' +
+        'Co to jest wodór?',
+      text: [
+        'Wodór jest wszechobecny w przyrodzie i występuje głównie w formie cząsteczek dwuatomowych (H2). ' +
+          'Jest również głównym składnikiem wody (H2O), gdzie łączy się z tlenem. Woda jest niezbędna dla życia ' +
+          'na Ziemi, co czyni wodór jednym z kluczowych elementów naszej planety.',
+        'Wodór molekularny (H2) jest badany ze względu na swoje potencjalne korzyści zdrowotne, ' +
+          'takie jak działanie przeciwutleniające i przeciwzapalne.',
+        'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
+          'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
+          'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
+          'problemami z pamięcią oraz alergiami.',
+      ],
+    },
+    additionInfo: [
       {
         subtitle: 'Czym są inhalacje wodorem molekularnym?',
         text: [
@@ -310,7 +295,6 @@ const pagesInfo: IPagesInfo = {
             'w przyrodzie, co oznacza, że łatwo przenika do komórek organizmu, neutralizując wolne rodniki, które mogą ' +
             'prowadzić do uszkodzenia tkanek i przyspieszenia procesów starzenia się.',
         ],
-        background: 'dark',
       },
       {
         subtitle:
@@ -396,31 +380,32 @@ const pagesInfo: IPagesInfo = {
           'Zaczynasz wdychać powoli i głęboko przez kaniulę wąsową, co pozwala wodorowi dostawać się do płuc. W ten ' +
             'sposób wodór jest wchłaniany przez układ oddechowy, który wpłyna na nasz organizm.',
         ],
-        background: 'dark',
       },
     ],
+    picture: {
+      file: cave2,
+      alt: 'grota solna',
+    },
   },
   yoga: {
+    hash: 'joga',
     title: 'Joga w grocie solnej',
-    description: [
-      {
-        subtitle:
-          'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze' +
-          'zdrowotnymi właściwościami soli.',
-        text: [
-          'Grota solna to miejsce, w którym' +
-            'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.' +
-            'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres' +
-            'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest' +
-            'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
-        ],
-        background: 'dark',
-        picture: {
-          file: yoga,
-          alt: 'Girl doing yoga',
-        },
-      },
-    ],
+    mainInfo: {
+      subtitle:
+        'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze' +
+        'zdrowotnymi właściwościami soli.',
+      text: [
+        'Grota solna to miejsce, w którym' +
+          'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.' +
+          'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres' +
+          'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest' +
+          'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
+      ],
+    },
+    picture: {
+      file: yoga,
+      alt: 'Girl doing yoga',
+    },
   },
 };
 

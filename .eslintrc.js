@@ -20,6 +20,7 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'react/require-default-props': 'off',
     'no-nested-ternary': 'off',
     'prettier/prettier': 'error',
     '@typescript-eslint/no-explicit-any': 2,
