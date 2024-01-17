@@ -1,31 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
 import contacts from '../../configs/contacts.config';
-import SectionLayout from '../layout/section-layout/SectionLayout';
-import SocialMedia from '../social-media/SocialMedia';
-import Map from '../map/Map';
+import SectionLayout from '../layout/Section-layout/SectionLayout';
+import SocialMedia from '../ui/social-media/SocialMedia';
+import Map from '../Map/Map';
 import styles from './_contacts.module.scss';
 
 function Contacts() {
   return (
-    <section className={styles.contacts__wrapper}>
-      <SectionLayout hash="kontakt">
-        <div className={styles.contacts}>
-          <div className={styles.contacts__textBlock}>
-            <h1>Kontakt</h1>
+    <section className={styles.contacts} id="kontakt">
+      <SectionLayout>
+        <div className={styles.contacts__text}>
+          <div className={styles.contacts__block}>
+            <h3 className={styles.contacts__title}>Kontakt</h3>
             <p>{contacts.address}</p>
             <Link href={`tel://${contacts.telephone}`}>
               {contacts.telephone}
             </Link>
             <Link href={`mailto:${contacts.email}`}>{contacts.email}</Link>
-            <h4>Poniedziałek - piątek </h4>
-            {contacts.weekHours}
-            <h4>Sobota i niedziela </h4>
-            {contacts.weekendHours}
-            <SocialMedia isHeader={false} isLight={false} />
           </div>
-          <Map />
+          <div className={styles.contacts__block}>
+            <h3 className={styles.contacts__title}>Godziny pracy</h3>
+            <p>Poniedziałek - piątek </p>
+            <p className={styles.contacts__weekHours}>{contacts.weekHours}</p>
+            <p>Sobota i niedziela </p>
+            <p>{contacts.weekendHours}</p>
+          </div>
+          <SocialMedia />
         </div>
+        <Map />
       </SectionLayout>
     </section>
   );

@@ -2,27 +2,26 @@
 @import "/app/sass/mixins";
 
 .contacts {
-  display: flex;
-  justify-content: space-between;
-  padding: 3em;
-
-  &__wrapper {
     color: $color-secondary;
     background-color: $color-primary;
-  }
 
-  @include media-m {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  &__textBlock {
+  &__text {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    justify-content: center;
+    gap: 3rem;
+  }
 
-    @include media-m {
-      padding: 2em;
-    }
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $color-secondary;
+  }
+
+  &__weekHours {
+    margin-bottom: 0.5rem;
   }
 }

@@ -1,0 +1,32 @@
+@import "/app/sass/variables";
+@import "/app/sass/mixins";
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 3rem;
+  width: 45%;
+  background-color: $color-light;
+  @include block-border;
+  @include block-shadow;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__line {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  &__addition {
+    display: flex;
+  }
+}

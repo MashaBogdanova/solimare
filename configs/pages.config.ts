@@ -36,9 +36,6 @@ const pagesInfo: SectionsConfig = {
         'Głównym punktem tej groty jest imponująca tężnia solankowa, która wzmaga działanie soli poprzez uwalnianie ' +
           'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
           'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
-        '45-minutowy pobyt w Grocie solnej jest często porównywany do trzydniowego pobytu nad morzem w czasie ' +
-          'sztormu ze względu na obecność tych mikroelementów w powietrzu. To doświadczenie może pomóc w oczyszczeniu ' +
-          'organizmu i poprawieniu zdrowia, a jednocześnie dostarczać relaksu i odprężenia.',
       ],
     },
     additionInfo: [
@@ -47,16 +44,21 @@ const pagesInfo: SectionsConfig = {
           'Grota solna znana jest ze swoich licznych korzyści zdrowotnych.',
         text: [
           'Inhalacja solanki pomaga w łagodzeniu problemów z drogami oddechowymi, takich jak astma, alergie czy ' +
-            "przewlekłe zapalenia zatok.'Działa także łagodząco na stres i poprawia ogólną kondycję psychiczną. " +
-            'Ponadto, solankowy mikroklimat pomaga w oczyszczeniu dróg oddechowych, poprawiając ich funkcję.',
+            'przewlekłe zapalenia zatok. Ponadto, solankowy mikroklimat pomaga w oczyszczeniu dróg oddechowych, ' +
+            'poprawiając ich funkcję. ',
+          'Działa także łagodząco na stres i poprawia ogólną kondycję psychiczną. ',
           'Odwiedzając Grotę solną, można cieszyć się nie tylko relaksem, ale także korzystać z jej właściwości ' +
             'zdrowotnych, co sprawia, że jest to miejsce szczególnie wartościowe dla osób poszukujących ukojenia dla ' +
             'ciała i ducha.',
         ],
+        addition:
+          '45-minutowy pobyt w Grocie solnej jest często porównywany do trzydniowego pobytu nad morzem w czasie ' +
+          'sztormu ze względu na obecność tych mikroelementów w powietrzu. To doświadczenie może pomóc w oczyszczeniu ' +
+          'organizmu i poprawieniu zdrowia, a jednocześnie dostarczać relaksu i odprężenia.',
       },
       {
         subtitle:
-          'Pobyt w grocie solnej ma również znaczący wpływ na budowanie odporności organizmu. Jod, brom i inne' +
+          'Pobyt w grocie solnej ma również znaczący wpływ na budowanie odporności organizmu. Jod, brom i inne ' +
           'mikroelementy zawarte w powietrzu groty korzystnie wpływają na zdrowie.',
         text: [
           {
@@ -104,11 +106,10 @@ const pagesInfo: SectionsConfig = {
       subtitle:
         'Zapraszamy do skorzystania z naszej usługi sauny infrared, gdzie relaks i poprawa zdrowia idą w parze!',
       text: [
-        'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie.' +
+        'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie. ' +
           'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
           'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
-          'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem.',
-        'Rezerwacje są obowiązkowe, abyśmy mogli zapewnić Ci najlepsze doświadczenie.',
+          'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem. ',
       ],
     },
     additionInfo: [
@@ -120,21 +121,21 @@ const pagesInfo: SectionsConfig = {
           {
             subtitle: 'Promieniowanie podczerwone',
             text:
-              'W saunie infrared stosuje się specjalne promienniki emitujące promieniowanie podczerwone.' +
+              'W saunie infrared stosuje się specjalne promienniki emitujące promieniowanie podczerwone. ' +
               'To promieniowanie jest niewidoczne dla ludzkiego oka, ale można je odczuć jako ciepło.',
           },
           {
             subtitle: 'Przenikanie pod skórę',
             text:
               'Promieniowanie podczerwone penetruje skórę i dociera głębiej do tkanek i narządów. ' +
-              'Jest to główna różnica między tradycyjnymi saunami a saunami infrared, ponieważ te pierwsze' +
+              'Jest to główna różnica między tradycyjnymi saunami a saunami infrared, ponieważ te pierwsze ' +
               'podgrzewają powietrze wokół ciała.',
           },
           {
             subtitle: 'Podgrzewanie ciała',
             text:
-              'Promieniowanie podczerwone przekształca się w ciepło wewnątrz ciała, bez konieczności podgrzewania' +
-              'powietrza. To sprawia, że organizm zaczyna się pocąć, aby utrzymać odpowiednią temperaturę,' +
+              'Promieniowanie podczerwone przekształca się w ciepło wewnątrz ciała, bez konieczności podgrzewania ' +
+              'powietrza. To sprawia, że organizm zaczyna się pocąć, aby utrzymać odpowiednią temperaturę, ' +
               'co przyczynia się do eliminacji toksyn.',
           },
           {
@@ -153,7 +154,7 @@ const pagesInfo: SectionsConfig = {
           {
             subtitle: 'Relaks i redukcja stresu',
             text:
-              'W naszej saunie infrared możesz się zrelaksować i zapomnieć o codziennym stresie.' +
+              'W naszej saunie infrared możesz się zrelaksować i zapomnieć o codziennym stresie. ' +
               'Ciepło promieni podczerwonych działa uspokajająco na organizm, pomagając złagodzić napięcie i stres.',
           },
           {
@@ -166,7 +167,7 @@ const pagesInfo: SectionsConfig = {
             subtitle: 'Detoksykacja',
             text:
               'Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się, ' +
-              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia. Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się,' +
+              'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia. Sesje w saunie infrared pomagają organizmowi pozbyć się toksyn poprzez intensywne pocenie się, ' +
               'co wpływa na oczyszczenie ciała i poprawę ogólnego stanu zdrowia.',
           },
           {
@@ -176,19 +177,19 @@ const pagesInfo: SectionsConfig = {
           {
             subtitle: 'Poprawa krążenia krwi',
             text:
-              'Dzięki stymulacji krążenia krwi w saunie infrared, możesz odczuć ulgę w' +
+              'Dzięki stymulacji krążenia krwi w saunie infrared, możesz odczuć ulgę w ' +
               'bólach mięśniowych i stawowych oraz przyspieszyć proces regeneracji.',
           },
           {
             subtitle: 'Wspomaganie utraty wagi',
             text:
-              'Regularne korzystanie z sauny infrared  przyspiesza spalanie kalorii, pomagając w' +
+              'Regularne korzystanie z sauny infrared  przyspiesza spalanie kalorii, pomagając w ' +
               'procesie utraty wagi i kształtowaniu sylwetki. W ciągu 30 min spalamy 600 - 900 kcal.',
           },
           {
             subtitle: 'Poprawa wyglądu skóry',
             text:
-              'Wysoka temperatura w saunie pomaga oczyścić pory skóry i przywrócić jej zdrowy i' +
+              'Wysoka temperatura w saunie pomaga oczyścić pory skóry i przywrócić jej zdrowy i ' +
               'promienny wygląd. Zmniejsza problemy dermatologiczne oraz cellulit i rozstępy.',
           },
           {
@@ -197,7 +198,7 @@ const pagesInfo: SectionsConfig = {
           },
         ],
         addition:
-          'Zanurz się w doświadczeniu pełnym relaksu, aromaterapii, muzyki i koloroterapii,' +
+          'Zanurz się w doświadczeniu pełnym relaksu, aromaterapii, muzyki i koloroterapii, ' +
           'czerpiąc korzyści zarówno dla ciała, jak i umysłu.',
       },
       {
@@ -245,7 +246,6 @@ const pagesInfo: SectionsConfig = {
             subtitle: 'Skłonność do krwawień',
             text: 'Osoby z tendencją do nadmiernego krwawienia powinny unikać sauny.',
           },
-
           {
             subtitle: 'Nowotwory',
             text: 'Osoby z chorobami nowotworowymi powinny unikać sauny',
@@ -255,7 +255,7 @@ const pagesInfo: SectionsConfig = {
       {
         subtitle: 'Przygotowanie',
         text: [
-          'Przed przyjściem do naszej sauny, upewnij się, że masz ze sobą dwa ręczniki na osobę oraz klapki.' +
+          'Przed przyjściem do naszej sauny, upewnij się, że masz ze sobą dwa ręczniki na osobę oraz klapki. ' +
             'To nie tylko zwiększy Twój komfort, ale także pomaga w utrzymaniu higieny.',
         ],
         addition:
@@ -272,14 +272,8 @@ const pagesInfo: SectionsConfig = {
     title: 'Inhalacje wodorem molekularnym',
     mainInfo: {
       subtitle:
-        'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym. ' +
-        'Co to jest wodór?',
+        'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym ',
       text: [
-        'Wodór jest wszechobecny w przyrodzie i występuje głównie w formie cząsteczek dwuatomowych (H2). ' +
-          'Jest również głównym składnikiem wody (H2O), gdzie łączy się z tlenem. Woda jest niezbędna dla życia ' +
-          'na Ziemi, co czyni wodór jednym z kluczowych elementów naszej planety.',
-        'Wodór molekularny (H2) jest badany ze względu na swoje potencjalne korzyści zdrowotne, ' +
-          'takie jak działanie przeciwutleniające i przeciwzapalne.',
         'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
           'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
           'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
@@ -287,6 +281,16 @@ const pagesInfo: SectionsConfig = {
       ],
     },
     additionInfo: [
+      {
+        subtitle: 'Co to jest wodór?',
+        text: [
+          'Wodór jest wszechobecny w przyrodzie i występuje głównie w formie cząsteczek dwuatomowych (H2). ' +
+            'Jest również głównym składnikiem wody (H2O), gdzie łączy się z tlenem. Woda jest niezbędna dla życia ' +
+            'na Ziemi, co czyni wodór jednym z kluczowych elementów naszej planety.',
+          'Wodór molekularny (H2) jest badany ze względu na swoje potencjalne korzyści zdrowotne, ' +
+            'takie jak działanie przeciwutleniające i przeciwzapalne.',
+        ],
+      },
       {
         subtitle: 'Czym są inhalacje wodorem molekularnym?',
         text: [
@@ -392,13 +396,13 @@ const pagesInfo: SectionsConfig = {
     title: 'Joga w grocie solnej',
     mainInfo: {
       subtitle:
-        'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze' +
-        'zdrowotnymi właściwościami soli.',
+        'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze ' +
+        'zdrowotnymi właściwościami soli',
       text: [
         'Grota solna to miejsce, w którym' +
-          'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia.' +
-          'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres' +
-          'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest' +
+          'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia. ' +
+          'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres ' +
+          'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest ' +
           'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
       ],
     },

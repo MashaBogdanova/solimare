@@ -1,4 +1,5 @@
 @import "sass/variables";
+@import "sass/mixins";
 
 * {
   box-sizing: border-box;
@@ -10,21 +11,54 @@ html,
 body {
   position: relative;
   max-width: 100vw;
-  color: $color-primary;
+  font-size: 10px;
+  color: $color-dark-m;
   background-color: $color-secondary;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  @include animation-fade-in;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--title-font);
   color: $color-primary;
 }
 
-h4, p, a, li, span {
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+h4 {
   font-family: var(--text-font);
+  font-size: 1.95rem;
+}
+
+p,
+a,
+li,
+span {
+  font-family: var(--text-font);
+  font-size: 1.7rem;
+}
+
+i {
+  font-family: var(--text-font);
+  font-size: 1.5rem;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }

@@ -1,0 +1,29 @@
+@import "../../app/sass/variables";
+@import "../../app/sass/mixins";
+
+.map {
+  width: 35vw;
+  height: 35vw;
+  color: $color-dark-m;
+  @include block-border;
+  @include block-shadow;
+
+  @include media-m {
+    width: 90vw;
+    height: 90vw;
+    margin: 2em auto 0;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    color: $color-primary;
+  }
+}

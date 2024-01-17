@@ -1,0 +1,19 @@
+@import "../../../app/sass/mixins";
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: $color-secondary;
+
+  &_header {
+    position: absolute;
+    top: 5rem;
+    right: 4.5rem;
+    z-index: 1;
+
+    @include media-l {
+      display: none;
+    }
+  }
+}

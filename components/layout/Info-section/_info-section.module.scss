@@ -1,0 +1,40 @@
+@import "../../../app/sass/mixins";
+
+.section {
+  color: $color-secondary;
+  background-color: $color-primary;
+
+  &__textBlock {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-between;
+    height: max-content;
+  }
+
+  &__title_light {
+    color: $color-secondary;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  &__listSubtitle {
+    display: inline-block;
+  }
+
+  &__listText {
+    padding-left: 1.4rem;
+  }
+
+  &__picture {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+@include zoom;

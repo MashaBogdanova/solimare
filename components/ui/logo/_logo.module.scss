@@ -1,0 +1,19 @@
+@import "../../../app/sass/mixins";
+
+.logo{
+  width: 20rem;
+  height: auto;
+
+  &_header {
+    position: absolute;
+    top: 3rem;
+    left: 3.2rem;
+    z-index: 1;
+    width: 22rem;
+    height: auto;
+
+    @include media-l {
+      left: 1.5em;
+    }
+  }
+}

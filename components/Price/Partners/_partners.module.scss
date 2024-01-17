@@ -1,0 +1,30 @@
+@import "/app/sass/mixins";
+
+.partners {
+  display: flex;
+  max-width: 40vw;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 5rem 0 2rem 0;
+  text-align: center;
+
+  &__cardsList {
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+  }
+
+  &__card {
+    height: 5.5rem;
+    width: auto;
+
+    &:hover {
+      cursor: pointer;
+      @include animation-zoom;
+    }
+  }
+}
+
+@include zoom;

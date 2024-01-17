@@ -1,0 +1,40 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.nav {
+  position: absolute;
+  top: 12rem;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 3.8rem;
+  padding: 0 4.5rem;
+  background-color: $color-dark-transparent;
+
+  @include media-l {
+    display: none;
+  }
+
+  &__link {
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    color: $color-secondary;
+  }
+}
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-left: 1.2rem;
+  width: 90%;
+  background-color: transparent;
+}
+
+.submenu {
+  background-color: $color-dark-transparent;
+}

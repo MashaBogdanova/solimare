@@ -1,0 +1,38 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.sideMenu {
+  position: absolute;
+  z-index: 1;
+  width: 40vw;
+  height: 100vh;
+  padding: 5.5em 1em 1em 2.5em;
+
+  color: $color-secondary;
+  background-color: $color-dark-transparent-l;
+
+  transform: translateX(140vw);
+  transition: transform 0.5s ease;
+
+  @include media-l {
+    height: 720px;
+  }
+
+  &_visible {
+    transform: translateX(60vw);
+  }
+
+  &__socialMedia {
+    padding: 2em 0 0 1em;
+  }
+
+  @include media-m {
+    width: 65vw;
+    padding: 6em 0 0 1em;
+    transform: translateX(165vw);
+
+    &_visible {
+      transform: translateX(35vw);
+    }
+  }
+}
