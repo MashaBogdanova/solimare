@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { MenuOutlined } from '@ant-design/icons';
-import styles from './_burger.module.scss';
+import styles from './_burgerIcon.module.scss';
 
 interface IProps {
-  setSideMenuVisible: (value) => void;
+  setSideMenuVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 function BurgerIcon({ setSideMenuVisible }: IProps) {

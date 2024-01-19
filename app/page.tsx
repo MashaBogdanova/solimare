@@ -1,6 +1,6 @@
 import React from 'react';
-import MainCarousel from '../components/Main-carousel/MainCarousel';
 import pagesInfo from '../configs/pages.config';
+import MainCarousel from '../components/Main-carousel/MainCarousel';
 import InfoSection from '../components/layout/Info-section/InfoSection';
 import Price from '../components/Price/Price';
 import Contacts from '../components/Contacts/Contacts';

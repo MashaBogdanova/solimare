@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import SectionLayout from '../Section-layout/SectionLayout';
 import { Section } from '../../../configs/pages.config';
+import SectionLayout from '../Section-layout/SectionLayout';
 import styles from './_info-section.module.scss';
 
 interface IProps {
@@ -11,7 +11,7 @@ interface IProps {
 
 function InfoSection({ sectionInfo, isLight = false }: IProps) {
   return (
-    <section className={isLight ? '' : styles.section} id={sectionInfo.hash}>
+    <section className={!isLight ? styles.section : ''} id={sectionInfo.hash}>
       <SectionLayout>
         {isLight && (
           <Image
@@ -22,28 +22,13 @@ function InfoSection({ sectionInfo, isLight = false }: IProps) {
         )}
 
         <div className={styles.section__text}>
-          <h2 className={isLight ? '' : styles.section__title_light}>
+          <h2 className={!isLight ? styles.section__title_light : ''}>
             {sectionInfo.title}
           </h2>
           <h4>{sectionInfo.mainInfo.subtitle}</h4>
-          {typeof sectionInfo.mainInfo.text === 'string' ? (
-            <p>{sectionInfo.mainInfo.text}</p>
-          ) : (
-            sectionInfo.mainInfo.text.map((paragraph) => {
-              return typeof paragraph === 'string' ? (
-                <p key={paragraph}>{paragraph}</p>
-              ) : (
-                <li key={paragraph.subtitle}>
-                  <h4 className={styles.infoSection__listSubtitle}>
-                    {paragraph.subtitle && paragraph.subtitle}
-                  </h4>
-                  <p className={styles.infoSection__listText}>
-                    {paragraph.text as string}
-                  </p>
-                </li>
-              );
-            })
-          )}
+          {sectionInfo.mainInfo.text.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
           {sectionInfo.mainInfo.addition && (
             <i>{sectionInfo.mainInfo.addition}</i>
           )}
@@ -51,8 +36,8 @@ function InfoSection({ sectionInfo, isLight = false }: IProps) {
 
         {!isLight && (
           <Image
-            src={sectionInfo.picture.file}
             className={styles.section__picture}
+            src={sectionInfo.picture.file}
             alt={sectionInfo.picture.alt}
           />
         )}

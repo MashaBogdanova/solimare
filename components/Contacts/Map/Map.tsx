@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { GoogleMap, InfoWindowF, useJsApiLoader } from '@react-google-maps/api';
-import contacts from '../../configs/contacts.config';
+import contacts from '../../../configs/contacts.config';
 import styles from './_map.module.scss';
 
 const MAP_ZOOM = 15;
@@ -31,7 +31,7 @@ function Map() {
             <p className={styles.map__text}>{contacts.googleMapDescription}</p>
             <p className={styles.map__text}>{contacts.address}</p>
             <Link href={contacts.googleMapLink} className={styles.map__link}>
-              View on Google Maps
+              Zobacz na Mapach Google
             </Link>
           </>
         </InfoWindowF>

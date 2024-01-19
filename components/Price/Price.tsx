@@ -12,9 +12,9 @@ function Price() {
         <article className={styles.price}>
           <h2 className={styles.price__title}>Cennik</h2>
           <ul className={styles.price__list}>
-            {prices.map((price) => {
-              return <PriceBlock price={price} />;
-            })}
+            {prices.map((price) => (
+              <PriceBlock price={price} />
+            ))}
           </ul>
         </article>
         <Partners />

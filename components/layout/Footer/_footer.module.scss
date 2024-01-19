@@ -23,11 +23,7 @@
     font-size: 1rem;
   }
 
-  &__contacts {
-    display: flex;
-  }
-
-  &__addresses {
+  &__addressesList {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -40,14 +36,6 @@
 
   &__link {
     font-size: 1.6rem;
-  }
-
-  &__divider {
-    display: none;
-
-    @include media-m {
-      display: flex;
-    }
   }
 
   &__socialNetworks {

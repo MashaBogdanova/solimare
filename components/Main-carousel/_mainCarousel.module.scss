@@ -2,14 +2,14 @@
 @import "../../app/sass/mixins";
 
 .carousel {
-  min-width: 350px;
   width: 100vw;
   height: 100vh;
+  min-width: 35rem;
   background-color: $color-dark-l;
   overflow: hidden;
 
   @include media-l {
-    height: 720px;
+    height: 72rem;
   }
 
   &__image {
@@ -19,7 +19,7 @@
     opacity: 60%;
 
     @include media-l {
-      height: 720px;
+      height: 72rem;
     }
   }
 }

@@ -2,23 +2,23 @@
 
 .partners {
   display: flex;
-  max-width: 40vw;
-  margin: auto;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
+  max-width: 40vw;
+  margin: auto;
   padding: 5rem 0 2rem 0;
   text-align: center;
 
   &__cardsList {
     display: flex;
-    gap: 1em;
     justify-content: space-around;
+    gap: 1em;
   }
 
   &__card {
-    height: 5.5rem;
     width: auto;
+    height: 5.5rem;
 
     &:hover {
       cursor: pointer;

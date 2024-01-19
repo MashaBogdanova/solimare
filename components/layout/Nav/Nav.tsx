@@ -9,13 +9,13 @@ interface IProps {
 
 function Nav({ isSideMenu }: IProps) {
   return (
-    <nav className={isSideMenu ? styles.sideMenu : styles.nav}>
+    <nav className={isSideMenu ? styles.nav_aside : styles.nav}>
       {navItems.map((item) => {
         return (
           <Link
             className={styles.nav__link}
-            key={item.key}
             href={`#${item.key}`}
+            key={item.key}
           >
             {item.label}
           </Link>

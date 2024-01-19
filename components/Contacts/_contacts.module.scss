@@ -1,27 +1,6 @@
 @import "app/sass/variables";
-@import "/app/sass/mixins";
 
 .contacts {
     color: $color-secondary;
     background-color: $color-primary;
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  &__block {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__title {
-    color: $color-secondary;
-  }
-
-  &__weekHours {
-    margin-bottom: 0.5rem;
-  }
 }

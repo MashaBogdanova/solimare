@@ -4,17 +4,23 @@ import yoga from '../public/pages/yoga.jpg';
 import cave from '../public/pages/cave.jpg';
 import cave2 from '../public/pages/cave2.jpg';
 
-interface TextBlock {
+interface Text {
   subtitle: string;
-  text: string | string[] | TextBlock[];
+  text: string[];
+  addition?: string;
+}
+
+interface AdditionalText {
+  subtitle: string;
+  text: string | string[] | AdditionalText[];
   addition?: string;
 }
 
 export interface Section {
   hash: string;
   title: string;
-  mainInfo: TextBlock;
-  additionInfo?: TextBlock[];
+  mainInfo: Text;
+  additionInfo?: AdditionalText[];
   picture: {
     file: StaticImageData;
     alt: string;

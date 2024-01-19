@@ -1,8 +1,8 @@
 import { StaticImageData } from 'next/image';
-import multisport from '../public/price/multisport.png';
-import medicover from '../public/price/medicover.png';
-import fitProfit from '../public/price/fit-profit.png';
-import pzu from '../public/price/pzu.png';
+import multisport from '../public/partners/multisport.png';
+import medicover from '../public/partners/medicover.png';
+import fitProfit from '../public/partners/fit-profit.png';
+import pzu from '../public/partners/pzu.png';
 
 interface TicketOptions {
   title: string;

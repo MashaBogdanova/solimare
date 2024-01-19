@@ -16,4 +16,18 @@
       display: none;
     }
   }
+
+  &__booksy {
+    width: auto;
+    height: 2.9rem;
+    object-fit: cover;
+
+    &_animated {
+      width: auto;
+      height: 3rem;
+      @include animation-shake;
+    }
+  }
 }
+
+@include shake;

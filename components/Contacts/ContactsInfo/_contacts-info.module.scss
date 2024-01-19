@@ -1,0 +1,21 @@
+@import "app/sass/variables";
+
+.contactsInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  &__title {
+    color: $color-secondary;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__weekHours {
+    margin-bottom: 0.5rem;
+  }
+}

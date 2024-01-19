@@ -19,7 +19,7 @@
 }
 
 @mixin block-shadow {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-s;
 }
 
 @mixin block-border {
@@ -30,8 +30,12 @@
   animation: zoom 500ms ease-out;
 }
 
-@mixin animation-fade-in {
-  animation: fadeIn 1s ease-out;
+@mixin animation-spin {
+  animation: spin 2s linear infinite;
+}
+
+@mixin animation-shake {
+  animation: shake 5s 7s both infinite;
 }
 
 @mixin zoom {
@@ -46,13 +50,27 @@
   }
 }
 
-@mixin fadeIn {
-  @keyframes fadeIn {
+@mixin spin {
+  @keyframes spin {
     0% {
-      opacity: 0;
+      transform: rotate(0deg);
     }
     100% {
-      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin shake {
+  @keyframes shake {
+    0%, 20% {
+      transform: translate3d(0, 0, 0);
+    }
+    10%, 14%, 18%, 2%, 6% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    12%, 16%, 4%, 8% {
+      transform: translate3d(2px, 0, 0);
     }
   }
 }

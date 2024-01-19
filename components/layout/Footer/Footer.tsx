@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Divider } from 'antd';
 import {
   EnvironmentOutlined,
   MailOutlined,
@@ -16,7 +15,7 @@ function Footer() {
     <footer className={styles.footer}>
       <Logo />
 
-      <section className={styles.footer__addresses}>
+      <section className={styles.footer__addressesList}>
         <article className={styles.footer__address}>
           <EnvironmentOutlined />
           <Link className={styles.footer__link} href={contacts.googleMapLink}>
@@ -41,7 +40,6 @@ function Footer() {
             {contacts.telephone}
           </Link>
         </article>
-        <Divider className={styles.footer__divider} />
       </section>
 
       <section className={styles.footer__socialNetworks}>
