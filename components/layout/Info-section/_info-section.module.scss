@@ -1,13 +1,9 @@
 @import "../../../app/sass/mixins";
 
 .section {
-  position: relative;
-  z-index: 2;
   background-color: $color-secondary;
 
   &_light {
-    position: relative;
-    z-index: 2;
     color: $color-secondary;
     background-color: $color-primary;
   }

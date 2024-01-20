@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Section } from '../../../configs/pages.config';
+import { Section } from '../../../configs/sections.config';
 import SectionLayout from '../Section-layout/SectionLayout';
 import styles from './_info-section.module.scss';
 

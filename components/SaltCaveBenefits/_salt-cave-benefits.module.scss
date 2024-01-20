@@ -1,0 +1,46 @@
+@import "/app/sass/variables";
+@import "/app/sass/mixins";
+
+.benefits {
+  padding: 4rem 0;
+  @include background-dark-gradient;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 30%;
+    padding: 4rem 3rem;
+    background-color: $color-dark-transparent-l;
+    @include block-border;
+    @include block-shadow;
+    &:hover {
+      cursor: pointer;
+      @include animation-zoom;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-light;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 10rem;
+    height: auto;
+  }
+
+  &__text {
+    text-align: center;
+    color: $color-light;
+  }
+}
+
+@include zoom;
