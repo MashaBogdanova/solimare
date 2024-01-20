@@ -1,8 +1,16 @@
 @import "../../../app/sass/mixins";
 
 .section {
-  color: $color-secondary;
-  background-color: $color-primary;
+  position: relative;
+  z-index: 2;
+  background-color: $color-secondary;
+
+  &_light {
+    position: relative;
+    z-index: 2;
+    color: $color-secondary;
+    background-color: $color-primary;
+  }
 
   &__textBlock {
     display: flex;

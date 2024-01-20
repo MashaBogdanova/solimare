@@ -8,7 +8,7 @@
   gap: 2.5rem;
   width: 45%;
   padding: 3rem;
-  background-color: $color-light;
+  background-color: $color-dark-transparent-l;
 
   @include block-border;
   @include block-shadow;
@@ -19,15 +19,22 @@
     gap: 1.5rem;
   }
 
+  &__title {
+    color: $color-light;
+    text-align: center;
+  }
+
   &__line {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     font-size: 1.5rem;
     white-space: nowrap;
+    color: $color-light-s;
   }
 
   &__addition {
     display: flex;
+    color: $color-light;
   }
 }

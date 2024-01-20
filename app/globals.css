@@ -65,4 +65,12 @@ li {
   list-style: none;
 }
 
+main {
+  background-image: url("../public/sections-images/price.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -25rem;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /*# sourceMappingURL=globals.css.map */

@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
-import multisport from '../public/partners/multisport.png';
-import medicover from '../public/partners/medicover.png';
+import multisport from '../public/partners/multisport.svg';
+import medicover from '../public/partners/medicover.svg';
 import fitProfit from '../public/partners/fit-profit.png';
 import pzu from '../public/partners/pzu.png';
 

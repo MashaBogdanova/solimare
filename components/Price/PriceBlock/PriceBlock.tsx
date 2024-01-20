@@ -10,7 +10,7 @@ function PriceBlock({ price }: Props) {
   return (
     <li className={styles.priceBlock} key={price.label}>
       <div className={styles.priceBlock__main}>
-        <h3>{price.label}</h3>
+        <h3 className={styles.priceBlock__title}>{price.label}</h3>
         {price.tickets.map((ticket) => {
           return (
             <article key={ticket.title}>

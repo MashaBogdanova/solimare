@@ -13,8 +13,8 @@ export default function Home() {
       <InfoSection sectionInfo={pagesInfo.saunaInfrared} isLight />
       <InfoSection sectionInfo={pagesInfo.inhalation} />
       <InfoSection sectionInfo={pagesInfo.yoga} isLight />
-      <Contacts />
       <Price />
+      <Contacts />
     </main>
   );
 }

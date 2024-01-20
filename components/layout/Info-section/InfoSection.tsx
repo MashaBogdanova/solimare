@@ -11,7 +11,10 @@ interface IProps {
 
 function InfoSection({ sectionInfo, isLight = false }: IProps) {
   return (
-    <section className={!isLight ? styles.section : ''} id={sectionInfo.hash}>
+    <section
+      className={!isLight ? styles.section_light : styles.section}
+      id={sectionInfo.hash}
+    >
       <SectionLayout>
         {isLight && (
           <Image

@@ -6,10 +6,6 @@
   justify-content: center;
   gap: 3rem;
 
-  &__title {
-    color: $color-secondary;
-  }
-
   &__block {
     display: flex;
     flex-direction: column;

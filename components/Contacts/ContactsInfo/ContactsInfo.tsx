@@ -8,7 +8,7 @@ function ContactsInfo() {
   return (
     <div className={styles.contactsInfo}>
       <div className={styles.contactsInfo__block}>
-        <h3 className={styles.contactsInfo__title}>Kontakt</h3>
+        <h3>Kontakt</h3>
         <p>{contacts.address}</p>
         <Link href={`tel://${contacts.telephone}`}>{contacts.telephone}</Link>
         <Link href={`mailto:${contacts.email}`}>{contacts.email}</Link>
