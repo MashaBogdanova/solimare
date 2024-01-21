@@ -22,7 +22,7 @@
     @include block-shadow;
     &:hover {
       cursor: pointer;
-      @include animation-zoom;
+      @include animation-pump;
     }
   }
 
@@ -42,5 +42,3 @@
     color: $color-light;
   }
 }
-
-@include zoom;

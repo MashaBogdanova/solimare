@@ -27,9 +27,7 @@
 
     &:hover {
       cursor: pointer;
-      @include animation-zoom;
+      @include animation-pump;
     }
   }
 }
-
-@include zoom;
