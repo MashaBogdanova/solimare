@@ -280,10 +280,8 @@ const pagesInfo: SectionsConfig = {
       subtitle:
         'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym ',
       text: [
-        'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
-          'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
-          'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
-          'problemami z pamięcią oraz alergiami.',
+        'Inhalacje wodorem molekularnym to rewolucyjna metoda, która wykorzystuje właściwości wodoru molekularnego do walki z wieloma ' +
+          'schorzeniami i do wspierania ogólnego samopoczucia.',
       ],
     },
     additionInfo: [
@@ -300,8 +298,11 @@ const pagesInfo: SectionsConfig = {
       {
         subtitle: 'Czym są inhalacje wodorem molekularnym?',
         text: [
-          'To rewolucyjna metoda, która wykorzystuje właściwości wodoru molekularnego do walki z wieloma ' +
-            'schorzeniami i do wspierania ogólnego samopoczucia. Wodór molekularny jest najmniejszym molekułowym elementem ' +
+          'Inhalacje wodorem molekularnym  pomagają w zwalczaniu wolnych rodników, które są jednym z czynników ' +
+            'przyczyniających się do rozwoju nowotworów. Dodatkowo, są one rekomendowane zwłaszcza dla osób z problemami ' +
+            'z drogami oddechowymi, chronicznym zmęczeniem, likwidacją stresu antyoksydancyjnego, bezsennością, ' +
+            'problemami z pamięcią oraz alergiami.',
+          'Wodór molekularny jest najmniejszym molekułowym elementem ' +
             'w przyrodzie, co oznacza, że łatwo przenika do komórek organizmu, neutralizując wolne rodniki, które mogą ' +
             'prowadzić do uszkodzenia tkanek i przyspieszenia procesów starzenia się.',
         ],

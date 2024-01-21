@@ -1,34 +1,37 @@
 @import "../../../app/sass/mixins";
 
 .section {
+  @include info-section;
   background-color: $color-secondary;
 
   &_light {
+    @include info-section;
     color: $color-secondary;
     background-color: $color-primary;
-  }
-
-  &__textBlock {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 1rem;
-    height: max-content;
-  }
-
-  &__title_light {
-    color: $color-secondary;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
+    @include media-l {
+      padding: 3rem;
+    }
+  }
+
+  &__title_light {
+    color: $color-secondary;
   }
 
   &__picture {
-    width: 30vw;
-    height: auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    @include media-m {
+      width: 100%;
+      height: auto;
+    }
   }
 }

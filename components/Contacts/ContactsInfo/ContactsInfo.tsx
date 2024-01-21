@@ -20,7 +20,7 @@ function ContactsInfo() {
         <p>Sobota i niedziela </p>
         <p>{contacts.weekendHours}</p>
       </div>
-      <SocialMedia />
+      <SocialMedia isDark />
     </div>
   );
 }

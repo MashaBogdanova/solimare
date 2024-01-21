@@ -10,12 +10,12 @@ interface IProps {
 function SideMenu({ isVisible }: IProps) {
   return (
     <aside
-      className={`${styles.sideMenu} ${isVisible && styles.sideMenu_visible}`}
+      className={`${styles.sideMenu} ${
+        isVisible ? styles.sideMenu_visible : ''
+      }`}
     >
-      {isVisible && <Nav isSideMenu />}
-      <div className={styles.sideMenu__socialMedia}>
-        <SocialMedia />
-      </div>
+      <Nav isSideMenu />
+      <SocialMedia />
     </aside>
   );
 }

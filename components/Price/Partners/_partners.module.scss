@@ -5,20 +5,29 @@
   flex-direction: column;
   justify-content: center;
   gap: 2.5rem;
-  max-width: 40vw;
+  max-width: 42vw;
   margin: 5rem auto 2rem;
   padding: 3rem;
   color: $color-light;
   text-align: center;
   background-color: $color-dark-transparent-l;
+  @include card;
 
-  @include block-border;
-  @include block-shadow;
+  @include media-l {
+    max-width: 60vw;
+  }
+
+  @include media-m {
+    max-width: 90%;
+  }
 
   &__cardsList {
     display: flex;
     justify-content: space-around;
     gap: 2em;
+    @include media-m {
+      flex-direction: column;
+    }
   }
 
   &__card {

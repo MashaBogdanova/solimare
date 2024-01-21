@@ -2,37 +2,32 @@
 @import "../../../app/sass/mixins";
 
 .sideMenu {
-  position: absolute;
+  display: flex;
+  visibility: hidden;
+  position: fixed;
   z-index: 1;
-  width: 40vw;
+  width: 100vw;
   height: 100vh;
-  padding: 5.5rem 1rem 1rem 2.5rem;
+  opacity: 0;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding-top: 5rem;
 
   color: $color-secondary;
   background-color: $color-dark-transparent-l;
 
-  transform: translateX(140vw);
-  transition: transform 0.5s ease;
-
-  @include media-l {
-    height: 72rem;
-  }
+  transition: opacity 500ms ease-out, visibility 500ms ease-out;
 
   &_visible {
-    transform: translateX(60vw);
+    visibility: visible;
+    opacity: 1;
   }
 
   &__socialMedia {
-    padding: 2rem 0 0 1rem;
-  }
-
-  @include media-m {
-    width: 65vw;
-    padding: 6rem 0 0 1rem;
-    transform: translateX(165vw);
-
-    &_visible {
-      transform: translateX(35vw);
-    }
+    display: flex;
+    align-self: center;
+    justify-self: center;
   }
 }

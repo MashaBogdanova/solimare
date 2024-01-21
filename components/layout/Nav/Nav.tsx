@@ -13,7 +13,7 @@ function Nav({ isSideMenu }: IProps) {
       {navItems.map((item) => {
         return (
           <Link
-            className={styles.nav__link}
+            className={isSideMenu ? styles.nav__link_aside : styles.nav__link}
             href={`#${item.key}`}
             key={item.key}
           >

@@ -74,7 +74,8 @@ export const prices: Price[] = [
         karnet: '700 zł',
       },
       {
-        title: 'Z kartą PZU Sport (30 min) ',
+        title: 'Z kartą PZU Sport',
+        subtitle: '(30 min)',
         bilet: 'dopłata 30zł',
       },
     ],

@@ -15,9 +15,7 @@ interface Benefit {
 const saltCaveBenefits: Benefit[] = [
   {
     title: 'LECZENIE CHORÓB',
-    text:
-      'Inhalacja solanki pomaga w łagodzeniu problemów z drogami oddechowymi, takich jak astma, alergie czy ' +
-      'przewlekłe zapalenia zatok',
+    text: 'Inhalacja solanki to ulga dla dróg oddechowych przy astmie, alergiach i zapaleniu zatok',
     icon: {
       file: health,
       alt: 'zdrowie',

@@ -2,12 +2,20 @@
 @import "/app/sass/mixins";
 
 .price {
-  @include background-dark-gradient;
+  @include card-section-background;
+
+  &__content {
+    @include card-section;
+  }
 
   &__title {
+    margin-bottom: 3rem;
     text-align: center;
-    padding: 2rem 0;
     color: $color-light;
+
+    @include media-l {
+      margin-bottom: 5rem;
+    }
   }
 
   &__list {
@@ -15,6 +23,8 @@
     justify-content: space-around;
     gap: 2rem 0;
     flex-wrap: wrap;
-    padding: 0 2rem;
+    @include media-m {
+      flex-direction: column;
+    }
   }
 }

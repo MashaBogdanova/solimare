@@ -2,42 +2,58 @@
 @import "/app/sass/mixins";
 
 .benefits {
-  padding: 4rem 0;
-  @include background-dark-gradient;
+    @include card-section-background;
 
-  &__list {
+  &__content {
+    @include card-section;
     display: flex;
     justify-content: space-between;
+
+    @include media-m {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
   }
 
-  &__item {
+  &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
     width: 30%;
-    padding: 4rem 3rem;
+    padding: 4rem 1rem;
     background-color: $color-dark-transparent-l;
-    transition: transform 500ms;
-    @include block-border;
-    @include block-shadow;
-    &:hover {
-      @include animation-zoom;
+    @include card;
+
+    @include media-l {
+      gap: 1rem;
+      width: calc(33% - 0.5rem);
+      height: 35rem;
+    }
+
+    @include media-m {
+      width: 90%;
     }
   }
 
   &__title {
     margin: 0;
+    height: 10%;
     color: $color-light;
     text-align: center;
+    @include media-l {
+      height: 20%;
+    }
   }
 
   &__icon {
-    width: 10rem;
+    width: 9rem;
     height: auto;
   }
 
   &__text {
+    font-size: 1.7rem;
     text-align: center;
     color: $color-light;
   }

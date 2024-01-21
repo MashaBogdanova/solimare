@@ -12,8 +12,9 @@
     width: 22rem;
     height: auto;
 
-    @include media-l {
-      left: 1.5rem;
+    @include media-m {
+      left: 1rem;
+      width: 20rem;
     }
   }
 }

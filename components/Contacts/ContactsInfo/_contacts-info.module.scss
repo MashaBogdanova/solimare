@@ -1,10 +1,21 @@
 @import "app/sass/variables";
+@import "app/sass/mixins";
 
 .contactsInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+
+  @include media-l {
+    flex: 1;
+    padding: 3rem 0 3rem 6rem;
+  }
+
+  @include media-m {
+    align-items: center;
+    text-align: center;
+  }
 
   &__block {
     display: flex;

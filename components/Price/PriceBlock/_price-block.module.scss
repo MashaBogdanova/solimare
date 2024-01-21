@@ -9,9 +9,11 @@
   width: 45%;
   padding: 3rem;
   background-color: $color-dark-transparent-l;
-
-  @include block-border;
-  @include block-shadow;
+  @include card;
+  @include media-m {
+    margin: auto;
+    width: 90%;
+  }
 
   &__main {
     display: flex;

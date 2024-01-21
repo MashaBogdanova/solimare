@@ -34,6 +34,10 @@ h1 {
 h2 {
   margin-bottom: 1.5rem;
   font-size: 3rem;
+
+  @include media-l {
+    margin-bottom: 0.5rem;
+  }
 }
 
 h3 {
@@ -44,6 +48,10 @@ h3 {
 h4 {
   font-family: var(--text-font);
   font-size: 1.95rem;
+
+  @include media-l {
+    font-size: 1.75rem;
+  }
 }
 
 p,
@@ -52,6 +60,10 @@ li,
 span {
   font-family: var(--text-font);
   font-size: 1.7rem;
+
+  @include media-l {
+    font-size: 1.65rem;
+  }
 }
 
 i {
@@ -66,12 +78,4 @@ a {
 
 li {
   list-style: none;
-}
-
-main {
-  background-image: url("../public/sections-images/price.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -25rem;
-  background-size: cover;
-  background-attachment: fixed;
 }

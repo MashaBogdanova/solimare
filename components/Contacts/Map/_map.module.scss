@@ -2,16 +2,20 @@
 @import "../../../app/sass/mixins";
 
 .map {
-  width: 35vw;
-  height: 35vw;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
   color: $color-dark-m;
-  @include block-border;
-  @include block-shadow;
+  box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-s;
+  border-radius: 0.5rem;
+
+  @include media-l {
+    border-radius: 0;
+  }
 
   @include media-m {
-    width: 90vw;
-    height: 90vw;
-    margin: 2em auto 0;
+    width: 100%;
+    height: auto;
   }
 
   &__title {

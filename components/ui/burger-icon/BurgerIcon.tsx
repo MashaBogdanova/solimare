@@ -19,9 +19,9 @@ function BurgerIcon({ setSideMenuVisible }: IProps) {
 
   return (
     <MenuOutlined
-      className={`${styles.menuIcon} ${
-        pathname === '/' && styles.menuIcon_light
-      } ${isAnimated && styles.menuIcon_animated}`}
+      className={`${styles.menuIcon}  ${
+        isAnimated ? styles.menuIcon_animated : ''
+      }`}
       onClick={() => {
         setSideMenuVisible((value) => !value);
         setAnimated((value) => !value);
