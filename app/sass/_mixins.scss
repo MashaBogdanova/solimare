@@ -45,6 +45,10 @@
   }
 }
 
+@mixin animation-zoom {
+  transform: scale(1.02);
+}
+
 @mixin animation-shake {
   animation: shake 5s 7s both infinite;
   @keyframes shake {

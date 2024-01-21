@@ -18,11 +18,11 @@
     width: 30%;
     padding: 4rem 3rem;
     background-color: $color-dark-transparent-l;
+    transition: transform 500ms;
     @include block-border;
     @include block-shadow;
     &:hover {
-      cursor: pointer;
-      @include animation-pump;
+      @include animation-zoom;
     }
   }
 
