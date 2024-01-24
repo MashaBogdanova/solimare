@@ -6,7 +6,7 @@
   height: 100%;
   aspect-ratio: 1/1;
   color: $color-dark-m;
-  box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-s;
+  box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-xs;
   border-radius: 0.5rem;
 
   @include media-l {
