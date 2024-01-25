@@ -24,12 +24,19 @@
     flex-direction: column;
     justify-content: center;
     height: max-content;
+    padding: 6rem 8rem;
+    gap: 6rem
+  }
+
+  @include media-s {
+    gap: 0;
+    padding: 0;
   }
 }
 
 @mixin card-section {
   margin: auto;
-  padding: 5rem 15rem;
+  padding: 5rem 14rem;
   background: linear-gradient(to bottom,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0) 100%
@@ -38,6 +45,10 @@
   @include media-l {
     padding: 5rem 2rem;
   }
+
+  //@include media-s {
+  //  padding: 0;
+  //}
 }
 
 @mixin card-section-background {
@@ -77,6 +88,10 @@
   transform: scale(1.01);
 }
 
+@mixin animation-zoom-l {
+  transform: scale(1.05);
+}
+
 @mixin animation-shake {
   animation: shake 5s 7s both infinite;
   @keyframes shake {
@@ -109,14 +124,20 @@
   transform: rotate(-90deg);
 }
 
+@mixin media-s {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+
 @mixin media-m {
-  @media screen and (max-width: $screen-width-m) {
+  @media screen and (max-width: 800px) {
     @content;
   }
 }
 
 @mixin media-l {
-  @media screen and (max-width: $screen-width-l) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }

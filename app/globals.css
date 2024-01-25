@@ -29,12 +29,18 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 800px) {
   h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -47,9 +53,14 @@ h4 {
   font-family: var(--text-font);
   font-size: 1.95rem;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   h4 {
     font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  h4 {
+    font-size: 2.2rem;
   }
 }
 
@@ -60,7 +71,23 @@ span {
   font-family: var(--text-font);
   font-size: 1.7rem;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
+  p,
+  a,
+  li,
+  span {
+    font-size: 1.65rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  p,
+  a,
+  li,
+  span {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 550px) {
   p,
   a,
   li,

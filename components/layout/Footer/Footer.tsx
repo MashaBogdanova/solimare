@@ -14,27 +14,29 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <Logo />
-
-      <section className={styles.footer__addressesList}>
-        <article className={styles.footer__address}>
-          <EnvironmentOutlined />
-          <Link className={styles.footer__link} href={contacts.googleMapLink}>
+      <section className={styles.footer__contactsList}>
+        <article className={styles.footer__contact}>
+          <EnvironmentOutlined className={styles.footer__contactIcon} />
+          <Link
+            className={styles.footer__contactLink}
+            href={contacts.googleMapLink}
+          >
             {contacts.address}
           </Link>
         </article>
-        <article className={styles.footer__address}>
-          <MailOutlined />
+        <article className={styles.footer__contact}>
+          <MailOutlined className={styles.footer__contactIcon} />
           <Link
-            className={styles.footer__link}
+            className={styles.footer__contactLink}
             href={`mailto:${contacts.email}`}
           >
             {contacts.email}
           </Link>
         </article>
-        <article className={styles.footer__address}>
-          <PhoneOutlined />
+        <article className={styles.footer__contact}>
+          <PhoneOutlined className={styles.footer__contactIcon} />
           <Link
-            className={styles.footer__link}
+            className={styles.footer__contactLink}
             href={`tel://${contacts.telephone}`}
           >
             {contacts.telephone}

@@ -30,7 +30,7 @@ function InfoSection({ sectionInfo, isLight = false }: IProps) {
       className={!isLight ? styles.section_light : styles.section}
       id={sectionInfo.hash}
     >
-      {(windowWidth < 768 || isLight) && (
+      {windowWidth > 800 && isLight && (
         <Image
           className={styles.section__picture}
           src={sectionInfo.picture.file}
@@ -51,7 +51,7 @@ function InfoSection({ sectionInfo, isLight = false }: IProps) {
         )}
       </div>
 
-      {windowWidth >= 768 && !isLight && (
+      {(windowWidth <= 800 || !isLight) && (
         <Image
           className={styles.section__picture}
           src={sectionInfo.picture.file}

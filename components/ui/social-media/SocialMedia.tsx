@@ -14,28 +14,32 @@ interface IProps {
 
 function SocialMedia({ isHeader = false, isDark = false }: IProps) {
   return (
-    <div className={`${styles.icons} ${isHeader ? styles.icons_header : ''}`}>
+    <div
+      className={`${styles.socialMedia} ${
+        isHeader ? styles.socialMedia_header : ''
+      }`}
+    >
       <Link href={contacts.booksyLink}>
         <Image
           src={isDark ? darkIcon : lightIcon}
-          className={`${styles.icons__booksy} ${
-            isHeader ? styles.icons__booksy_animated : ''
+          className={`${styles.socialMedia__booksyIcon} ${
+            isHeader ? styles.socialMedia__booksyIcon_animated : ''
           }`}
           alt="booksy"
         />
       </Link>
       <Link href={contacts.instagramLink}>
         <InstagramOutlined
+          className={styles.socialMedia__icon}
           style={{
-            fontSize: '1.6rem',
             color: `${isDark ? '#834a4c' : '#f4f1e8'}`,
           }}
         />
       </Link>
       <Link href={contacts.facebookLink}>
         <FacebookOutlined
+          className={styles.socialMedia__icon}
           style={{
-            fontSize: '1.6rem',
             color: `${isDark ? '#834a4c' : '#f4f1e8'}`,
           }}
         />

@@ -5,20 +5,25 @@
   flex-direction: column;
   justify-content: center;
   gap: 2.5rem;
-  max-width: 42vw;
+  width: 42vw;
   margin: 5rem auto 2rem;
-  padding: 3rem;
+  padding: 3.5rem;
   color: $color-light;
   text-align: center;
   background-color: $color-dark-transparent-l;
   @include card;
 
   @include media-l {
-    max-width: 60vw;
+    width: 60vw;
   }
 
   @include media-m {
-    max-width: 90%;
+    width: 100%;
+    margin: 5rem 0 0;
+  }
+
+  @include media-s {
+    gap: 3rem;
   }
 
   &__cardsList {
@@ -26,7 +31,7 @@
     justify-content: space-around;
     gap: 2em;
     @include media-m {
-      flex-direction: column;
+     flex-wrap: wrap;
     }
   }
 
@@ -37,6 +42,10 @@
     &:hover {
       cursor: pointer;
       @include animation-pump;
+    }
+
+    @include media-s {
+      height: 3rem;
     }
   }
 }

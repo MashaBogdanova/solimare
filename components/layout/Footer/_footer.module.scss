@@ -11,19 +11,40 @@
   color: $color-secondary;
   background-color: $color-primary;
 
-  &__addressesList {
+  @include media-m {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__contactsList {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+
+    @include media-m {
+      align-items: center;
+      text-align: center;
+    }
   }
 
-  &__address {
+  &__contact {
     display: flex;
     gap: 2rem;
   }
 
-  &__link {
+  &__contactIcon {
+    @include media-m {
+      display: none;
+    }
+  }
+
+  &__contactLink {
     font-size: 1.6rem;
+
+    @include media-s {
+      font-size: 1.4rem;
+    }
   }
 
   &__socialNetworks {
@@ -34,5 +55,9 @@
 
   &__followUs {
     padding-left: 0.5rem;
+
+    @include media-m {
+      display: none;
+    }
   }
 }
