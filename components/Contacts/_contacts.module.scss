@@ -2,6 +2,7 @@
 @import "app/sass/mixins";
 
 .contacts {
-  @include info-section;
-  background-color: $color-secondary;
+  display: flex;
+  justify-content: space-between;
+  height: 450px;
 }

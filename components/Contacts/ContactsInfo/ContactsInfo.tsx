@@ -6,7 +6,7 @@ import styles from './_contacts-info.module.scss';
 
 function ContactsInfo() {
   return (
-    <div className={styles.contactsInfo}>
+    <article className={styles.contactsInfo}>
       <div className={styles.contactsInfo__block}>
         <h3 className={styles.contactsInfo__title}>Kontakt</h3>
         <p>{contacts.address}</p>
@@ -21,7 +21,7 @@ function ContactsInfo() {
         <p>{contacts.weekendHours}</p>
       </div>
       <SocialMedia isDark />
-    </div>
+    </article>
   );
 }
 

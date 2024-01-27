@@ -1,13 +1,53 @@
 @import "../../../app/sass/mixins";
 
-.section {
-  @include info-section;
-  background-color: $color-secondary;
+.infoSection {
+  width: 100vw;
 
-  &_light {
-    @include info-section;
+  &:hover {
+    @include animation-zoom;
+  }
+
+  &_dark {
     color: $color-secondary;
     background-color: $color-primary;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem;
+
+    max-width: $content-width-l;
+    height: 450px;
+    margin: auto;
+    padding: 4rem 0;
+
+    @include transition;
+
+    @include media-l {
+      align-items: center;
+      gap: 0;
+
+      max-width: $content-width-m;
+      height: 400px;
+      padding: 0;
+    }
+
+    @include media-m {
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      max-width: $content-width-s;
+      height: unset;
+    }
+
+    &_reversed {
+      flex-direction: row-reverse;
+
+      @include media-m {
+        flex-direction: column-reverse;
+      }
+    }
   }
 
   &__text {
@@ -20,22 +60,22 @@
     }
 
     @include media-m {
-      padding: 0;
+      padding: 6rem 5rem;
     }
 
-    @include  media-s {
-      padding: 5rem 1.6rem;
+    @include media-s {
+      padding: 4rem 1.6rem;
+      gap: 2rem;
     }
   }
 
-  &__title_light {
+  &__title_dark {
     color: $color-secondary;
   }
 
   &__picture {
     width: auto;
     height: 100%;
-    aspect-ratio: 1/1;
 
     @include media-m {
       width: 100%;

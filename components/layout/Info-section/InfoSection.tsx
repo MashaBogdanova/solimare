@@ -1,63 +1,42 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Section } from '../../../configs/sections.config';
 import styles from './_info-section.module.scss';
 
 interface IProps {
   sectionInfo: Section;
-  isLight?: boolean;
+  isDark?: boolean;
 }
 
-function InfoSection({ sectionInfo, isLight = false }: IProps) {
-  const [windowWidth, setWindowWidth] = useState<number>(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+function InfoSection({ sectionInfo, isDark = false }: IProps) {
   return (
     <section
-      className={!isLight ? styles.section_light : styles.section}
+      className={`${styles.infoSection} ${
+        isDark ? styles.infoSection_dark : ''
+      }`}
       id={sectionInfo.hash}
     >
-      {windowWidth > 800 && isLight && (
+      <div
+        className={`${styles.infoSection__content} ${
+          isDark ? styles.infoSection__content_reversed : ''
+        }`}
+      >
         <Image
-          className={styles.section__picture}
+          className={styles.infoSection__picture}
           src={sectionInfo.picture.file}
           alt={sectionInfo.picture.alt}
         />
-      )}
 
-      <div className={styles.section__text}>
-        <h2 className={!isLight ? styles.section__title_light : ''}>
-          {sectionInfo.title}
-        </h2>
-        <h4>{sectionInfo.mainInfo.subtitle}</h4>
-        {sectionInfo.mainInfo.text.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-        {sectionInfo.mainInfo.addition && (
-          <i>{sectionInfo.mainInfo.addition}</i>
-        )}
+        <div className={styles.infoSection__text}>
+          <h2 className={isDark ? styles.infoSection__title_dark : ''}>
+            {sectionInfo.title}
+          </h2>
+          <h4>{sectionInfo.mainInfo.subtitle}</h4>
+          {sectionInfo.mainInfo.text.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </div>
-
-      {(windowWidth <= 800 || !isLight) && (
-        <Image
-          className={styles.section__picture}
-          src={sectionInfo.picture.file}
-          alt={sectionInfo.picture.alt}
-        />
-      )}
     </section>
   );
 }

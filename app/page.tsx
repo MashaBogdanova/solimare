@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <main>
       <MainCarousel />
-      <InfoSection sectionInfo={pagesInfo.saltCave} />
+      <InfoSection sectionInfo={pagesInfo.saltCave} isDark />
       <SaltCaveBenefits />
-      <InfoSection sectionInfo={pagesInfo.saunaInfrared} isLight />
-      <InfoSection sectionInfo={pagesInfo.inhalation} />
-      <InfoSection sectionInfo={pagesInfo.yoga} isLight />
+      <InfoSection sectionInfo={pagesInfo.saunaInfrared} />
+      <InfoSection sectionInfo={pagesInfo.inhalation} isDark />
+      <InfoSection sectionInfo={pagesInfo.yoga} />
       <Price />
       <Contacts />
     </main>
