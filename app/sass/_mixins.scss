@@ -59,14 +59,14 @@
   }
 }
 
-// Layouts
+// Sections styles
 
-@mixin layout-info-section {
+@mixin info-section-layout {
   display: flex;
   justify-content: space-between;
   gap: 7rem;
 
-  max-width: $content-width-l;
+  max-width: $info-section-content-width-l;
   height: $info-section-height;
   margin: auto;
   padding: 4rem 0;
@@ -77,7 +77,7 @@
     align-items: center;
     gap: 0;
 
-    max-width: $content-width-m;
+    max-width: $info-section-content-width-m;
     height: $info-section-height-l;
     padding: 0;
   }
@@ -86,13 +86,17 @@
     flex-direction: column-reverse;
     justify-content: center;
 
-    max-width: $content-width-s;
+    max-width: $info-section-content-width-s;
     height: $info-section-height-m;
     padding: 0 0 6rem;
   }
+
+  @media screen and (max-width: 639px) {
+    padding: 0;
+  }
 }
 
-@mixin layout-info-section-reversed {
+@mixin info-section-reversed-layout {
   flex-direction: row-reverse;
 
   @include media-m {
@@ -100,19 +104,22 @@
   }
 }
 
-@mixin card-section {
+@mixin card-section-layout {
+  max-width: $card-section-content-width;
   margin: auto;
   padding: 5rem 0;
-  width: 85%;
-  max-width: 100rem;
 
   @include media-l {
-    width: 95%;
+    max-width: $card-section-content-width-l;
   }
 
-  //@include media-s {
-  //  padding: 0;
-  //}
+  @include media-m {
+    max-width: $card-section-content-width-m;
+  }
+
+  @include media-s {
+    max-width: $card-section-content-width-s;
+  }
 }
 
 @mixin card-section-background {
@@ -124,8 +131,15 @@
 }
 
 @mixin card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+
+  background-color: $color-dark-transparent-l;
   box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-s;
   border-radius: 0.5rem;
+
   @include transition;
 
   &:hover {

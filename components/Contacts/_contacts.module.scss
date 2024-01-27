@@ -2,7 +2,7 @@
 @import "app/sass/mixins";
 
 .contacts {
-  @include layout-info-section;
+  @include info-section-layout;
   align-items: center;
 
   &:hover {

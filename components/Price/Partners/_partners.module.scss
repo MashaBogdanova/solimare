@@ -1,29 +1,15 @@
 @import "/app/sass/mixins";
 
 .partners {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 2.5rem;
-  width: 42vw;
+  width: 60%;
   margin: 5rem auto 2rem;
-  padding: 3.5rem;
-  color: $color-light;
   text-align: center;
-  background-color: $color-dark-transparent-l;
   @include card;
-
-  @include media-l {
-    width: 60vw;
-  }
 
   @include media-m {
     width: 100%;
     margin: 5rem 0 0;
-  }
-
-  @include media-s {
-    gap: 3rem;
   }
 
   &__title {

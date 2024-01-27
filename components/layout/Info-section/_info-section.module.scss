@@ -13,10 +13,10 @@
   }
 
   &__content {
-    @include layout-info-section;
+    @include info-section-layout;
 
     &_reversed {
-     @include layout-info-section-reversed;
+     @include info-section-reversed-layout;
     }
   }
 

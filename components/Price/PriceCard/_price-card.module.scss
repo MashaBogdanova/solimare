@@ -2,23 +2,17 @@
 @import "/app/sass/mixins";
 
 .priceCard {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  gap: 2.5rem;
   width: 45%;
   height: 35rem;
-  padding: 3rem;
-  background-color: $color-dark-transparent-l;
   @include card;
 
   @include media-m {
     margin: auto;
-    width: 90%;
+    width: 100%;
   }
 
   @include media-s {
-    width: 100%;
     padding: 3rem 1rem;
   }
 

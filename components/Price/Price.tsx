@@ -9,13 +9,11 @@ function Price() {
     <section className={styles.price} id="cennik">
       <div className={styles.price__content}>
         <h2 className={styles.price__title}>Cennik</h2>
-        <article>
-          <ul className={styles.price__list}>
-            {prices.map((price) => (
-              <PriceCard price={price} />
-            ))}
-          </ul>
-        </article>
+        <ul className={styles.price__list}>
+          {prices.map((price) => (
+            <PriceCard price={price} />
+          ))}
+        </ul>
         <Partners />
       </div>
     </section>
