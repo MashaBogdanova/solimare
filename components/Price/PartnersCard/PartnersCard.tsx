@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { partners } from '../../../configs/price.config';
-import styles from './_partners.module.scss';
+import styles from './_partnersCard.module.scss';
 
-function Partners() {
+function PartnersCard() {
   return (
     <article className={styles.partners}>
       <h3 className={styles.partners__title}>Akceptujemy karty</h3>
@@ -23,4 +23,4 @@ function Partners() {
   );
 }
 
-export default Partners;
+export default PartnersCard;

@@ -3,7 +3,7 @@ import health from '../public/benefits/health.svg';
 import meditation from '../public/benefits/meditation.svg';
 import lungs from '../public/benefits/lungs.svg';
 
-interface Benefit {
+export interface Benefit {
   title: string;
   text: string;
   icon: {
