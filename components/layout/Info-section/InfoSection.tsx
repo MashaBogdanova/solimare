@@ -38,11 +38,9 @@ function InfoSection({ sectionInfo, isDark = false }: IProps) {
           <h4 className={styles.infoSection__subtitle}>
             {sectionInfo.mainInfo.subtitle}
           </h4>
-          {sectionInfo.mainInfo.text.map((paragraph) => (
-            <p className={styles.infoSection__paragraph} key={paragraph}>
-              {paragraph}
-            </p>
-          ))}
+          <p className={styles.infoSection__paragraph}>
+            {sectionInfo.mainInfo.text}
+          </p>
         </div>
       </div>
     </section>

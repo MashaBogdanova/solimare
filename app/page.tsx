@@ -1,5 +1,5 @@
 import React from 'react';
-import pagesInfo from '../configs/sections.config';
+import sectionsConfig from '../configs/sections.config';
 import MainCarousel from '../components/Main-carousel/MainCarousel';
 import InfoSection from '../components/layout/Info-section/InfoSection';
 import Price from '../components/Price/Price';
@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <main>
       <MainCarousel />
-      <InfoSection sectionInfo={pagesInfo.saltCave} isDark />
+      <InfoSection sectionInfo={sectionsConfig.saltCave} isDark />
       <SaltCaveBenefits />
-      <InfoSection sectionInfo={pagesInfo.saunaInfrared} />
-      <InfoSection sectionInfo={pagesInfo.inhalation} isDark />
-      <InfoSection sectionInfo={pagesInfo.yoga} />
+      <InfoSection sectionInfo={sectionsConfig.saunaInfrared} />
+      <InfoSection sectionInfo={sectionsConfig.inhalation} isDark />
+      <InfoSection sectionInfo={sectionsConfig.yoga} />
       <Price />
       <Contacts />
     </main>

@@ -6,7 +6,7 @@ import cave2 from '../public/sections-images/cave2.jpg';
 
 interface Text {
   subtitle: string;
-  text: string[];
+  text: string;
   addition?: string;
 }
 
@@ -31,18 +31,17 @@ interface SectionsConfig {
   [key: string]: Section;
 }
 
-const pagesInfo: SectionsConfig = {
+const sectionsConfig: SectionsConfig = {
   saltCave: {
     hash: 'grota-solna',
     title: 'Grota Solna',
     mainInfo: {
       subtitle:
         'Grota solna to wyjątkowe miejsce, zbudowane z cegieł solnych, które stwarzają atmosferę spokoju i odprężenia',
-      text: [
+      text:
         'Głównym punktem tej groty jest imponująca tężnia solankowa, która wzmaga działanie soli poprzez uwalnianie ' +
-          'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
-          'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
-      ],
+        'drobin soli do powietrza. Dodatkowo, w grocie rozpylana jest inhalacyjna mgiełka solankowa, co sprawia, że ' +
+        'jest to miejsce idealne do relaksu i oddechnięcia pełną piersią.',
     },
     additionInfo: [
       {
@@ -111,12 +110,11 @@ const pagesInfo: SectionsConfig = {
     mainInfo: {
       subtitle:
         'Zapraszamy do skorzystania z naszej usługi sauny infrared, gdzie relaks i poprawa zdrowia idą w parze!',
-      text: [
+      text:
         'Sauna infrared to doskonały sposób na odprężenie się i zadbanie o swoje samopoczucie. ' +
-          'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
-          'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
-          'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem. ',
-      ],
+        'Nasza usługa trwa 30 minut i jest dostępna na wyłączność. To oznacza, że jeśli przyjdziesz sama/sam, ' +
+        'nikt inny nie będzie miał dostępu do sauny przez cały ten czas. Jednak jeśli wolisz, możecie przyjść ' +
+        'we dwoje i cieszyć się tym wyjątkowym doświadczeniem razem. ',
     },
     additionInfo: [
       {
@@ -279,10 +277,9 @@ const pagesInfo: SectionsConfig = {
     mainInfo: {
       subtitle:
         'Zanurz się w przyszłość zdrowia i dobrostanu dzięki naszej innowacyjnej usłudze inhalacji wodorem molekularnym ',
-      text: [
+      text:
         'Inhalacje wodorem molekularnym to rewolucyjna metoda, która wykorzystuje właściwości wodoru molekularnego do walki z wieloma ' +
-          'schorzeniami i do wspierania ogólnego samopoczucia.',
-      ],
+        'schorzeniami i do wspierania ogólnego samopoczucia.',
     },
     additionInfo: [
       {
@@ -405,13 +402,12 @@ const pagesInfo: SectionsConfig = {
       subtitle:
         'Joga w grocie solnej to doskonałe połączenie ćwiczeń jogi ze ' +
         'zdrowotnymi właściwościami soli',
-      text: [
+      text:
         'Grota solna to miejsce, w którym' +
-          'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia. ' +
-          'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres ' +
-          'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest ' +
-          'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
-      ],
+        'można wypocząć i złagodzić objawy alergii, astmy czy przeziębienia. ' +
+        'Ćwiczenia jogi w takim otoczeniu pomagają dodatkowo zredukować stres ' +
+        'i poprawić samopoczucie. Dzięki temu, joga w grocie solnej jest ' +
+        'idealnym sposobem na poprawę zdrowia fizycznego i psychicznego.',
     },
     picture: {
       file: yoga,
@@ -420,4 +416,4 @@ const pagesInfo: SectionsConfig = {
   },
 };
 
-export default pagesInfo;
+export default sectionsConfig;
