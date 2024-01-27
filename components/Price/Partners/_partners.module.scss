@@ -26,6 +26,10 @@
     gap: 3rem;
   }
 
+  &__title {
+    @include title-card;
+  }
+
   &__cardsList {
     display: flex;
     justify-content: space-around;

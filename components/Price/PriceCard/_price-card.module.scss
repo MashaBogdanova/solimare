@@ -1,7 +1,7 @@
 @import "/app/sass/variables";
 @import "/app/sass/mixins";
 
-.priceBlock {
+.priceCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,8 +29,8 @@
   }
 
   &__title {
-    color: $color-light;
-    text-align: center;
+    @include title-card;
+    margin-bottom: 1.5rem;
   }
 
   &__line {
@@ -44,6 +44,7 @@
 
   &__addition {
     display: flex;
+    font-size: 1.5rem;
     color: $color-light;
   }
 }

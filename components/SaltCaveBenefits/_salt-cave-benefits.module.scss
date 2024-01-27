@@ -2,7 +2,7 @@
 @import "/app/sass/mixins";
 
 .benefits {
-    @include card-section-background;
+  @include card-section-background;
 
   &__content {
     @include card-section;
@@ -39,12 +39,13 @@
   }
 
   &__title {
-    margin: 0;
-    height: 10%;
-    color: $color-light;
-    text-align: center;
+    @include title-card;
+    height: 20%;
+
     @include media-l {
-      height: 20%;
+      display: flex;
+      align-items: center;
+      height: 30%;
     }
   }
 

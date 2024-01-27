@@ -13,6 +13,14 @@
   background-color: $color-dark-transparent-xl;
 
   &__title {
+    font-size: 10rem;
+    font-weight: lighter;
+    color: $color-secondary;
+  }
+
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-size: 3rem;
     font-weight: lighter;
     color: $color-secondary;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Partners from './Partners/Partners';
-import PriceBlock from './PriceBlock/PriceBlock';
+import PriceCard from './PriceCard/PriceCard';
 import { prices } from '../../configs/price.config';
 import styles from './_price.module.scss';
 
@@ -12,7 +12,7 @@ function Price() {
         <article>
           <ul className={styles.price__list}>
             {prices.map((price) => (
-              <PriceBlock price={price} />
+              <PriceCard price={price} />
             ))}
           </ul>
         </article>

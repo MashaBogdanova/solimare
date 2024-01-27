@@ -1,5 +1,65 @@
 @import "variables";
 
+// Typography
+
+@mixin title-info-section {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  color: $color-primary;
+
+  @include media-m {
+    margin-bottom: 2rem;
+  }
+
+  @include media-s {
+    margin-bottom: 0;
+  }
+}
+
+@mixin title-card-section {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: $color-light;
+
+  @include media-l {
+    margin-bottom: 5rem;
+  }
+}
+
+@mixin title-card {
+  text-align: center;
+  font-size: 2rem;
+  color: $color-light;
+}
+
+@mixin subtitle-info-section {
+  font-size: 1.95rem;
+
+  @include media-l {
+    font-size: 1.85rem;
+  }
+
+  @include media-m {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin text {
+  font-family: var(--text-font);
+  font-size: 1.7rem;
+
+  @include media-m {
+    font-size: 1.9rem;
+  }
+
+  @include media-s {
+    font-size: 1.65rem;
+  }
+}
+
+// Card section
+
 @mixin card-section {
   margin: auto;
   padding: 5rem 0;
@@ -32,6 +92,8 @@
     @include animation-zoom;
   }
 }
+
+// Animation
 
 @mixin transition {
   transition: transform 500ms ease-out;
@@ -88,6 +150,8 @@
 @mixin animation-rotate {
   transform: rotate(-90deg);
 }
+
+// Breakpoints
 
 @mixin media-l {
   @media screen and (max-width: $screen-width-l) {

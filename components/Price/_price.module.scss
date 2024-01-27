@@ -9,13 +9,7 @@
   }
 
   &__title {
-    margin-bottom: 3rem;
-    text-align: center;
-    color: $color-light;
-
-    @include media-l {
-      margin-bottom: 5rem;
-    }
+    @include title-card-section
   }
 
   &__list {

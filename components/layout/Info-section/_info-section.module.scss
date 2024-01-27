@@ -50,7 +50,7 @@
     }
   }
 
-  &__text {
+  &__textBlock {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -69,8 +69,20 @@
     }
   }
 
-  &__title_dark {
-    color: $color-secondary;
+  &__title {
+    @include title-info-section;
+
+    &_dark {
+      color: $color-secondary;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle-info-section;
+  }
+
+  &__paragraph {
+    @include text;
   }
 
   &__picture {

@@ -27,13 +27,21 @@ function InfoSection({ sectionInfo, isDark = false }: IProps) {
           alt={sectionInfo.picture.alt}
         />
 
-        <div className={styles.infoSection__text}>
-          <h2 className={isDark ? styles.infoSection__title_dark : ''}>
+        <div className={styles.infoSection__textBlock}>
+          <h2
+            className={`${styles.infoSection__title} ${
+              isDark ? styles.infoSection__title_dark : ''
+            }`}
+          >
             {sectionInfo.title}
           </h2>
-          <h4>{sectionInfo.mainInfo.subtitle}</h4>
+          <h4 className={styles.infoSection__subtitle}>
+            {sectionInfo.mainInfo.subtitle}
+          </h4>
           {sectionInfo.mainInfo.text.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p className={styles.infoSection__paragraph} key={paragraph}>
+              {paragraph}
+            </p>
           ))}
         </div>
       </div>

@@ -1,20 +1,20 @@
 import React from 'react';
 import { Price } from '../../../configs/price.config';
-import styles from './_price-block.module.scss';
+import styles from './_price-card.module.scss';
 
 interface Props {
   price: Price;
 }
 
-function PriceBlock({ price }: Props) {
+function PriceCard({ price }: Props) {
   return (
-    <li className={styles.priceBlock} key={price.label}>
-      <div className={styles.priceBlock__main}>
-        <h3 className={styles.priceBlock__title}>{price.label}</h3>
+    <li className={styles.priceCard} key={price.label}>
+      <div className={styles.priceCard__main}>
+        <h3 className={styles.priceCard__title}>{price.label}</h3>
         {price.tickets.map((ticket) => {
           return (
             <article key={ticket.title}>
-              <div className={styles.priceBlock__line}>
+              <div className={styles.priceCard__line}>
                 <div>
                   <p>{ticket.title}</p>
                   {ticket.subtitle && <p>{ticket.subtitle}</p>}
@@ -22,7 +22,7 @@ function PriceBlock({ price }: Props) {
                 <p>{ticket.bilet}</p>
               </div>
               {ticket.karnet && (
-                <div className={styles.priceBlock__line}>
+                <div className={styles.priceCard__line}>
                   <p>Karnet </p>
                   <p>{ticket.karnet}</p>
                 </div>
@@ -33,10 +33,10 @@ function PriceBlock({ price }: Props) {
       </div>
 
       {price.addition && (
-        <i className={styles.priceBlock__addition}>{price.addition}</i>
+        <i className={styles.priceCard__addition}>{price.addition}</i>
       )}
     </li>
   );
 }
 
-export default PriceBlock;
+export default PriceCard;

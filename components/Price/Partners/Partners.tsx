@@ -7,7 +7,7 @@ import styles from './_partners.module.scss';
 function Partners() {
   return (
     <article className={styles.partners}>
-      <h4>Akceptujemy karty</h4>
+      <h3 className={styles.partners__title}>Akceptujemy karty</h3>
       <div className={styles.partners__cardsList}>
         {partners.map((card) => (
           <Link href={card.link} target="_blank" key={card.name}>
