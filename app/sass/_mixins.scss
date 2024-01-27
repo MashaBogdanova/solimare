@@ -34,6 +34,7 @@
 }
 
 @mixin subtitle-info-section {
+  font-family: var(--text-font);
   font-size: 1.95rem;
 
   @include media-l {
@@ -58,7 +59,46 @@
   }
 }
 
-// Card section
+// Layouts
+
+@mixin layout-info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 7rem;
+
+  max-width: $content-width-l;
+  height: $info-section-height;
+  margin: auto;
+  padding: 4rem 0;
+
+  @include transition;
+
+  @include media-l {
+    align-items: center;
+    gap: 0;
+
+    max-width: $content-width-m;
+    height: $info-section-height-l;
+    padding: 0;
+  }
+
+  @include media-m {
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    max-width: $content-width-s;
+    height: $info-section-height-m;
+    padding: 0 0 6rem;
+  }
+}
+
+@mixin layout-info-section-reversed {
+  flex-direction: row-reverse;
+
+  @include media-m {
+    flex-direction: column-reverse;
+  }
+}
 
 @mixin card-section {
   margin: auto;

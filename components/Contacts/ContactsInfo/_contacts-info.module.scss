@@ -4,22 +4,20 @@
 .contactsInfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 3rem;
 
   @include media-l {
-    flex: 1;
-    padding: 3rem 0 3rem 6rem;
+    padding: 3rem;
   }
 
   @include media-m {
     align-items: center;
     text-align: center;
-    padding: 0;
+    padding: 6rem 5rem 1rem;
   }
 
   @include media-s {
-    padding: 4rem 0;
+    padding: 0;
   }
 
   &__block {
@@ -28,7 +26,10 @@
   }
 
   &__title {
+    margin-bottom: 1rem;
     font-size: 2.5rem;
+    color: $color-primary;
+
     @include media-m {
       font-size: 2.3rem;
     }

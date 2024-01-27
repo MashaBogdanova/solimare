@@ -16,12 +16,18 @@ function Map() {
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
   });
 
+  const mapOptions = {
+    disableDefaultUI: true,
+    mapTypeId: 'roadmap',
+  };
+
   if (isLoaded) {
     return (
       <GoogleMap
         mapContainerClassName={styles.map}
         center={{ lat: contacts.latitude, lng: contacts.longitude }}
         zoom={MAP_ZOOM}
+        options={mapOptions}
       >
         <InfoWindowF
           position={{ lat: contacts.latitude, lng: contacts.longitude }}

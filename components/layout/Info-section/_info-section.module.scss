@@ -13,40 +13,10 @@
   }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
-    gap: 7rem;
-
-    max-width: $content-width-l;
-    height: 450px;
-    margin: auto;
-    padding: 4rem 0;
-
-    @include transition;
-
-    @include media-l {
-      align-items: center;
-      gap: 0;
-
-      max-width: $content-width-m;
-      height: 400px;
-      padding: 0;
-    }
-
-    @include media-m {
-      flex-direction: column-reverse;
-      justify-content: center;
-
-      max-width: $content-width-s;
-      height: unset;
-    }
+    @include layout-info-section;
 
     &_reversed {
-      flex-direction: row-reverse;
-
-      @include media-m {
-        flex-direction: column-reverse;
-      }
+     @include layout-info-section-reversed;
     }
   }
 

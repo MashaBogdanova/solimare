@@ -29,28 +29,37 @@ i {
 }
 
 a {
+  font-family: var(--text-font);
+  font-size: 1.7rem;
   color: inherit;
   text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+  a {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  a {
+    font-size: 1.65rem;
+  }
 }
 
 li {
   list-style: none;
 }
 
-p,
-a {
+p {
   font-family: var(--text-font);
   font-size: 1.7rem;
 }
 @media screen and (max-width: 800px) {
-  p,
-  a {
+  p {
     font-size: 1.9rem;
   }
 }
 @media screen and (max-width: 550px) {
-  p,
-  a {
+  p {
     font-size: 1.65rem;
   }
 }

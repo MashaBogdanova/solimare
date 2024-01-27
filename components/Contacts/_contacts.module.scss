@@ -2,7 +2,24 @@
 @import "app/sass/mixins";
 
 .contacts {
-  display: flex;
-  justify-content: space-between;
-  height: 450px;
+  @include layout-info-section;
+  align-items: center;
+
+  &:hover {
+    @include animation-zoom;
+  }
+
+  @include media-l {
+    height: 480px;
+    gap: 2rem;
+  }
+
+  @include media-m {
+    flex-direction: column;
+    height: unset;
+  }
+
+  @include  media-s {
+    padding: 4rem 0 0;
+  }
 }
