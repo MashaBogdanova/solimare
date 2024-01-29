@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { partners } from '../../../configs/price.config';
-import styles from './_partnersCard.module.scss';
+import styles from './_partners-card.module.scss';
 
 function PartnersCard() {
   return (

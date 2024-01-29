@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from './_mainCarousel.module.scss';
+import styles from './_main-carousel.module.scss';
 import carouselImages from '../../configs/carousel.config';
 
 function MainCarousel() {

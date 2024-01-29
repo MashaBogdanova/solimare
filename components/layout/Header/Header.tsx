@@ -2,15 +2,16 @@
 
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import SocialMedia from '../../ui/social-media/SocialMedia';
-import SideMenu from '../../ui/side-menu/SideMenu';
+import SocialMedia from '../../ui/SocialMedia/SocialMedia';
+import SideMenu from '../SideMenu/SideMenu';
 import Nav from '../Nav/Nav';
-import Logo from '../../ui/logo/Logo';
-import BurgerIcon from '../../ui/burger-icon/BurgerIcon';
+import Logo from '../../ui/Logo/Logo';
+import BurgerIcon from '../../ui/BurgerIcon/BurgerIcon';
 
 function Header() {
   const [isSideMenuVisible, setSideMenuVisible] = useState(false);
   const [isNavVisible, setNavVisible] = useState(true);
+  const [isBurgerIconAnimated, setBurgerIconAnimated] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -26,9 +27,17 @@ function Header() {
     <header>
       <Logo isHeader />
       <SocialMedia isHeader />
-      {isNavVisible && <Nav isSideMenu={false} />}
-      <BurgerIcon setSideMenuVisible={setSideMenuVisible} />
-      <SideMenu isVisible={isSideMenuVisible} />
+      {isNavVisible && <Nav />}
+      <BurgerIcon
+        isAnimated={isBurgerIconAnimated}
+        setAnimated={setBurgerIconAnimated}
+        setSideMenuVisible={setSideMenuVisible}
+      />
+      <SideMenu
+        isVisible={isSideMenuVisible}
+        setVisible={setSideMenuVisible}
+        setBurgerIconAnimated={setBurgerIconAnimated}
+      />
     </header>
   );
 }

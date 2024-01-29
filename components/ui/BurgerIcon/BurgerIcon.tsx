@@ -1,16 +1,17 @@
 'use client';
 
-import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { MenuOutlined } from '@ant-design/icons';
-import styles from './_burgerIcon.module.scss';
+import styles from './_burger-icon.module.scss';
 
 interface IProps {
+  isAnimated: boolean;
+  setAnimated: Dispatch<SetStateAction<boolean>>;
   setSideMenuVisible: Dispatch<SetStateAction<boolean>>;
 }
 
-function BurgerIcon({ setSideMenuVisible }: IProps) {
-  const [isAnimated, setAnimated] = useState(false);
+function BurgerIcon({ isAnimated, setAnimated, setSideMenuVisible }: IProps) {
   const pathname = usePathname();
 
   useEffect(() => {

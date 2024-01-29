@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import contacts from '../../../configs/contacts.config';
-import SocialMedia from '../../ui/social-media/SocialMedia';
+import SocialMedia from '../../ui/SocialMedia/SocialMedia';
 import styles from './_contacts-info.module.scss';
 
 function ContactsInfo() {
