@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from './_main-carousel.module.scss';
+import Image from 'next/image';
 import carouselImages from '../../configs/carousel.config';
+import styles from './_main-carousel.module.scss';
 
 function MainCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,13 +21,15 @@ function MainCarousel() {
   return (
     <div className={styles.carousel}>
       {carouselImages.map((image, index) => (
-        <div
-          key={image}
+        <Image
+          key={image.name}
+          src={image.file}
           className={styles.carousel__image}
-          style={{
-            backgroundImage: `url(${image})`,
-            opacity: index === currentIndex ? 1 : 0,
-          }}
+          style={{ opacity: index === currentIndex ? 1 : 0 }}
+          alt={image.name}
+          fill
+          sizes="100vw"
+          placeholder="blur"
         />
       ))}
     </div>

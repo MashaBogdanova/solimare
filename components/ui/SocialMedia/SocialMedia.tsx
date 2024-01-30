@@ -25,7 +25,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
           className={`${styles.socialMedia__booksyIcon} ${
             isHeader ? styles.socialMedia__booksyIcon_animated : ''
           }`}
-          alt="booksy"
+          alt="booksy logo"
         />
       </Link>
       <Link href={contacts.instagramLink}>
@@ -34,6 +34,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
           style={{
             color: `${isDark ? '#834a4c' : '#f4f1e8'}`,
           }}
+          alt="instagram logo"
         />
       </Link>
       <Link href={contacts.facebookLink}>
@@ -42,6 +43,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
           style={{
             color: `${isDark ? '#834a4c' : '#f4f1e8'}`,
           }}
+          alt="facebook logo"
         />
       </Link>
     </div>

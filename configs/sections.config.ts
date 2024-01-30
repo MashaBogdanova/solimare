@@ -1,8 +1,8 @@
 import { StaticImageData } from 'next/image';
-import sauna from '../public/sections-images/sauna.jpg';
-import yoga from '../public/sections-images/yoga.jpg';
-import cave from '../public/sections-images/cave.jpg';
-import cave2 from '../public/sections-images/cave2.jpg';
+import sauna from '../public/info-section/sauna.jpg';
+import yoga from '../public/info-section/yoga.jpg';
+import cave from '../public/info-section/cave.jpg';
+import cave2 from '../public/info-section/inhalation.jpg';
 
 interface Text {
   subtitle: string;

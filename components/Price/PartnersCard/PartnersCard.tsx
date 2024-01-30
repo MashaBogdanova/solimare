@@ -14,7 +14,7 @@ function PartnersCard() {
             <Image
               className={styles.partners__card}
               src={card.image}
-              alt="partner card"
+              alt={`${card.name} card`}
             />
           </Link>
         ))}
