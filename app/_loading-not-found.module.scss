@@ -4,45 +4,36 @@
 .page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: .5em;
-
+  align-items: center;
+  gap: 0.5rem;
   height: 100vh;
-  padding-top: 150px;
 
-  font-size: 1.2em;
   color: $color-secondary;
   background-color: $color-dark-transparent-xl;
 
-  &__icon {
-    margin: .5em 0;
-    font-size: 3em;
+  &__title {
+    font-size: 10rem;
+    font-weight: lighter;
     color: $color-secondary;
-    animation: spin 10s linear infinite;
-
-    &_loading {
-      animation: spin 1s linear infinite;
-    }
   }
 
-  &__links {
-    display: flex;
-    gap: 1em;
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: $color-secondary;
+  }
+
+  &__icon {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    color: $color-secondary;
+    @include animation-spin;
   }
 
   &__link {
     color: $color-secondary;
-    font-size: .8em;
     text-decoration: underline;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

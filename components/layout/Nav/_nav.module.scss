@@ -1,0 +1,48 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.nav {
+  position: absolute;
+  top: 12rem;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 3.8rem;
+  padding: 0 4.5rem;
+
+  background-color: $color-dark-transparent-m;
+
+  @include media-l {
+    display: none;
+  }
+
+  &__link {
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    color: $color-secondary;
+    @include transition;
+
+    &_aside {
+      color: $color-light-s;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    &:hover {
+      @include animation-zoom-l;
+    }
+  }
+
+  &_aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    width: 100vw;
+    padding-top: 5rem;
+  }
+}

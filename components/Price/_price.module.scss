@@ -1,0 +1,25 @@
+@import "/app/sass/variables";
+@import "/app/sass/mixins";
+
+.price {
+  @include card-section-background;
+
+  &__content {
+    @include card-section-layout;
+  }
+
+  &__title {
+    @include title-card-section
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem 0;
+    flex-wrap: wrap;
+
+    @include media-m {
+      flex-direction: column;
+    }
+  }
+}

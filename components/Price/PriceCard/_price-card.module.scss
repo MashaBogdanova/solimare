@@ -1,0 +1,44 @@
+@import "/app/sass/variables";
+@import "/app/sass/mixins";
+
+.priceCard {
+  justify-content: space-between;
+  width: 45%;
+  height: 35rem;
+  @include card;
+
+  @include media-m {
+    margin: auto;
+    width: 100%;
+  }
+
+  @include media-s {
+    padding: 3rem 1rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__title {
+    @include title-card;
+    margin-bottom: 1.5rem;
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    color: $color-light-s;
+  }
+
+  &__addition {
+    display: flex;
+    font-size: 1.5rem;
+    color: $color-light;
+  }
+}

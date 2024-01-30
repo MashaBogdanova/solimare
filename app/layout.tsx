@@ -1,19 +1,17 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { DM_Serif_Display, Lato } from 'next/font/google';
-import { ConfigProvider } from 'antd';
-import Header from '../components/layout/header/Header';
-import Footer from '../components/layout/footer/Footer';
-import antdStyles from './antdStyles';
+import { Mulish, Philosopher } from 'next/font/google';
+import Header from '../components/layout/Header/Header';
+import Footer from '../components/layout/Footer/Footer';
 import './globals.scss';
 
-export const titleFont = DM_Serif_Display({
+const titleFont = Philosopher({
   weight: '400',
   subsets: ['latin'],
   variable: '--title-font',
 });
 
-export const textFont = Lato({
+const textFont = Mulish({
   weight: '400',
   subsets: ['latin'],
   variable: '--text-font',
@@ -31,13 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ConfigProvider theme={antdStyles}>
-        <body className={`${textFont.variable} ${titleFont.variable}`}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </ConfigProvider>
+      <body className={`${textFont.variable} ${titleFont.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

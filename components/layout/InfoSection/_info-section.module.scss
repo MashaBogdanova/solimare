@@ -1,0 +1,68 @@
+@import "../../../app/sass/mixins";
+
+.infoSection {
+  width: 100vw;
+  @include transition;
+
+  &:hover {
+    @include animation-zoom;
+  }
+
+  &_dark {
+    color: $color-secondary;
+    background-color: $color-primary;
+  }
+
+  &__content {
+    @include info-section-layout;
+
+    &_reversed {
+     @include info-section-reversed-layout;
+    }
+  }
+
+  &__textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include media-l {
+      padding: 3rem;
+    }
+
+    @include media-m {
+      padding: 6rem 5rem;
+    }
+
+    @include media-s {
+      padding: 4rem 1.6rem;
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    @include title-info-section;
+
+    &_dark {
+      color: $color-secondary;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle-info-section;
+  }
+
+  &__paragraph {
+    @include text;
+  }
+
+  &__picture {
+    width: auto;
+    height: 100%;
+
+    @include media-m {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

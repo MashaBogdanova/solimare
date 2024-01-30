@@ -1,0 +1,41 @@
+@import "app/sass/variables";
+@import "app/sass/mixins";
+
+.contactsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include media-l {
+    padding: 3rem;
+  }
+
+  @include media-m {
+    align-items: center;
+    text-align: center;
+    padding: 6rem 5rem 1rem;
+  }
+
+  @include media-s {
+    padding: 0;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: $color-primary;
+
+    @include media-m {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__weekHours {
+    margin-bottom: 0.5rem;
+  }
+}

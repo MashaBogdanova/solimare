@@ -1,0 +1,31 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.menuIcon {
+  display: none;
+
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  z-index: 2;
+
+  font-size: 2.8rem;
+  color: $color-secondary;
+  @include transition;
+
+  @include media-l {
+    display: flex;
+  }
+
+  @include media-m {
+    right: 3rem;
+  }
+
+  &_animated {
+    @include animation-rotate;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

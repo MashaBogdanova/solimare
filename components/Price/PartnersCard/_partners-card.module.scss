@@ -1,0 +1,41 @@
+@import "/app/sass/mixins";
+
+.partners {
+  justify-content: center;
+  width: 60%;
+  margin: 5rem auto 2rem;
+  text-align: center;
+  @include card;
+
+  @include media-m {
+    width: 100%;
+    margin: 5rem 0 0;
+  }
+
+  &__title {
+    @include title-card;
+  }
+
+  &__cardsList {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    @include media-m {
+     flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    width: auto;
+    height: 4rem;
+
+    &:hover {
+      cursor: pointer;
+      @include animation-pump;
+    }
+
+    @include media-s {
+      height: 3rem;
+    }
+  }
+}

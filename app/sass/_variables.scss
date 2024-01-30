@@ -1,16 +1,33 @@
 $color-primary: #834a4c;
-$color-primary-transparent: rgba(131, 74, 76, 0.5);
 $color-secondary: #f4f1e8;
 
 $color-light: #ffffffff;
+$color-light-s: #d0d0d0;
 
-$color-dark-l: rgb(0, 0, 0);
-$color-dark-m: rgb(30, 30, 30);
-$color-dark-s: rgb(94, 94, 94);
-$color-dark-transparent: rgba(0, 0, 0, 0.5);
-$color-dark-transparent-l: rgba(0, 0, 0, 0.71);
-$color-dark-transparent-xl: rgba(0, 0, 0, 0.9);
+$color-dark-xs: #b9b9b9ff;
+$color-dark-s: #5e5e5eff;
+$color-dark-m: #3a3a3a;
+$color-dark-l: #000000ff;
 
-$screen-width-xl: 1100px;
-$screen-width-l: 920px;
-$screen-width-m: 620px;
+$color-dark-transparent-xs: #0000001a;
+$color-dark-transparent-s: rgba(0, 0, 0, 0.37);
+$color-dark-transparent-m: #0000007f;
+$color-dark-transparent-l: #000000b5;
+$color-dark-transparent-xl: #000000e5;
+
+$screen-width-l: 1100px;
+$screen-width-m: 800px;
+$screen-width-s: 550px;
+
+$info-section-content-width-l: 1040px;
+$info-section-content-width-m: 1100px;
+$info-section-content-width-s: 640px;
+
+$card-section-content-width: 900px;
+$card-section-content-width-l: 95%;
+$card-section-content-width-m: 75%;
+$card-section-content-width-s: 95%;
+
+$info-section-height: 450px;
+$info-section-height-l: 400px;
+$info-section-height-m: unset;

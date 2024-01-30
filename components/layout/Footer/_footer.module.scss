@@ -1,0 +1,65 @@
+@import "../../../app/sass/variables";
+@import "../../../app/sass/mixins";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem 4.5rem 3rem 3.5rem;
+
+  color: $color-secondary;
+  background-color: $color-primary;
+
+  @include media-m {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  &__contactsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    @include media-m {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__contactIcon {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    @include media-m {
+      display: none;
+    }
+  }
+
+  &__contactLink {
+    font-size: 1.6rem;
+
+    @include media-s {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__socialNetworks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__followUs {
+    padding-left: 0.5rem;
+
+    @include media-m {
+      display: none;
+    }
+  }
+}

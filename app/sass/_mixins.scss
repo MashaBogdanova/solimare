@@ -1,10 +1,211 @@
 @import "variables";
 
-@mixin media-xl {
-  @media screen and (max-width: $screen-width-xl) {
-    @content;
+// Typography
+
+@mixin title-info-section {
+  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  color: $color-primary;
+
+  @include media-m {
+    margin-bottom: 2rem;
+  }
+
+  @include media-s {
+    margin-bottom: 0;
   }
 }
+
+@mixin title-card-section {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: $color-light;
+
+  @include media-l {
+    margin-bottom: 5rem;
+  }
+}
+
+@mixin title-card {
+  text-align: center;
+  font-size: 2rem;
+  color: $color-light;
+}
+
+@mixin subtitle-info-section {
+  font-family: var(--text-font);
+  font-size: 1.95rem;
+
+  @include media-l {
+    font-size: 1.85rem;
+  }
+
+  @include media-m {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin text {
+  font-family: var(--text-font);
+  font-size: 1.7rem;
+
+  @include media-m {
+    font-size: 1.9rem;
+  }
+
+  @include media-s {
+    font-size: 1.65rem;
+  }
+}
+
+// Sections styles
+
+@mixin info-section-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 7rem;
+
+  max-width: $info-section-content-width-l;
+  height: $info-section-height;
+  margin: auto;
+  padding: 4rem 0;
+
+  @include transition;
+
+  @include media-l {
+    align-items: center;
+    gap: 0;
+
+    max-width: $info-section-content-width-m;
+    height: $info-section-height-l;
+    padding: 0;
+  }
+
+  @include media-m {
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    max-width: $info-section-content-width-s;
+    height: $info-section-height-m;
+    padding: 0 0 6rem;
+  }
+
+  @media screen and (max-width: 639px) {
+    padding: 0;
+  }
+}
+
+@mixin info-section-reversed-layout {
+  flex-direction: row-reverse;
+
+  @include media-m {
+    flex-direction: column-reverse;
+  }
+}
+
+@mixin card-section-layout {
+  max-width: $card-section-content-width;
+  margin: auto;
+  padding: 5rem 0;
+
+  @include media-l {
+    max-width: $card-section-content-width-l;
+  }
+
+  @include media-m {
+    max-width: $card-section-content-width-m;
+  }
+
+  @include media-s {
+    max-width: $card-section-content-width-s;
+  }
+}
+
+@mixin card-section-background {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url("../../public/info-section/price.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
+
+  background-color: $color-dark-transparent-l;
+  box-shadow: 0 0.2rem 0.4rem 0 $color-dark-transparent-s;
+  border-radius: 0.5rem;
+
+  @include transition;
+
+  &:hover {
+    @include animation-zoom;
+  }
+}
+
+// Animation
+
+@mixin transition {
+  transition: transform 500ms ease-out;
+}
+
+@mixin animation-spin {
+  animation: spin 2s linear infinite;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin animation-zoom {
+  transform: scale(1.01);
+}
+
+@mixin animation-zoom-l {
+  transform: scale(1.04);
+}
+
+@mixin animation-shake {
+  animation: shake 5s 7s both infinite;
+  @keyframes shake {
+    0%, 20% {
+      transform: translate3d(0, 0, 0);
+    }
+    10%, 14%, 18%, 2%, 6% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    12%, 16%, 4%, 8% {
+      transform: translate3d(2px, 0, 0);
+    }
+  }
+}
+
+@mixin animation-pump {
+  animation: pump 500ms ease-out;
+  @keyframes pump {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+}
+
+@mixin animation-rotate {
+  transform: rotate(-90deg);
+}
+
+// Breakpoints
 
 @mixin media-l {
   @media screen and (max-width: $screen-width-l) {
@@ -17,3 +218,11 @@
     @content;
   }
 }
+
+@mixin media-s {
+  @media screen and (max-width: $screen-width-s) {
+    @content;
+  }
+}
+
+
