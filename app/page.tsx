@@ -5,6 +5,7 @@ import InfoSection from '../components/layout/InfoSection/InfoSection';
 import Price from '../components/Price/Price';
 import Contacts from '../components/Contacts/Contacts';
 import SaltCaveBenefits from '../components/SaltCaveBenefits/SaltCaveBenefits';
+import ToTopButton from '../components/ui/ToTopButton/ToTopButton';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <InfoSection sectionInfo={sectionsConfig.yoga} />
       <Price />
       <Contacts />
+      <ToTopButton />
     </main>
   );
 }
