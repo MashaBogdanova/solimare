@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import styles from './_loading-not-found.module.scss';
+import styles from './loading-not-found.module.scss';
 
 function Error() {
   return (

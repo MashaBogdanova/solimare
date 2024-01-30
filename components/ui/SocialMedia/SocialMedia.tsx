@@ -5,7 +5,7 @@ import { FacebookOutlined, InstagramOutlined } from '@ant-design/icons';
 import contacts from '../../../configs/contacts.config';
 import lightIcon from '../../../public/social-media/booksy-icon-light.svg';
 import darkIcon from '../../../public/social-media/booksy-icon-dark.svg';
-import styles from './_social-media.module.scss';
+import styles from './social-media.module.scss';
 
 interface IProps {
   isHeader?: boolean;

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { GoogleMap, InfoWindowF, useJsApiLoader } from '@react-google-maps/api';
 import contacts from '../../../configs/contacts.config';
-import styles from './_map.module.scss';
+import styles from './map.module.scss';
 
 const MAP_ZOOM = 15;
 const GOOGLE_MAP_ID = 'google-Map-script';

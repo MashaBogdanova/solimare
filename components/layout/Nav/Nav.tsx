@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import navItems from '../../../configs/navigation.config';
-import styles from './_nav.module.scss';
+import styles from './nav.module.scss';
 
 interface IProps {
   isSideMenu?: boolean;

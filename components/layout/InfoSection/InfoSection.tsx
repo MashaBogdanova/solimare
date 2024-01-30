@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Section } from '../../../configs/sections.config';
-import styles from './_info-section.module.scss';
+import styles from './info-section.module.scss';
 
 interface IProps {
   sectionInfo: Section;

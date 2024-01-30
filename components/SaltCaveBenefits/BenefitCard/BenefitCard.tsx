@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Benefit } from '../../../configs/salt-cave-benefits';
-import styles from './_benefit-card.module.scss';
+import styles from './benefit-card.module.scss';
 
 interface Props {
   benefit: Benefit;

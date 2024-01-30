@@ -1,6 +1,6 @@
 import React from 'react';
 import { Price } from '../../../configs/price.config';
-import styles from './_price-card.module.scss';
+import styles from './price-card.module.scss';
 
 interface Props {
   price: Price;

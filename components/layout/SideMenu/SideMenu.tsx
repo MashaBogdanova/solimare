@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import SocialMedia from '../../ui/SocialMedia/SocialMedia';
 import Nav from '../Nav/Nav';
-import styles from './_side-menu.module.scss';
+import styles from './side-menu.module.scss';
 
 interface IProps {
   isVisible: boolean;

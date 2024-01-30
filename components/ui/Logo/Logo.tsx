@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logoLight from '../../../public/logo/logo-light.png';
-import styles from './_logo.module.scss';
+import styles from './logo.module.scss';
 
 interface IProps {
   isHeader?: boolean;

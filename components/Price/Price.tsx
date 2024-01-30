@@ -2,7 +2,7 @@ import React from 'react';
 import PartnersCard from './PartnersCard/PartnersCard';
 import PriceCard from './PriceCard/PriceCard';
 import { prices } from '../../configs/price.config';
-import styles from './_price.module.scss';
+import styles from './price.module.scss';
 
 function Price() {
   return (

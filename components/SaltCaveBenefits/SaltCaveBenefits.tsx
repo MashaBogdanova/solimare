@@ -1,7 +1,7 @@
 import React from 'react';
 import saltCaveBenefits from '../../configs/salt-cave-benefits';
 import BenefitCard from './BenefitCard/BenefitCard';
-import styles from './_salt-cave-benefits.module.scss';
+import styles from './salt-cave-benefits.module.scss';
 
 function SaltCaveBenefits() {
   return (

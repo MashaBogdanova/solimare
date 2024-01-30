@@ -3,7 +3,7 @@
 import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { MenuOutlined } from '@ant-design/icons';
-import styles from './_burger-icon.module.scss';
+import styles from './burger-icon.module.scss';
 
 interface IProps {
   isAnimated: boolean;

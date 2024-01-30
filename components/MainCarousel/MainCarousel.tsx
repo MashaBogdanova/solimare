@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import carouselImages from '../../configs/carousel.config';
-import styles from './_main-carousel.module.scss';
+import styles from './main-carousel.module.scss';
 
 function MainCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

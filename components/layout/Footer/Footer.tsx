@@ -8,7 +8,7 @@ import {
 import contacts from '../../../configs/contacts.config';
 import SocialMedia from '../../ui/SocialMedia/SocialMedia';
 import Logo from '../../ui/Logo/Logo';
-import styles from './_footer.module.scss';
+import styles from './footer.module.scss';
 
 function Footer() {
   return (
