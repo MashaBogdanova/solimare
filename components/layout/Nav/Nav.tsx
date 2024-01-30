@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import Link from 'next/link';
 import navItems from '../../../configs/navigation.config';
 import styles from './_nav.module.scss';
 
@@ -26,14 +25,14 @@ function Nav({
     <nav className={isSideMenu ? styles.nav_aside : styles.nav}>
       {navItems.map((item) => {
         return (
-          <Link
+          <a
             className={isSideMenu ? styles.nav__link_aside : styles.nav__link}
             href={`#${item.key}`}
             key={item.key}
             onClick={clickHandler}
           >
             {item.label}
-          </Link>
+          </a>
         );
       })}
     </nav>
