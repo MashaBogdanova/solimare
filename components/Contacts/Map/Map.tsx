@@ -36,7 +36,11 @@ function Map() {
             <h3 className={styles.map__title}>{contacts.googleMapName}</h3>
             <p className={styles.map__text}>{contacts.googleMapDescription}</p>
             <p className={styles.map__text}>{contacts.address}</p>
-            <Link href={contacts.googleMapLink} className={styles.map__link}>
+            <Link
+              href={contacts.googleMapLink}
+              className={styles.map__link}
+              target="_blank"
+            >
               Zobacz na Mapach Google
             </Link>
           </>

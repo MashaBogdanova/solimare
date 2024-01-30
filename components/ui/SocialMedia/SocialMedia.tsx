@@ -19,7 +19,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
         isHeader ? styles.socialMedia_header : ''
       }`}
     >
-      <Link href={contacts.booksyLink}>
+      <Link href={contacts.booksyLink} target="_blank">
         <Image
           src={isDark ? darkIcon : lightIcon}
           className={`${styles.socialMedia__booksyIcon} ${
@@ -28,7 +28,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
           alt="booksy logo"
         />
       </Link>
-      <Link href={contacts.instagramLink}>
+      <Link href={contacts.instagramLink} target="_blank">
         <InstagramOutlined
           className={styles.socialMedia__icon}
           style={{
@@ -37,7 +37,7 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
           alt="instagram logo"
         />
       </Link>
-      <Link href={contacts.facebookLink}>
+      <Link href={contacts.facebookLink} target="_blank">
         <FacebookOutlined
           className={styles.socialMedia__icon}
           style={{
