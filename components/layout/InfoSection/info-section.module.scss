@@ -2,11 +2,6 @@
 
 .infoSection {
   width: 100vw;
-  @include transition;
-
-  &:hover {
-    @include animation-zoom;
-  }
 
   &_dark {
     color: $color-secondary;

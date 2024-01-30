@@ -71,8 +71,6 @@
   margin: auto;
   padding: 4rem 0;
 
-  @include transition;
-
   @include media-l {
     align-items: center;
     gap: 0;

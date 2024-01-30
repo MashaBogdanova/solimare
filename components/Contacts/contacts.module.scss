@@ -5,10 +5,6 @@
   @include info-section-layout;
   align-items: center;
 
-  &:hover {
-    @include animation-zoom;
-  }
-
   @include media-l {
     height: 480px;
     gap: 2rem;
