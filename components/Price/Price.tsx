@@ -11,7 +11,7 @@ function Price() {
         <h2 className={styles.price__title}>Cennik</h2>
         <ul className={styles.price__list}>
           {prices.map((price) => (
-            <PriceCard price={price} />
+            <PriceCard price={price} key={price.label} />
           ))}
         </ul>
         <PartnersCard />

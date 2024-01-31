@@ -22,9 +22,11 @@ function InfoSection({ sectionInfo, isDark = false }: IProps) {
         }`}
       >
         <Image
-          className={styles.infoSection__picture}
           src={sectionInfo.picture.file}
+          className={styles.infoSection__picture}
           alt={sectionInfo.picture.alt}
+          quality={100}
+          placeholder="blur"
         />
 
         <div className={styles.infoSection__textBlock}>

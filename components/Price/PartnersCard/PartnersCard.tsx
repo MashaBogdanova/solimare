@@ -12,8 +12,8 @@ function PartnersCard() {
         {partners.map((card) => (
           <Link href={card.link} target="_blank" key={card.name}>
             <Image
-              className={styles.partners__card}
               src={card.image}
+              className={styles.partners__card}
               alt={`${card.name} card`}
             />
           </Link>

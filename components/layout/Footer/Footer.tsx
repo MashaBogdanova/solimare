@@ -20,6 +20,7 @@ function Footer() {
           <Link
             className={styles.footer__contactLink}
             href={contacts.googleMapLink}
+            target="_blank"
           >
             {contacts.address}
           </Link>
@@ -29,6 +30,7 @@ function Footer() {
           <Link
             className={styles.footer__contactLink}
             href={`mailto:${contacts.email}`}
+            target="_blank"
           >
             {contacts.email}
           </Link>
@@ -37,7 +39,8 @@ function Footer() {
           <PhoneOutlined className={styles.footer__contactIcon} />
           <Link
             className={styles.footer__contactLink}
-            href={`tel://${contacts.telephone}`}
+            href={`tel:${contacts.telephone.replaceAll(' ', '')}`}
+            target="_blank"
           >
             {contacts.telephone}
           </Link>

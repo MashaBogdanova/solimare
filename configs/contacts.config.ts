@@ -16,7 +16,7 @@ interface IContacts {
 
 const contacts: IContacts = {
   address: 'Mandarynki 12, 02-796 Warszawa',
-  telephone: '+48 506 815 888',
+  telephone: '506 815 888',
   email: 'grota.solimare@gmail.com',
   booksyLink:
     'https://booksy.com/pl-pl/125722_grota-solna-solimare_zdrowie_3_warszawa',

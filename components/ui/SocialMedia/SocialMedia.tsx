@@ -26,6 +26,8 @@ function SocialMedia({ isHeader = false, isDark = false }: IProps) {
             isHeader ? styles.socialMedia__booksyIcon_animated : ''
           }`}
           alt="booksy logo"
+          quality={100}
+          priority
         />
       </Link>
       <Link href={contacts.instagramLink} target="_blank">

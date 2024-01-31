@@ -12,9 +12,11 @@ function Logo({ isHeader = false }: IProps) {
   return (
     <Link href="/">
       <Image
-        className={isHeader ? styles.logo_header : styles.logo}
         src={logoLight}
+        className={isHeader ? styles.logo_header : styles.logo}
         alt="logo"
+        quality={100}
+        priority
       />
     </Link>
   );

@@ -10,8 +10,15 @@ function ContactsInfo() {
       <div className={styles.contactsInfo__block}>
         <h3 className={styles.contactsInfo__title}>Kontakt</h3>
         <p>{contacts.address}</p>
-        <Link href={`tel://${contacts.telephone}`}>{contacts.telephone}</Link>
-        <Link href={`mailto:${contacts.email}`}>{contacts.email}</Link>
+        <Link
+          href={`tel:${contacts.telephone.replaceAll(' ', '')}`}
+          target="_blank"
+        >
+          {contacts.telephone}
+        </Link>
+        <Link href={`mailto:${contacts.email}`} target="_blank">
+          {contacts.email}
+        </Link>
       </div>
       <div className={styles.contactsInfo__block}>
         <h3 className={styles.contactsInfo__title}>Godziny pracy</h3>
