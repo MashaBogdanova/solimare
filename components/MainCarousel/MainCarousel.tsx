@@ -22,15 +22,15 @@ function MainCarousel() {
       setImages(carouselImages);
       setImagesLength(carouselImages.length);
     }
+  }, []);
 
+  useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === imagesLength - 1 ? 0 : prevIndex + 1,
-      );
+      setCurrentIndex((prev) => (prev + 1) % imagesLength);
     }, 3000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [images]);
 
   return (
     <div className={styles.carousel}>
@@ -39,8 +39,9 @@ function MainCarousel() {
           <Image
             key={image.name}
             src={image.file}
-            className={styles.carousel__image}
-            style={{ opacity: index === currentIndex ? 1 : 0 }}
+            className={`${styles.carousel__image} ${
+              index === currentIndex ? styles.carousel__image_visible : ''
+            }`}
             alt={image.name}
             quality={100}
             fill

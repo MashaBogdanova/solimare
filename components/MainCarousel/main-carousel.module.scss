@@ -9,8 +9,13 @@
   background-color: $color-dark-l;
 
   &__image {
+    opacity: 0;
     object-fit: cover;
     transition: opacity 1500ms ease;
+
+    &_visible {
+      opacity: 1;
+    }
   }
 
   &::after {
